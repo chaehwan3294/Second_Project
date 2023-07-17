@@ -3,7 +3,7 @@
 @font-face {font-family: "Cyberwar"; src: url(../font/CyberwarRegular-7BX0E.ttf) format('truetype')}
 @font-face {font-family: "Glitch Goblin"; src: url(../font/GlitchGoblin-2O87v.ttf) format('truetype');}
 
-#wrap {width: 1900px; margin: 0 auto; background-color: #0e0e1f;}
+#wrap {width: 1900px; margin: 0 auto; background-color: black;}
 
 header {width: 100%; height: 80px; margin: 0 auto;display: flex; flex-direction: row;justify-content: space-between;}
 .menubar {width: 90.5%;display: flex; justify-content: space-between;}
@@ -25,16 +25,52 @@ header {width: 100%; height: 80px; margin: 0 auto;display: flex; flex-direction:
 #slider {width: 100%; height: 900px; margin: 0 auto; overflow: hidden;}
 #slider video {min-width: 100%; min-height: 100%;}
 
-section {width: 1230px; height: 450px; margin: 0 auto; background-color: aqua; display: flex; flex-flow: row wrap; justify-content: space-between;}
+section {width: 1230px; height: 450px; margin: 0 auto; display: flex; flex-flow: row wrap; justify-content: space-between;}
 nav {width: 100%; height: 100px;display: flex; align-items: center;flex-direction: row; justify-content: flex-start;}
 nav h1 {font-size: 90px; font-family: "Glitch Goblin"; margin-left: 20px; color: mediumvioletred;}
 
-article {width: 31%; height: 325px; background-color: burlywood;}
+article {width: 31%; height: 325px;}
 article img {width: 100%; height: 80%;}
+article h1 {color: #fff;}
+article h5 {color: #fff;}
 
-#mid_banner {width: 100%; height: 850px; background-color: blue;}
+#mid_banner {width: 100%; height: 780px; overflow: hidden; position: relative; margin: 0 auto;}
+#mid_banner > .banner_textbox {width: 62%; height: 300px; position: absolute; left: 380px; bottom: 100px; text-align: center;}
+.banner_textbox h1 {color: gold;}
+.banner_textbox h4 {color: lightgray; margin: 20px 0 20px 0; font-size: 20px;}
+.banner_textbox h4 span {font-weight: bold; font-size: 22px;; color: gold;}
+#solid {margin: 0 auto; border: 1px solid gold; width: 120px; height: 40px; position: relative;}
+#solid a {width: 120px; height: 40px; background-color: gold; position: absolute; top: 5px; left: 5px; line-height: 40px; font-family: "Glitch Goblin"; color: #333;}
+#solid a:hover {color: red; background-color: yellow}
 
-#contentbox {width: 1230px; height: 960px; background-color: brown; margin: 0 auto;}
+
+#impo {width: 1230px; height: 960px; background-color: brown; margin: 0 auto;}
+.impo_head {margin-left: 5%; color: #fff;}
+.impo_body {width: 80%; height: 600px; background-color: pink;display: flex; margin: 5%; flex-wrap: wrap;}
+
+.impo_craft {width: 600px; height: 300px;}
+.impo_craft img {width: 600px; height: 300px;}
+
+.impo_battle {width: 600px; height: 300px; display: none;}
+.impo_battle img {width: 600px; height: 300px;}
+
+.impo_survive {width: 600px; height: 300px; display: none;}
+.impo_survive img {width: 600px; height: 300px;}
+
+.impo_imgbar {width: 240px; height: 300px; display: flex; flex-direction: column;}
+.impo_imgbar img {width: 240px; height: 100px;}
+
+.craft_text {width: 840px; height: 200px;}
+.craft_text h1 {margin: 10px 0 10px 10px; color: #fff;}
+.craft_text h3 {margin: 10px 0 10px 10px; color: #777;}
+
+.battle_text {width: 840px; height: 200px; display: none;}
+.battle_text h1 {margin: 10px 0 10px 10px; color: #fff;}
+.battle_text h3 {margin: 10px 0 10px 10px; color: #777;}
+
+.survive_text {width: 840px; height: 200px; display: none;}
+.survive_text h1 {margin: 10px 0 10px 10px; color: #fff;}
+.survive_text h3 {margin: 10px 0 10px 10px; color: #777;}
 
 #bottom_banner {width: 100%; height: 785px; background-color: cyan;}
 
