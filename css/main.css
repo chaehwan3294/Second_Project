@@ -44,21 +44,35 @@ article h5 {color: #fff;}
 #solid a:hover {color: red; background-color: yellow}
 
 
-#impo {width: 1230px; height: 960px; background-color: brown; margin: 0 auto;}
+#impo {width: 1230px; height: auto; margin: 0 auto; border-style: none none none solid; border-color: #fff; border-width: thin;}
 .impo_head {margin-left: 5%; color: #fff;}
-.impo_body {width: 80%; height: 600px; background-color: pink;display: flex; margin: 5%; flex-wrap: wrap;}
+.impo_body {width: 80%; height: 600px;display: flex; margin: 5%; flex-wrap: wrap;}
 
-.impo_craft {width: 600px; height: 300px;}
-.impo_craft img {width: 600px; height: 300px;}
+.impo_craft {width: 800px; height: 480px; position: relative;}
+.impo_craft img {width: 800px; height: 480px;}
 
-.impo_battle {width: 600px; height: 300px; display: none;}
-.impo_battle img {width: 600px; height: 300px;}
+.impo_battle {width: 800px; height: 480px; display: none;}
+.impo_battle img {width: 800px; height: 480px;}
 
-.impo_survive {width: 600px; height: 300px; display: none;}
-.impo_survive img {width: 600px; height: 300px;}
+.impo_survive {width: 800px; height: 480px; display: none;}
+.impo_survive img {width: 800px; height: 480px;}
 
-.impo_imgbar {width: 240px; height: 300px; display: flex; flex-direction: column;}
-.impo_imgbar img {width: 240px; height: 100px;}
+.impo_button {width: 180px; height: 480px; display: flex; flex-direction: column;}
+.impo_button button {width: 180px; height: 160px;}
+.crbu {background-image: url(../img/crafting.webp); background-size: cover; transition: all 1s ease-in-out; background-position: center;}
+.crbu span {transition: all 1s ease-in-out; opacity: 0; scale: 0; font-family: "맑은 고딕"; font-size: 20px; font-weight: bold;color: #fff;}
+.crbu:hover {background-image: url(../img/cr_bu.jpg); background-size: cover;}
+.crbu:hover span{opacity: 1; transform: scale(1);}
+
+.babu {background-image: url(../img/battle.webp); background-size: cover; transition: all 1s ease-in-out;background-position: center;}
+.babu span {transition: all 1s ease-in-out; opacity: 0; scale: 0; font-family: "맑은 고딕"; font-size: 20px; font-weight: bold;color: #fff;}
+.babu:hover {background-image: url(../img/ba_bu.jpg); background-size: cover;}
+.babu:hover span{opacity: 1; transform: scale(1);}
+
+.subu {background-image: url(../img/survive.webp); background-size: cover; transition: all 1s ease-in-out; background-position: center;}
+.subu span {transition: all 1s ease-in-out; opacity: 0; scale: 0; font-family: "맑은 고딕"; font-size: 20px; font-weight: bold;color: #fff;}
+.subu:hover {background-image: url(../img/su_bu.jpg); background-size: cover;}
+.subu:hover span{opacity: 1; transform: scale(1);}
 
 .craft_text {width: 840px; height: 200px;}
 .craft_text h1 {margin: 10px 0 10px 10px; color: #fff;}
@@ -72,9 +86,41 @@ article h5 {color: #fff;}
 .survive_text h1 {margin: 10px 0 10px 10px; color: #fff;}
 .survive_text h3 {margin: 10px 0 10px 10px; color: #777;}
 
-#bottom_banner {width: 100%; height: 785px; background-color: cyan;}
+#chainfo {width: 100%; height: 800px; margin: 0 auto; position: relative;}
+#chainfo > .asidl {width: 30%; height: 540px; position: absolute; top: 0; left: 0;background-image: linear-gradient(to right, black 10% , transparent);}
+#chainfo > .asidr {width: 30%; height: 540px; position: absolute; top: 0; right: 0;background-image: linear-gradient(to left, black 10% , transparent);}
+.chainfo_img {width: 1810px; height: 540px; margin: 0 auto;}
+.char_list1 {width: 100%;height: 180px;background-image: url(../img/list1.png);background-repeat: repeat-x;animation: characterRight 200s linear infinite;}
+.char_list2 {width: 100%;height: 180px;background-image: url(../img/list-character-02.png);background-repeat: repeat-x;animation: characterLeft 200s linear infinite;}
+.char_list3 {width: 100%;height: 180px;background-image: url(../img/list-character-03.png);background-repeat: repeat-x;animation: characterRight 200s linear infinite;}
+.chatext {margin: 0 auto; width: 45%; height: 260px; text-align: center;}
+.chatext h1 {color: gold; font-size: 30px;margin: 10px 0 10px 0;}
+.chatext h3 {color: #fff; font-size: 24px;}
+.chatext h3 b {font-size: 26px; color: gold;}
+.chatext #solid {margin: 30px auto; border: 1px solid gold; width: 120px; height: 40px; position: relative;}
+.chatext #solid a {width: 120px; height: 40px; background-color: gold; position: absolute; top: 5px; left: 5px; line-height: 40px; font-family: "맑은 고딕"; color: #333; font-weight: bold;}
+.chatext #solid a:hover {color: red; background-color: yellow}
+
+#bottom_banner {width: 100%; height: 785px; background-image: url(../img/bg-play-er.jpg); background-size: cover; position: relative; margin: 0 auto; text-align: center;}
+#bottom_banner img {width: 100%;position: absolute; bottom: 10px; left: 0;}
+#bottom_banner h2 {color: #fff; font-size: 26px;}
+#bottom_banner h4 {color: #fff; font-size: 22px;}
+#bottom_banner h1 {color: #fff; font-size: 30px;}
+#bottom_banner h1 span {color: gold;}
+
 
 footer {width: 100%; height: 630px; background-color: black;margin: 0 auto;}
 
 /*주요 Content 사이 간격 조정*/
 #void {width: 100%; height: 30px; margin: 0 auto;}
+
+/*animation*/
+@keyframes characterRight {
+    0% {background-position:0 0;}
+    100% {background-position:-10000px 0;}
+}
+
+@keyframes characterLeft {
+    0% {background-position:0 0;}
+    100% {background-position:10000px 0;}
+}

@@ -9,6 +9,50 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js"></script>
+
+    <script>
+        $(function(){
+            $('button:nth-of-type(1)').click(function(){
+                $(".impo_craft").show();
+                $(".impo_battle").hide();
+                $(".impo_survive").hide();
+            });
+
+            $('button:nth-of-type(2)').click(function(){
+                $(".impo_craft").hide();
+                $(".impo_battle").show();
+                $(".impo_survive").hide();
+            });
+
+            $('button:nth-of-type(3)').click(function(){
+                $(".impo_craft").hide();
+                $(".impo_battle").hide();
+                $(".impo_survive").show();
+            });
+        });
+    </script>
+
+<script>
+    $(function(){
+        $('button:nth-of-type(1)').click(function(){
+            $(".craft_text").show();
+            $(".battle_text").hide();
+            $(".survive_text").hide();
+        });
+
+        $('button:nth-of-type(2)').click(function(){
+            $(".craft_text").hide();
+            $(".battle_text").show();
+            $(".survive_text").hide();
+        });
+
+        $('button:nth-of-type(3)').click(function(){
+            $(".craft_text").hide();
+            $(".battle_text").hide();
+            $(".survive_text").show();
+        });
+    });
+</script>
 </head>
 <body>
     <div id="wrap">
@@ -99,14 +143,14 @@
                 <div class="impo_survive">
                     <img src="img/survive.webp" alt="survive">
                 </div>
-                <div class="impo_imgbar">
-                    <img src="img/crafting.webp" alt="craftbar">
-                    <img src="img/battle.webp" alt="battlebar">
-                    <img src="img/survive.webp" alt="survivebar">
+                <div class="impo_button">
+                    <button class="crbu"><span>제작</span></button>
+                    <button class="babu"><span>전투</span></button>
+                    <button class="subu"><span>생존</span></button>
                 </div>
                 <div class="craft_text">
                     <h1>제작</h1>
-                    <h3>필요한 재료를 찾아 더욱 강한 무기 <br>
+                    <h3>시시각각 변화하는 루미아섬의 환경에서 필요한 재료를 찾아 더욱 강한 무기 <br>
                         방어구, 회복 아이템을 만들어 보세요.
                     </h3>
                 </div>
@@ -118,20 +162,47 @@
                 </div>
                 <div class="survive_text">
                     <h1>생존</h1>
-                    <h3>탐색, 제작, 사냥, 전투 등 매 순간 어떤 행동을 할 지 선택하세요. <br>
-                        승리를 위한 전략을 세워 마지막까지 <br>
-                        생존하세요.</h3>
+                    <h3>점점 좁아지는 생존 구역에서 <br>
+                        탐색, 제작, 사냥, 전투 등 매 순간 어떤 행동을 할 지 선택하세요. <br>
+                        승리를 위한 전략을 세워 마지막까지 생존하세요.</h3>
                 </div>
             </div>
         </div>
 
         <div id="void"></div>
 
-        <div id="bottom_banner">
-
+        <div id="chainfo">
+            <aside class="asidl"></aside>
+            <div class="chainfo_img">
+                <div class="char_list1"></div>
+                <div class="char_list2"></div>
+                <div class="char_list3"></div>
+            </div>
+            <aside class="asidr"></aside>
+            <div class="chatext">
+                <h1>매력적이고 다양한 실험체</h1>
+                <h3>애니메이션 스타일로 창조된 다양한 실험체들을 선택해 게임을 플레이 하며,<br>
+                    상황에 맞는 전투를 펼치세요.<br>
+                    <b>개성 넘치는 실험체들이 여러분을 기다립니다!</b>
+                </h3>
+                <div id="solid">
+                    <a href="#">자세히 보기</a>
+                </div>
+            </div>
         </div>
     
         <div id="void"></div>
+
+        <div id="bottom_banner">
+            <br>
+            <h2>쿼터뷰 형식의 전투 스타일과 배틀로얄</h2>
+            <br>
+            <h4>독특한 크래프팅 시스템이 합쳐진 "새로운 형태의 서바이벌 MOBA 게임"</h4>
+            <br>
+            <h1><span>이터널 리턴</span>을 플레이해보세요</h1>
+
+            <img src="img/img-play-er.png" alt="player">
+        </div>
 
         <footer>
     
