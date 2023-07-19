@@ -5,31 +5,35 @@
 
 #wrap {width: 1900px; margin: 0 auto; background-color: black;}
 
+/*header 내용*/
 header {width: 100%; height: 80px; margin: 0 auto;display: flex; flex-direction: row;justify-content: space-between;}
 .menubar {width: 90.5%;display: flex; justify-content: space-between;}
 .menubar a:hover {color: cyan;}
 .list_me {width: 70%; height: 100%;display: flex; flex-direction: row; align-items: center;}
-.list_me ul {display: flex; flex-direction: row;}
-.list_me ul li {font-size: 30px;margin: 0 20px 0 20px;}
-.list_me ul li a {font-family: "Glitch Goblin"; color: #fff;}
-
+.list_me>ul {display: flex; flex-direction: row;}
+.list_me>ul>li {font-size: 30px;margin: 0 20px 0 20px; width: 160px; position: relative;}
+.list_me>ul>li>ul {width: 150px;display: none; position: absolute;background-color: #333;opacity: 0.8;}
+.list_me>ul>li>ul>li {font-size: 16px; height: 30px; color: #fff; line-height: 30px; z-index: 3;}
+.list_me>ul>li:hover ul{display: block;}
+.list_me>ul>li>ul>li:hover {background-color: gold; color: #fff;}
+.list_me>ul>li>a {font-family: "Glitch Goblin"; color: #fff;}
 
 .contbox_me {width: 30%; height: 100%; display: flex; flex-direction: row; align-items: center; justify-content: flex-end;}
 .contbox_me i {font-size: 30px; color: #fff;}
 .contbox_me a {margin: 0 20px 0 20px;}
 .contbox_me i:hover {color: cyan;}
-.play {display: block; padding: 5px 10px; background-color: gold; border-radius: 10px; font-size: 24px; font-family: "Glitch Goblin";color: #333;} 
-.contbox_me > .play:hover {color: indianred;}
+.play {display: block; padding: 10px 20px; background-color: gold; border-radius: 10px; font-size: 24px; font-family: "Glitch Goblin";color: #333;} 
+.contbox_me > .play:hover {color: #fff; background-color: yellow;}
 
-
-#slider {width: 100%; height: 900px; margin: 0 auto; overflow: hidden;}
+/*main 내용*/
+#slider {width: 100%; height: 900px; margin: 0 auto; overflow: hidden; z-index: 1;}
 #slider video {min-width: 100%; min-height: 100%;}
 
 section {width: 1230px; height: 450px; margin: 0 auto; display: flex; flex-flow: row wrap; justify-content: space-between;}
 nav {width: 100%; height: 100px;display: flex; align-items: center;flex-direction: row; justify-content: flex-start;}
 nav h1 {font-size: 90px; font-family: "Glitch Goblin"; margin-left: 20px; color: mediumvioletred;}
-
-article {width: 31%; height: 325px;}
+section a {width: 31%; height: 325px;}
+/* article {width: 31%; height: 325px;} */
 article img {width: 100%; height: 80%;}
 article h1 {color: #fff;}
 article h5 {color: #fff;}
@@ -108,8 +112,37 @@ article h5 {color: #fff;}
 #bottom_banner h1 {color: #fff; font-size: 30px;}
 #bottom_banner h1 span {color: gold;}
 
+.platform {width: 40%; height: 50px; margin: 0 auto; display: flex; flex-direction: row; justify-content: center;}
+.kakao {width: 150px; height: 50px; border: 1px solid #fff; line-height: 45px;font-size: 24px; margin-right: 10px; border-radius: 10px;}
+.kakao span {color: #fff; font-family: "Consolas";}
+.kakao span b{font-family: "Consolas";}
+.kakao:hover {background-color: gold; border-color: gold;}
+.kakao:hover b{color: #666;}
 
-footer {width: 100%; height: 630px; background-color: black;margin: 0 auto;}
+.steam {width: 150px; height: 50px; border: 1px solid #fff; line-height: 45px;font-size: 26px;margin-left: 10px;border-radius: 10px;}
+.steam {color: #fff;}
+.steam span {font-family: "Consolas";}
+.steam:hover {background-color: skyblue; border-color: skyblue;}
+
+.bot_banner_text {width: 40%; height: 100px; margin: 0 auto;text-align: left;}
+.bot_banner_text {color: #999;}
+
+/*footer 내용*/
+footer {width: 100%; height: 350px; background-color: black;margin: 0 auto;}
+
+.media_box {width: 20%; height: 100px; margin: 0 auto; text-align: center; display: flex; flex-flow: row wrap; justify-content: space-around; margin-top: 20px;}
+.media_box h3 {font-size: 26px; color: #fff; width: 100%; height: 45px;}
+.media_box i {font-size: 28px; color: #fff; border: 1px none; width: 60px; height: 60px; line-height: 60px; border-radius: 30px; background-color: #222;}
+.media_box i:hover {background-color: #fff; color: #333; transform: scale(1.2); font-size: 32px;}
+
+.logo_footer {width: 30%; height: 80px; margin: 0 auto; display: flex; flex-flow: row; justify-content: space-around; align-items: center;}
+.logo_footer img {width: 103px; align-self: center;}
+.logo_footer p {font-size: 12px; color: #fff;}
+
+.regulration {width: 60%; height: 100px; margin: 0 auto; display: flex; flex-direction: row; justify-content: center;}
+.regulration table {display:block; margin:4px 0 0 0; line-height:30px; border: 1px solid #222; border-collapse: collapse; font-size: 10px; width: 50%;}
+.regulration table td {border: 1px solid #222; width: 25%; padding: 0 10px 0 25px; background-color: gold;}
+.regulration table th {border: 1px solid #222; width: 25%; padding: 0 10px 0 10px; background-color: gold;}
 
 /*주요 Content 사이 간격 조정*/
 #void {width: 100%; height: 30px; margin: 0 auto;}
