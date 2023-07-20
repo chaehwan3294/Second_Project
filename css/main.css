@@ -12,11 +12,13 @@ header {width: 100%; height: 80px; margin: 0 auto;display: flex; flex-direction:
 .list_me {width: 70%; height: 100%;display: flex; flex-direction: row; align-items: center;}
 .list_me>ul {display: flex; flex-direction: row;}
 .list_me>ul>li {font-size: 30px;margin: 0 20px 0 20px; width: 160px; position: relative;}
-.list_me>ul>li>ul {width: 150px;display: none; position: absolute;background-color: #333;opacity: 0.8;}
-.list_me>ul>li>ul>li {font-size: 16px; height: 30px; color: #fff; line-height: 30px; z-index: 3;}
+.list_me>ul>li>ul {width: 150px;display: none;position: absolute;background-color: #333;opacity: 0.8;z-index: 3;}
+.list_me>ul>li>ul>li {font-size: 16px; height: 30px; color: #fff; line-height: 30px;}
 .list_me>ul>li:hover ul{display: block;}
-.list_me>ul>li>ul>li:hover {background-color: gold; color: #fff;}
-.list_me>ul>li>a {font-family: "Glitch Goblin"; color: #fff;}
+.list_me>ul>li>ul>li:hover {background-color: gold;}
+.list_me>ul>li>ul>li:hover a{color: cyan;}
+.list_me>ul>li a {font-family: "Glitch Goblin"; color: #fff; padding: 0 0 0 5px;}
+.list_me>ul>li:nth-of-type(5) {margin-left: 80px;}
 
 .contbox_me {width: 30%; height: 100%; display: flex; flex-direction: row; align-items: center; justify-content: flex-end;}
 .contbox_me i {font-size: 30px; color: #fff;}
