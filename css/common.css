@@ -8,8 +8,12 @@
  font-family: 'Noto Sans KR', sans-serif;
 }
 
+#wrap {width: 100%; margin: 0 auto; background-color: black;}
+
 /*header 내용*/
+@media (min-width:1200px){
 header {width: 100%; height: 80px; margin: 0 auto;display: flex; flex-direction: row;justify-content: space-between;}
+.menu-trigger {display: none;}
 .menubar {width: 90.5%;display: flex; justify-content: space-between;}
 .menubar a:hover {color: cyan;}
 .list_me {width:60%; height: 100%;display: flex; flex-direction: row; align-items: center;}
@@ -50,3 +54,126 @@ footer br {margin: 30px 0 30px 0;}
 
 /*주요 Content 사이 간격 조정*/
 #void {width: 100%; height: 30px; margin: 0 auto;}
+}
+
+@media (max-width:1199px){
+header {width: 100%; height: 80px; margin: 0 auto;display: flex; flex-direction: row;justify-content: space-between;}
+
+.menubar {width: 90.5%;display: flex; justify-content: space-between;}
+.menubar a:hover {color: cyan;}
+.list_me {width:60%; height: 100%;display: flex; flex-direction: row; align-items: center;}
+.list_me>ul {display: flex; flex-direction: row;justify-content: space-around;}
+.list_me>ul>li {font-size: 24px;margin: 0 20px 0 20px; width: 16.6%; position: relative;}
+.list_me>ul>li>ul {width: 150px;display: none;position: absolute;background-color: #333;opacity: 0.8;z-index: 3;}
+.list_me>ul>li>ul>li {font-size: 16px; height: 30px; color: #fff; line-height: 30px;}
+.list_me>ul>li:hover ul{display: block;}
+.list_me>ul>li>ul>li:hover {background-color: gold; cursor: pointer;}
+.list_me>ul>li>ul>li:hover a{color: violet;}
+.list_me>ul>li a {font-family: "Glitch Goblin"; color: #fff; padding: 0 0 0 5px;}
+/* .list_me>ul>li:nth-of-type(5) {margin-left: 70px;} */
+    
+.contbox_me {width: 20%; height: 100%; display: flex; flex-direction: row; align-items: center; justify-content: flex-end;}
+.contbox_me i {font-size: 24px; color: #fff;}
+.contbox_me a {margin: 0 10px 0 10px;}
+.contbox_me i:hover {color: cyan;}
+.play {display: block; padding: 10px 20px; background-color: gold; border-radius: 10px; font-size: 20px; font-family: "Glitch Goblin";color: #333;} 
+.contbox_me > .play:hover {color: #fff; background-color: yellow;}
+    
+/*footer 내용*/
+footer {width: 100%; height: 430px; background-color: black;margin: 0 auto;}
+footer br {margin: 30px 0 30px 0;}
+    
+.media_box {width: 380px; height: 140px; margin: 0 auto; text-align: center; display: flex; flex-flow: row wrap; justify-content: space-around; margin-top: 40px; margin-bottom: 20px;}
+.media_box h3 {font-size: 26px; color: #fff; width: 100%; height: 45px; margin-bottom: 20px;}
+.media_box i {font-size: 28px; color: #fff; border: 1px none; width: 60px; height: 60px; line-height: 60px; border-radius: 30px; background-color: #222;}
+.media_box i:hover {background-color: #fff; color: #333; transform: scale(1.2); font-size: 32px;}
+    
+.logo_footer {width: 30%; height: 80px; margin: 0 auto; display: flex; flex-flow: row; justify-content: space-around; align-items: center;margin-bottom: 40px;}
+.logo_footer img {width: 103px; align-self: center;}
+.logo_footer p {font-size: 12px; color: #fff; padding: 0 0 0 10px;}
+    
+.regulration {width: 80%; height: 100px; margin: 0 auto; display: flex; flex-direction: row; justify-content: center;}
+.regulration table {display:block; margin:4px 0 0 0; line-height:30px; border: 1px solid #222; border-collapse: collapse; font-size: 10px; width: 600px;}
+.regulration table td {border: 1px solid #222; width: 25%; padding: 0 10px 0 25px; background-color: gold;}
+.regulration table th {border: 1px solid #222; width: 25%; padding: 0 10px 0 10px; background-color: gold; font-size: 12px;}
+    
+/*주요 Content 사이 간격 조정*/
+#void {width: 100%; height: 30px; margin: 0 auto;}
+}
+
+@media (max-width:769px){
+header {width: 100%; height: 80px; margin: 0 auto;display: flex; flex-direction: row;justify-content: space-between; position: relative;}
+.menu-trigger {margin-right: 25px; margin-top: 15px; position: relative; width: 50px; height: 44px;}
+.menu-trigger span {position: absolute; left: 0; width: 100%; height: 4px; background-color: #fff; border-radius: 4px;}
+.menu-trigger, .menu-trigger span {display: inline-block; transition: all .4s; box-sizing: border-box;}
+.menu-trigger span:nth-of-type(1) {top: 0;}
+.menu-trigger span:nth-of-type(2) {top: 20px;}
+.menu-trigger span:nth-of-type(3) {bottom: 0;}
+
+.menubar {width: 100%;display: none; position: absolute; top: 80px;left: 0;}
+.menubar a:hover {color: cyan;}
+.list_me {width:100%; display: flex; align-items: center;background-color: rgba(0,0,0,0.8); }
+.list_me>ul {display: flex; flex-direction: column;justify-content: space-around;z-index: 5;}
+.list_me>ul>li {font-size: 24px;margin: 0 20px 0 20px; width: 100%; height: 80px;position: relative;line-height: 80px;}
+.list_me>ul>li>ul {width: 100%;display: none;position: absolute;background-color: #333;opacity: 0.8;z-index: 5;}
+.list_me>ul>li>ul>li {font-size: 16px; height: 50px; color: #fff; line-height: 50px;}
+.list_me>ul>li:hover ul{display: block;}
+.list_me>ul>li>ul>li:hover {background-color: gold; cursor: pointer;}
+.list_me>ul>li>ul>li:hover a{color: violet;}
+.list_me>ul>li a {font-family: "Glitch Goblin"; color: #fff; padding: 0 0 0 5px;}
+
+/*해당 사이즈에서는 사용안함*/
+.contbox_me {width: 20%; height: 100%; display: none; flex-direction: row; align-items: center; justify-content: flex-end;}
+.contbox_me i {font-size: 24px; color: #fff;}
+.contbox_me a {margin: 0 10px 0 10px;}
+.contbox_me i:hover {color: cyan;}
+.play {display: block; padding: 10px 20px; background-color: gold; border-radius: 10px; font-size: 20px; font-family: "Glitch Goblin";color: #333;} 
+.contbox_me > .play:hover {color: #fff; background-color: yellow;}
+        
+/*footer 내용*/
+footer {width: 100%; height: 600px; background-color: black;margin: 0 auto;}
+footer br {margin: 30px 0 30px 0;}
+        
+.media_box {width: 380px; height: 140px; margin: 0 auto; text-align: center; display: flex; flex-flow: row wrap; justify-content: space-around; margin-top: 40px; margin-bottom: 20px;}
+.media_box h3 {font-size: 26px; color: #fff; width: 100%; height: 45px; margin-bottom: 20px;}
+.media_box i {font-size: 28px; color: #fff; border: 1px none; width: 60px; height: 60px; line-height: 60px; border-radius: 30px; background-color: #222;}
+.media_box i:hover {background-color: #fff; color: #333; transform: scale(1.2); font-size: 32px;}
+        
+.logo_footer {width: 30%; height: 80px; margin: 0 auto; display: flex; flex-flow: row; justify-content: space-around; align-items: center;margin-bottom: 40px;}
+.logo_footer img {width: 103px; align-self: center;}
+.logo_footer p {font-size: 12px; color: #fff; padding: 0 0 0 10px;}
+        
+.regulration {width: 80%; margin: 0 auto; display: flex; flex-flow: row wrap; justify-content: center;}
+.regulration table {display:block; margin:4px 0 0 0; line-height:30px; border: 1px solid #222; border-collapse: collapse; font-size: 10px; width: 600px;}
+.regulration table td {border: 1px solid #222; width: 25%; padding: 0 10px 0 25px; background-color: gold;}
+.regulration table th {border: 1px solid #222; width: 25%; padding: 0 10px 0 10px; background-color: gold; font-size: 12px;}
+       
+/*주요 Content 사이 간격 조정*/
+#void {width: 100%; height: 30px; margin: 0 auto;}
+
+.menu-trigger.active-5 span:nth-of-type(1) {
+	-webkit-transform : translateY(20px) rotate(-45deg);
+	transform : translateY(20px) rotate(-45deg);
+}
+.menu-trigger.active-5 span:nth-of-type(2) {
+	left : 50%;
+	opacity : 0;
+	-webkit-animation : active-menu-bar05 .8s forwards;
+	animation : active-menu-bar05 .8s forwards;
+}
+@-webkit-keyframes active-menu-bar05 {
+	100% {
+		height: 0;
+	}
+}
+@keyframes active-menu-bar05 {
+	100% {
+		height: 0;
+	}
+}
+.menu-trigger.active-5 span:nth-of-type(3) {
+	-webkit-transform : translateY(-20px) rotate(45deg);
+	transform : translateY(-20px) rotate(45deg);
+}
+
+}

@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main(1200-770px)">
+    <link rel="stylesheet" href="css/main(769px)">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,9 +34,7 @@
                 $(".impo_survive").show();
             });
         });
-    </script>
 
-<script>
     $(function(){
         $('button:nth-of-type(1)').click(function(){
             $(".craft_text").show();
@@ -54,12 +54,43 @@
             $(".survive_text").show();
         });
     });
+
+
+    var burger = $('.menu-trigger');
+
+    burger.each(function(index){
+	var $this = $(this);
+	
+	$this.on('click', function(e){
+		e.preventDefault();
+		$(this).toggleClass('active-' + (index+1));
+	    })
+    });
+
+
+    $(function(){
+        $('.menu-trigger').click(function(){
+            $('.menubar').slideToggle();
+        });
+    });
+
+    $(window).resize(function(){
+        if(window.innerWidth<=1199){
+            $('.menubar').show();
+        }
+    });
 </script>
+
 </head>
 <body>
     <div id="wrap">
         <header>
             <img src="img/logo_main.jpg" alt="logo_main">
+            <a class="menu-trigger" href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
             <div class="menubar">
                 <div class="list_me">
                     <ul>
@@ -79,10 +110,10 @@
                         </li>
             
                         <li><a href="#">Record</a>
-                        <ul>
-                            <li><a href="#">유저 검색</a></li>
-                            <li><a href="#">통계</a></li>
-                        </ul>
+                            <ul>
+                                <li><a href="#">유저 검색</a></li>
+                                <li><a href="#">통계</a></li>
+                            </ul>
                         </li>
             
                         <li><a href="#">Community</a>
