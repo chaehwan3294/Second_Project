@@ -5,22 +5,22 @@
 
 
 /*main 내용*/
-@media (max-width:1199px){
-#slider {width: 100%; height: 900px; margin: 0 auto; overflow: hidden; z-index: 1;}
-#slider video {min-width: 1200px; width: 100%;z-index: 1;}
+@media (min-width:770px){
+#slider {width: 100%; margin: 0 auto; overflow: hidden; z-index: 1;}
+#slider video {width: 100%;z-index: 1;}
 
-section {width: 63%; height: 450px; margin: 0 auto; display: flex; flex-flow: row wrap; justify-content: space-around;}
+section {width: 63%; margin: 0 auto; display: flex; flex-flow: row wrap; justify-content: space-around;}
 nav {width: 100%; height: 100px;display: flex; align-items: center;flex-direction: row; justify-content: flex-start;}
 nav h1 {font-size: 90px; font-family: "Glitch Goblin"; margin-left: 20px; color: mediumvioletred;}
-section a {width: 30%; height: 250px;}
+section a {width: 46%;margin: 1%;}
 /* article {width: 31%; height: 325px;} */
 article img {width: 100%; height: 80%;}
 article h1 {color: #fff;}
 article h5 {color: #fff; font-weight: normal;}
 
-#mid_banner {width: 100%; height: 780px; overflow: hidden; position: relative; margin: 0 auto;}
+#mid_banner {width: 100%; overflow: hidden; position: relative; margin: 0 auto;}
 #mid_banner::after {content: '';position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0,0,0.5);}
-#mid_banner > img {width: 100%; min-width: 1200px;}
+#mid_banner > img {width: 100%;}
 #mid_banner > .banner_textbox {width: 62%; height: 300px; position: absolute; left: 50%;transform: translateX(-50%); bottom: 100px; text-align: center;z-index: 5;}
 .banner_textbox h1 {color: gold; padding-top: 20px;}
 .banner_textbox h4 {color: lightgray; margin: 20px 0 20px 0; font-size: 20px; font-weight: normal;}
@@ -30,7 +30,7 @@ article h5 {color: #fff; font-weight: normal;}
 #solid a:hover {color: red; background-color: yellow}
 
 
-#impo {width: 63%; height: auto; margin: 0 auto; border-style: none none none solid; border-color: #fff; border-width: thin;}
+#impo {width: 80%; height: auto; margin: 0 auto; border-style: none none none solid; border-color: #fff; border-width: thin;}
 .impo_head {margin-left: 5%; color: #fff;}
 .impo_body {width: 88%; height: 600px;display: flex; margin: 5%; flex-wrap: wrap;}
 
@@ -87,7 +87,7 @@ article h5 {color: #fff; font-weight: normal;}
 .chatext #solid a {width: 120px; height: 40px; background-color: gold; position: absolute; top: 5px; left: 5px; line-height: 40px; font-family: 'Noto Sans KR'; color: #333; font-weight: bold;}
 .chatext #solid a:hover {color: red; background-color: yellow}
 
-#bottom_banner {width: 100%; height: 785px; background-image: url(../img/bg-play-er.jpg); background-size: cover; position: relative; margin: 0 auto; text-align: center;}
+#bottom_banner {width: 100%; height: 620px; background-image: url(../img/bg-play-er.jpg); background-size: cover; position: relative; margin: 0 auto; text-align: center;}
 #bottom_banner img {width: 100%;position: absolute; bottom: 10px; left: 0;}
 #bottom_banner h2 {color: #fff; font-size: 26px; color: gold; padding: 30px 0 30px 0;}
 #bottom_banner>p {color: #fff; font-size: 22px; padding: 0 0 30px 0;}
@@ -106,7 +106,7 @@ article h5 {color: #fff; font-weight: normal;}
 .steam span {font-family: "Consolas";}
 .steam:hover {background-color: skyblue; border-color: skyblue;}
 
-.bot_banner_text {width: 40%; height: 100px; margin: 0 auto;text-align: left; color: #999;}
+.bot_banner_text {width: 60%; margin: 0 auto;text-align: left; color: #999;}
 .bot_banner_text>p {color: #999;}
 }
 

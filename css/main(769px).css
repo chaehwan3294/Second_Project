@@ -4,45 +4,47 @@
 
 /*main 내용*/
 @media (max-width:769px){
-#slider {width: 100%; height: 900px; margin: 0 auto; overflow: hidden; z-index: 1;}
-#slider video {min-width: 1200px; width: 100%; z-index: 1;}
+#slider {width: 100%; margin: 0 auto; overflow: hidden; z-index: 1;}
+#slider video {min-width: 500px; width: 100%; z-index: 1;}
 
-section {width: 63%; height: 450px; margin: 0 auto; display: flex; flex-flow: row wrap; justify-content: space-around;}
-nav {width: 100%; height: 100px;display: flex; align-items: center;flex-direction: row; justify-content: flex-start;}
-nav h1 {font-size: 90px; font-family: "Glitch Goblin"; margin-left: 20px; color: mediumvioletred;}
-section a {width: 30%; height: 250px;}
+section {width: 80%; margin: 0 auto; display: flex; flex-flow: row wrap; justify-content: space-around;}
+nav {width: 100%; height: 100px;display: flex; align-items: center;flex-direction: row; justify-content: center;}
+nav h1 {font-size: 80px; font-family: "Glitch Goblin"; color: mediumvioletred;}
+section a {width: 100%;}
 /* article {width: 31%; height: 325px;} */
 article img {width: 100%; height: 80%;}
-article h1 {color: #fff;}
-article h5 {color: #fff; font-weight: normal;}
+article h1 {color: #fff; text-align: center;}
+article h5 {color: #fff; font-weight: normal; text-align: center;}
 
-#mid_banner {width: 100%; height: 780px; overflow: hidden; position: relative; margin: 0 auto;}
+#mid_banner {width: 100%; height: 320px;margin: 0 auto;position: relative;}
 #mid_banner::after {content: '';position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0,0,0.5);}
-#mid_banner > img {width: 100%; min-width: 1200px;}
-#mid_banner > .banner_textbox {width: 62%; height: 300px; position: absolute; left: 50%;transform: translateX(-50%); bottom: 100px; text-align: center;z-index: 5;}
-.banner_textbox h1 {color: gold; padding-top: 20px;}
-.banner_textbox h4 {color: lightgray; margin: 20px 0 20px 0; font-size: 20px; font-weight: normal;}
-.banner_textbox h4 span {font-weight: bold; font-size: 22px;; color: gold;}
+#mid_banner > img {width: 100%;}
+#mid_banner > .banner_textbox {width: 80%;text-align: center;z-index: 5;position: absolute; top: 100px; left: 50%;transform: translateX(-50%);}
+.banner_textbox h1 {color: gold; font-size: 20px;}
+.banner_textbox h4 {color: lightgray; margin: 20px 0 20px 0; font-size: 12px; font-weight: normal;}
+.banner_textbox h4 span {font-weight: bold; font-size: 20px;; color: gold;}
 #solid {margin: 0 auto; border: 1px solid gold; width: 120px; height: 40px; position: relative;}
 #solid a {width: 120px; height: 40px; background-color: gold; position: absolute; top: 5px; left: 5px; line-height: 40px; font-family: "Glitch Goblin"; color: #333;}
 #solid a:hover {color: red; background-color: yellow}
 
 
-#impo {width: 63%; height: auto; margin: 0 auto; border-style: none none none solid; border-color: #fff; border-width: thin;}
-.impo_head {margin-left: 5%; color: #fff;}
-.impo_body {width: 88%; height: 600px;display: flex; margin: 5%; flex-wrap: wrap;}
+#impo {width: 80%; height: auto; margin: 0 auto;}
+.impo_head {width: 100%; margin-left: 5%; color: #fff;}
+.impo_head h1 {font-size: 18px; text-align: center;}
+.impo_body {width: 100%; height: 600px;display: flex; margin: 5%; flex-wrap: wrap;}
 
-.impo_craft {width: 88%; height: 480px; position: relative;}
-.impo_craft img {width: 100%; height: 480px;}
+.impo_craft {width: 100%; position: relative;}
+.impo_craft img {width: 100%;}
 
-.impo_battle {width: 800px; height: 480px; display: none;}
-.impo_battle img {width: 800px; height: 480px;}
+.impo_battle {width: 100%; display: none;}
+.impo_battle img {width: 100%;}
 
-.impo_survive {width: 800px; height: 480px; display: none;}
-.impo_survive img {width: 800px; height: 480px;}
+.impo_survive {width: 100%; display: none;}
+.impo_survive img {width: 100%;}
 
-.impo_button {width: 12%; height: 480px; display: flex; flex-direction: column;}
-.impo_button button {width: 180px; height: 160px;}
+.impo_button {width: 100%; height: 140px; display: flex; flex-direction: row;}
+.impo_button button {width: 100%; height: 140px;}
+
 .crbu {background-image: url(../img/crafting.webp); background-size: cover; transition: all 1s ease-in-out; background-position: center;}
 .crbu span {transition: all 1s ease-in-out; opacity: 0; scale: 0; font-family: 'Noto Sans KR'; font-size: 20px; font-weight: bold;color: #fff;}
 .crbu:hover {background-image: url(../img/cr_bu.jpg); background-size: cover;}
@@ -59,37 +61,37 @@ article h5 {color: #fff; font-weight: normal;}
 .subu:hover span{opacity: 1; transform: scale(1);}
 
 .craft_text {width: 840px; height: 200px;}
-.craft_text h1 {margin: 10px 0 10px 10px; color: #fff;}
+.craft_text h1 {margin: 10px 0 10px 10px; color: #fff; text-align: center;}
 .craft_text h3 {margin: 10px 0 10px 10px; color: #777;}
 
 .battle_text {width: 840px; height: 200px; display: none;}
-.battle_text h1 {margin: 10px 0 10px 10px; color: #fff;}
+.battle_text h1 {margin: 10px 0 10px 10px; color: #fff; text-align: center;}
 .battle_text h3 {margin: 10px 0 10px 10px; color: #777;}
 
 .survive_text {width: 840px; height: 200px; display: none;}
-.survive_text h1 {margin: 10px 0 10px 10px; color: #fff;}
+.survive_text h1 {margin: 10px 0 10px 10px; color: #fff; text-align: center;}
 .survive_text h3 {margin: 10px 0 10px 10px; color: #777;}
 
-#chainfo {width: 100%; height: 920px; margin: 0 auto; position: relative;}
+#chainfo {width: 100%; height: 865px; margin: 0 auto; position: relative;}
 #chainfo > .asidl {width: 30%; height: 540px; position: absolute; top: 0; left: 0;background-image: linear-gradient(to right, black 10% , transparent);}
 #chainfo > .asidr {width: 30%; height: 540px; position: absolute; top: 0; right: 0;background-image: linear-gradient(to left, black 10% , transparent);}
 .chainfo_img {height: 540px; margin: 0 auto;}
 .char_list1 {width: 100%;height: 180px;background-image: url(../img/list1.png);background-repeat: repeat-x;animation: characterRight 200s linear infinite;}
 .char_list2 {width: 100%;height: 180px;background-image: url(../img/list-character-02.png);background-repeat: repeat-x;animation: characterLeft 200s linear infinite;}
 .char_list3 {width: 100%;height: 180px;background-image: url(../img/list-character-03.png);background-repeat: repeat-x;animation: characterRight 200s linear infinite;}
-.chatext {margin: 0 auto; width: 860px; height: 280px; text-align: center; margin-top: 80px;}
-.chatext h1 {color: gold; font-size: 30px;margin: 30px 0 20px 0;}
-.chatext h3 {color: #fff; font-size: 22px; font-weight: normal;}
-.chatext>h3>b {font-size: 26px; color: gold; margin-top: 20px;}
+.chatext {margin: 0 auto; width: 80%; height: 240px; text-align: center; margin-top: 40px;}
+.chatext h1 {color: gold; font-size: 24px;margin: 30px 0 20px 0;}
+.chatext h3 {color: #fff; font-size: 18px; font-weight: normal;}
+.chatext>h3>b {font-size: 20px; color: gold; margin-top: 20px;}
 .chatext #solid {margin: 30px auto; border: 1px solid gold; width: 120px; height: 40px; position: relative;}
 .chatext #solid a {width: 120px; height: 40px; background-color: gold; position: absolute; top: 5px; left: 5px; line-height: 40px; font-family: 'Noto Sans KR'; color: #333; font-weight: bold;}
 .chatext #solid a:hover {color: red; background-color: yellow}
 
-#bottom_banner {width: 100%; height: 785px; background-image: url(../img/bg-play-er.jpg); background-size: cover; position: relative; margin: 0 auto; text-align: center;}
+#bottom_banner {width: 100%; height: 520px; background-image: url(../img/bg-play-er.jpg); background-size: cover; position: relative; margin: 0 auto; text-align: center;}
 #bottom_banner img {width: 100%;position: absolute; bottom: 10px; left: 0;}
-#bottom_banner h2 {color: #fff; font-size: 26px; color: gold; padding: 30px 0 30px 0;}
-#bottom_banner>p {color: #fff; font-size: 22px; padding: 0 0 30px 0;}
-#bottom_banner h1 {color: #fff; font-size: 30px; padding: 0 0 30px 0;}
+#bottom_banner h2 {color: #fff; font-size: 24px; color: gold; padding: 30px 0 30px 0;}
+#bottom_banner>p {color: #fff; font-size: 18px;}
+#bottom_banner h1 {color: #fff; font-size: 28px; padding: 0 0 30px 0;}
 #bottom_banner h1 span {color: gold;}
 
 .platform {width: 40%; height: 50px; margin: 0 auto; display: flex; flex-direction: row; justify-content: center;}
@@ -104,7 +106,7 @@ article h5 {color: #fff; font-weight: normal;}
 .steam span {font-family: "Consolas";}
 .steam:hover {background-color: skyblue; border-color: skyblue;}
 
-.bot_banner_text {width: 40%; height: 100px; margin: 0 auto;text-align: left; color: #999;}
+.bot_banner_text {width: 90%; margin: 0 auto;text-align: left; color: #999;}
 .bot_banner_text>p {color: #999;}
 }
 
