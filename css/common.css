@@ -197,15 +197,15 @@ footer br {margin: 30px 0 30px 0;}
 	.contbox_me > .play:hover {color: #fff; background-color: yellow;}
 	
 	/*footer 내용*/
-	footer {width: 100%; height: 430px; background-color: black;margin: 0 auto;}
+	footer {width: 100%; height: 480px; background-color: black;margin: 0 auto;}
 	footer br {margin: 30px 0 30px 0;}
 	
-	.media_box {width: 380px; height: 140px; margin: 0 auto; text-align: center; display: flex; flex-flow: row wrap; justify-content: space-around; margin-top: 40px; margin-bottom: 20px;}
+	.media_box {width: 380px; height: 140px; margin: 0 auto; text-align: center; display: flex; flex-flow: row wrap; justify-content: space-around; margin-top: 40px; margin-bottom: 50px;}
 	.media_box h3 {font-size: 26px; color: #fff; width: 100%; height: 45px; margin-bottom: 20px;}
 	.media_box i {font-size: 28px; color: #fff; border: 1px none; width: 60px; height: 60px; line-height: 60px; border-radius: 30px; background-color: #222;}
 	.media_box i:hover {background-color: #fff; color: #333; transform: scale(1.2); font-size: 32px;}
 	
-	.logo_footer {width: 30%; height: 80px; margin: 0 auto; display: flex; flex-flow: row; justify-content: space-around; align-items: center;margin-bottom: 40px;}
+	.logo_footer {width: 30%; height: 80px; margin: 0 auto; display: flex; flex-flow: row; justify-content: space-around; align-items: center;margin-bottom: 40px; margin-top: 40px;}
 	.logo_footer img {width: 103px; align-self: center;}
 	.logo_footer p {font-size: 12px; color: #fff; padding: 0 0 0 10px;}
 	
@@ -215,6 +215,6 @@ footer br {margin: 30px 0 30px 0;}
 	.regulration table th {border: 1px solid #222; width: 25%; padding: 0 10px 0 10px; background-color: gold; font-size: 12px;}
 	
 	/*주요 Content 사이 간격 조정*/
-	#void {width: 100%; height: 30px; margin: 0 auto;}
+	#void {width: 100%; height: 60px; margin: 0 auto;}
 	}
 	
