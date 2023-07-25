@@ -26,11 +26,11 @@ article h5 {color: #fff; font-weight: normal;}
 .banner_textbox h4 {color: lightgray; margin: 20px 0 20px 0; font-size: 20px; font-weight: normal;}
 .banner_textbox h4 span {font-weight: bold; font-size: 22px;; color: gold;}
 #solid {margin: 0 auto; border: 1px solid gold; width: 120px; height: 40px; position: relative;}
-#solid a {width: 120px; height: 40px; background-color: gold; position: absolute; top: 5px; left: 5px; line-height: 40px; font-family: "Glitch Goblin"; color: #333; margin-bottom: 60px;}
+#solid a {width: 120px; height: 40px; background-color: gold; position: absolute; top: 5px; left: 5px; line-height: 40px; font-family: "Glitch Goblin"; color: #333;}
 #solid a:hover {color: red; background-color: yellow}
 
 
-#impo {width: 63%; height: auto; margin: 0 auto; border-style: none none none solid; border-color: #fff; border-width: thin;}
+#impo {width: 63%; height: auto; margin: 0 auto; border-style: none none none solid; border-color: #fff; border-width: thin; margin-top: 60px;}
 .impo_head {margin-left: 5%; color: #fff;}
 .impo_body {width: 88%; height: 600px;display: flex; margin: 5%; flex-wrap: wrap;}
 
