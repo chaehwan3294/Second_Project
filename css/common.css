@@ -88,7 +88,7 @@ footer br {margin: 30px 0 30px 0;}
 
 
 
-@media (min-width:770px){
+@media (min-width:770px) and (max-width:1199px){
 header {width: 100%; height: 80px; margin: 0 auto;display: flex; flex-direction: row;justify-content: space-between;}
 .menu-trigger {margin-right: 25px; margin-top: 15px; position: relative; width: 50px; height: 44px;}
 .menu-trigger span {position: absolute; left: 0; width: 100%; height: 4px; background-color: #fff; border-radius: 4px;}
@@ -171,7 +171,7 @@ footer br {margin: 30px 0 30px 0;}
 
 	.menu-trigger {display: none;}
 
-	.menubar {width: 90%;display: flex; justify-content: space-between;}
+	.menubar {width: 85%;height: 80px;display: flex; justify-content: space-between;}
 	.menubar a:hover {color: cyan;}
 
 	.list_me {width:60%; height: 100%;display: flex; flex-direction: row; align-items: center;}
@@ -187,7 +187,7 @@ footer br {margin: 30px 0 30px 0;}
 	.sub>li:hover a{color: violet;}
 	
 	
-	.contbox_me {width: 20%; height: 100%; display: flex; flex-direction: row; align-items: center; justify-content: flex-end;}
+	.contbox_me {width: 20%; height: 80px; display: flex; flex-direction: row; align-items: center; justify-content: flex-end; overflow: hidden;}
 	.contbox_me i {font-size: 24px; color: #fff;}
 	.contbox_me a {margin: 0 10px 0 10px;}
 	.contbox_me i:hover {color: cyan;}
