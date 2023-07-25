@@ -30,7 +30,7 @@ article h5 {color: #fff; font-weight: normal;}
 #solid a:hover {color: red; background-color: yellow}
 
 
-#impo {width: 63%; height: auto; margin: 0 auto; border-style: none none none solid; border-color: #fff; border-width: thin; margin-top: 60px;}
+#impo {width: 63%; height: auto; margin: 0 auto; border-style: none none none solid; border-color: #fff; border-width: thin;}
 .impo_head {margin-left: 5%; color: #fff;}
 .impo_body {width: 88%; height: 600px;display: flex; margin: 5%; flex-wrap: wrap;}
 
