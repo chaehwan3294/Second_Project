@@ -29,9 +29,9 @@ article h5 {color: #fff; font-weight: normal; text-align: center;}
 
 
 #impo {width: 80%; height: auto; margin: 0 auto;}
-.impo_head {width: 100%; margin-left: 5%; color: #fff;}
+.impo_head {width: 100%; margin: 0 auto; color: #fff;}
 .impo_head h1 {font-size: 18px; text-align: center;}
-.impo_body {width: 100%; height: 600px;display: flex; margin: 5%; flex-wrap: wrap;}
+.impo_body {width: 100%; height: 600px;display: flex; flex-wrap: wrap;}
 
 .impo_craft {width: 100%; position: relative;}
 .impo_craft img {width: 100%;}
