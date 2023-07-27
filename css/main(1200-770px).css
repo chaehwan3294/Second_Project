@@ -37,11 +37,11 @@ article h5 {color: #fff; font-weight: normal;}
 .impo_craft {width: 88%; height: 480px; position: relative;}
 .impo_craft img {width: 100%; height: 480px;}
 
-.impo_battle {width: 800px; height: 480px; display: none;}
-.impo_battle img {width: 800px; height: 480px;}
+.impo_battle {width: 88%; height: 480px; display: none;}
+.impo_battle img {width: 100%; height: 480px;}
 
-.impo_survive {width: 800px; height: 480px; display: none;}
-.impo_survive img {width: 800px; height: 480px;}
+.impo_survive {width: 88%; height: 480px; display: none;}
+.impo_survive img {width: 100%; height: 480px;}
 
 .impo_button {width: 12%; height: 480px; display: flex; flex-direction: column;}
 .impo_button button {width: 180px; height: 160px;}
