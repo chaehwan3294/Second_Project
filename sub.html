@@ -47,11 +47,6 @@
                     $(".img").eq(page).fadeIn().css("display","flex")  
                 });
                 }               
-                
-                
-                 
-                
-                
             };
 
             $('.prev').click(function () {
@@ -60,6 +55,41 @@
 
             $('.next').click(function () {
                 next();
+            });
+
+            $(".b1").click(function(){
+                $(".text_Q").show();
+                $(".text_Q").siblings().hide();
+                $(".skill_Q").show();
+                $(".skill_Q").siblings().hide();
+            });
+
+            $(".b2").click(function(){
+                $(".text_W").show();
+                $(".text_W").siblings().hide();
+                $(".skill_W").show();
+                $(".skill_W").siblings().hide();
+            });
+
+            $(".b3").click(function(){
+                $(".text_E").show();
+                $(".text_E").siblings().hide();
+                $(".skill_E").show();
+                $(".skill_E").siblings().hide();
+            });
+
+            $(".b4").click(function(){
+                $(".text_R").show();
+                $(".text_R").siblings().hide();
+                $(".skill_R").show();
+                $(".skill_R").siblings().hide();
+            });
+
+            $(".b5").click(function(){
+                $(".text_P").show();
+                $(".text_P").siblings().hide();
+                $(".skill_P").show();
+                $(".skill_P").siblings().hide();
             });
         });
     </script>
@@ -339,7 +369,468 @@
 
 
     <section>
-
+        <div id="Skill_box">
+            <h1>캐릭터 스킬</h1>
+            <div class="Character_skill Jackie1">
+                <div class="Skill_img">
+                    <button class="btn b1"><img src="img/Jackie_Q1.png" alt="jack_q"></button>
+                    <button class="btn b2"><img src="img/Jackie_W_Adrenaline Burst.png" alt="jack_w"></button>
+                    <button class="btn b3"><img src="img/Jackie_E_Leaping Strike.png" alt="jack_e"></button>
+                    <button class="btn b4"><img src="img/Jackie_R_Chainsaw Murderer.png" alt="jack_r"></button>
+                    <button class="btn b5"><img src="img/Jackie_P_Bloodfest.png" alt="jack_p"></button>
+                    <div class="Skill_text_box">
+                        <div class="Skill text_Q">
+                            <h2>Q - 연참</h2>
+                            <p>재키가 지정한 방향으로 무기를 휘둘러 스킬 피해를 입힙니다. <br>
+                                연참이 적에게 적중했다면 재사용이 활성화됩니다. <br>
+                                재사용 시 재키가 지정한 방향으로 살짝 전진하며 무기를 휘둘러 스킬 피해를 입힙니다.
+                            </p>
+                        </div>
+                        <div class="Skill text_W">
+                            <h2>W - 아드레날린 분비</h2>
+                            <p>
+                                재키가 아드레날린을 활성화하여 이동 속도가 증가합니다. <br>
+                                아드레날린이 활성화된 동안 출혈에 걸린 적을 향해 이동하면 이동 속도가 증가하고, <br>
+                                출혈 상태의 적을 공격하면 자신의 잃은 체력에 비례해 체력을 회복합니다.
+                            </p>
+                        </div>
+                        <div class="Skill text_E">
+                            <h2>E - 습격</h2>
+                            <p>
+                                재키가 지정한 위치로 점프하여, 주변의 적들에게 스킬 피해를 입힙니다.
+                            </p>
+                        </div>
+                        <div class="Skill text_R">
+                            <h2>R - 전기톱 살인마</h2>
+                            <p>
+                                재키가 일정 시간동안 전기톱을 꺼내들어 기본 공격으로 추가 스킬 피해를 입힙니다. <br>
+                                재키가 적 실험체 처치에 관여하면 지속 시간이 5초 증가합니다. <br>
+                                전기톱 살인마가 발동되고 3초가 지나면 학살을 사용할 수 있습니다. <br>
+                                <br>
+                                학살: 재키가 전기톱을 크게 휘둘러 적의 잃은 체력에 비례하여 스킬 피해를 입힙니다.
+                            </p>
+                        </div>
+                        <div class="Skill text_P">
+                            <h2>패시브 - 피의 축제</h2>
+                            <p>
+                                재키가 피해를 입힌 적 실험체가 3초 내에 빈사 또는 사망에 이르게 되면 재키의 일반 스킬 쿨다운이 초기화됩니다. <br>
+                                재키가 스킬로 피해를 입히면 6초 동안 스킬 피해를 입히는 출혈을 부여합니다. <br>
+                                재키는 출혈 상태의 대상에게 추가 스킬 피해를 입히고 출혈의 지속 시간을 갱신합니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="Skill_video">
+                    <div class="video skill_Q">
+                        <video src="video/재키Q.mp4"loop muted autoplay></video>
+                    </div>
+                    <div class="video skill_W">
+                        <video src="video/재키W.mp4"loop muted autoplay></video>
+                    </div>
+                    <div class="video skill_E">
+                        <video src="video/재키E.mp4"loop muted autoplay></video>
+                    </div>
+                    <div class="video skill_R">
+                        <video src="video/재키R.mp4"loop muted autoplay></video>
+                    </div>
+                    <div class="video skill_P">
+                        <video src="video/재키P.mp4"loop muted autoplay></video>
+                    </div>
+                </div>
+            </div>
+            <div class="Character_skill Aya1">
+                <div class="Skill_img">
+                    <button class="btn b1"><img src="img/Jackie_Q1.png" alt="jack_q"></button>
+                    <button class="btn b2"><img src="img/Jackie_W_Adrenaline Burst.png" alt="jack_w"></button>
+                    <button class="btn b3"><img src="img/Jackie_E_Leaping Strike.png" alt="jack_e"></button>
+                    <button class="btn b4"><img src="img/Jackie_R_Chainsaw Murderer.png" alt="jack_r"></button>
+                    <button class="btn b5"><img src="img/Jackie_P_Bloodfest.png" alt="jack_p"></button>
+                    <div class="Skill_text_box">
+                        <div class="Skill text_Q">
+                
+                        </div>
+                        <div class="Skill text_W">
+                
+                        </div>
+                        <div class="Skill text_E">
+                
+                        </div>
+                        <div class="Skill text_R">
+                
+                        </div>
+                        <div class="Skill text_P">
+                
+                        </div>
+                    </div>
+                </div>
+                <div class="Skill_video">
+                    <div class="video skill_Q">
+    
+                    </div>
+                    <div class="video skill_W">
+    
+                    </div>
+                    <div class="video skill_E">
+    
+                    </div>
+                    <div class="video skill_R">
+    
+                    </div>
+                    <div class="video skill_P">
+    
+                    </div>
+                </div>
+            </div>
+            <div class="Character_skill Hyunwoo1">
+                <div class="Skill_img">
+                    <button class="btn b1"><img src="img/Jackie_Q1.png" alt="jack_q"></button>
+                    <button class="btn b2"><img src="img/Jackie_W_Adrenaline Burst.png" alt="jack_w"></button>
+                    <button class="btn b3"><img src="img/Jackie_E_Leaping Strike.png" alt="jack_e"></button>
+                    <button class="btn b4"><img src="img/Jackie_R_Chainsaw Murderer.png" alt="jack_r"></button>
+                    <button class="btn b5"><img src="img/Jackie_P_Bloodfest.png" alt="jack_p"></button>
+                    <div class="Skill_text_box">
+                        <div class="Skill text_Q">
+                
+                        </div>
+                        <div class="Skill text_W">
+                
+                        </div>
+                        <div class="Skill text_E">
+                
+                        </div>
+                        <div class="Skill text_R">
+                
+                        </div>
+                        <div class="Skill text_P">
+                
+                        </div>
+                    </div>
+                </div>
+                <div class="Skill_video">
+                    <div class="video skill_Q">
+    
+                    </div>
+                    <div class="video skill_W">
+    
+                    </div>
+                    <div class="video skill_E">
+    
+                    </div>
+                    <div class="video skill_R">
+    
+                    </div>
+                    <div class="video skill_P">
+    
+                    </div>
+                </div>
+            </div>
+            <div class="Character_skill Magnus1">
+                <div class="Skill_img">
+                    <button class="btn b1"><img src="img/Jackie_Q1.png" alt="jack_q"></button>
+                    <button class="btn b2"><img src="img/Jackie_W_Adrenaline Burst.png" alt="jack_w"></button>
+                    <button class="btn b3"><img src="img/Jackie_E_Leaping Strike.png" alt="jack_e"></button>
+                    <button class="btn b4"><img src="img/Jackie_R_Chainsaw Murderer.png" alt="jack_r"></button>
+                    <button class="btn b5"><img src="img/Jackie_P_Bloodfest.png" alt="jack_p"></button>
+                    <div class="Skill_text_box">
+                        <div class="Skill text_Q">
+                
+                        </div>
+                        <div class="Skill text_W">
+                
+                        </div>
+                        <div class="Skill text_E">
+                
+                        </div>
+                        <div class="Skill text_R">
+                
+                        </div>
+                        <div class="Skill text_P">
+                
+                        </div>
+                    </div>
+                </div>
+                <div class="Skill_video">
+                    <div class="video skill_Q">
+    
+                    </div>
+                    <div class="video skill_W">
+    
+                    </div>
+                    <div class="video skill_E">
+    
+                    </div>
+                    <div class="video skill_R">
+    
+                    </div>
+                    <div class="video skill_P">
+    
+                    </div>
+                </div>
+            </div>
+            <div class="Character_skill Fiora1">
+                <div class="Skill_img">
+                    <button class="btn b1"><img src="img/Jackie_Q1.png" alt="jack_q"></button>
+                    <button class="btn b2"><img src="img/Jackie_W_Adrenaline Burst.png" alt="jack_w"></button>
+                    <button class="btn b3"><img src="img/Jackie_E_Leaping Strike.png" alt="jack_e"></button>
+                    <button class="btn b4"><img src="img/Jackie_R_Chainsaw Murderer.png" alt="jack_r"></button>
+                    <button class="btn b5"><img src="img/Jackie_P_Bloodfest.png" alt="jack_p"></button>
+                    <div class="Skill_text_box">
+                        <div class="Skill text_Q">
+                
+                        </div>
+                        <div class="Skill text_W">
+                
+                        </div>
+                        <div class="Skill text_E">
+                
+                        </div>
+                        <div class="Skill text_R">
+                
+                        </div>
+                        <div class="Skill text_P">
+                
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="Skill_video">
+                    <div class="video skill_Q">
+    
+                    </div>
+                    <div class="video skill_W">
+    
+                    </div>
+                    <div class="video skill_E">
+    
+                    </div>
+                    <div class="video skill_R">
+    
+                    </div>
+                    <div class="video skill_P">
+    
+                    </div>
+                </div>
+            </div>
+            <div class="Character_skill Nadine1">
+                <div class="Skill_img">
+                    <button class="btn b1"><img src="img/Jackie_Q1.png" alt="jack_q"></button>
+                    <button class="btn b2"><img src="img/Jackie_W_Adrenaline Burst.png" alt="jack_w"></button>
+                    <button class="btn b3"><img src="img/Jackie_E_Leaping Strike.png" alt="jack_e"></button>
+                    <button class="btn b4"><img src="img/Jackie_R_Chainsaw Murderer.png" alt="jack_r"></button>
+                    <button class="btn b5"><img src="img/Jackie_P_Bloodfest.png" alt="jack_p"></button>
+                    <div class="Skill_text_box">
+                        <div class="Skill text_Q">
+                
+                        </div>
+                        <div class="Skill text_W">
+                
+                        </div>
+                        <div class="Skill text_E">
+                
+                        </div>
+                        <div class="Skill text_R">
+                
+                        </div>
+                        <div class="Skill text_P">
+                
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="Skill_video">
+                    <div class="video skill_Q">
+    
+                    </div>
+                    <div class="video skill_W">
+    
+                    </div>
+                    <div class="video skill_E">
+    
+                    </div>
+                    <div class="video skill_R">
+    
+                    </div>
+                    <div class="video skill_P">
+    
+                    </div>
+                </div>
+            </div>
+            <div class="Character_skill Zahir1">
+                <div class="Skill_img">
+                    <button class="btn b1"><img src="img/Jackie_Q1.png" alt="jack_q"></button>
+                    <button class="btn b2"><img src="img/Jackie_W_Adrenaline Burst.png" alt="jack_w"></button>
+                    <button class="btn b3"><img src="img/Jackie_E_Leaping Strike.png" alt="jack_e"></button>
+                    <button class="btn b4"><img src="img/Jackie_R_Chainsaw Murderer.png" alt="jack_r"></button>
+                    <button class="btn b5"><img src="img/Jackie_P_Bloodfest.png" alt="jack_p"></button>
+                    <div class="Skill_text_box">
+                        <div class="Skill text_Q">
+                
+                        </div>
+                        <div class="Skill text_W">
+                
+                        </div>
+                        <div class="Skill text_E">
+                
+                        </div>
+                        <div class="Skill text_R">
+                
+                        </div>
+                        <div class="Skill text_P">
+                
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="Skill_video">
+                    <div class="video skill_Q">
+    
+                    </div>
+                    <div class="video skill_W">
+    
+                    </div>
+                    <div class="video skill_E">
+    
+                    </div>
+                    <div class="video skill_R">
+    
+                    </div>
+                    <div class="video skill_P">
+    
+                    </div>
+                </div>
+            </div>
+            <div class="Character_skill Hart1">
+                <div class="Skill_img">
+                    <button class="btn b1"><img src="img/Jackie_Q1.png" alt="jack_q"></button>
+                    <button class="btn b2"><img src="img/Jackie_W_Adrenaline Burst.png" alt="jack_w"></button>
+                    <button class="btn b3"><img src="img/Jackie_E_Leaping Strike.png" alt="jack_e"></button>
+                    <button class="btn b4"><img src="img/Jackie_R_Chainsaw Murderer.png" alt="jack_r"></button>
+                    <button class="btn b5"><img src="img/Jackie_P_Bloodfest.png" alt="jack_p"></button>
+                    <div class="Skill_text_box">
+                        <div class="Skill text_Q">
+                
+                        </div>
+                        <div class="Skill text_W">
+                
+                        </div>
+                        <div class="Skill text_E">
+                
+                        </div>
+                        <div class="Skill text_R">
+                
+                        </div>
+                        <div class="Skill text_P">
+                
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="Skill_video">
+                    <div class="video skill_Q">
+    
+                    </div>
+                    <div class="video skill_W">
+    
+                    </div>
+                    <div class="video skill_E">
+    
+                    </div>
+                    <div class="video skill_R">
+    
+                    </div>
+                    <div class="video skill_P">
+    
+                    </div>
+                </div>
+            </div>
+            <div class="Character_skill Isol1">
+                <div class="Skill_img">
+                    <button class="btn b1"><img src="img/Jackie_Q1.png" alt="jack_q"></button>
+                    <button class="btn b2"><img src="img/Jackie_W_Adrenaline Burst.png" alt="jack_w"></button>
+                    <button class="btn b3"><img src="img/Jackie_E_Leaping Strike.png" alt="jack_e"></button>
+                    <button class="btn b4"><img src="img/Jackie_R_Chainsaw Murderer.png" alt="jack_r"></button>
+                    <button class="btn b5"><img src="img/Jackie_P_Bloodfest.png" alt="jack_p"></button>
+                    <div class="Skill_text_box">
+                        <div class="Skill text_Q">
+                
+                        </div>
+                        <div class="Skill text_W">
+                
+                        </div>
+                        <div class="Skill text_E">
+                
+                        </div>
+                        <div class="Skill text_R">
+                
+                        </div>
+                        <div class="Skill text_P">
+                
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="Skill_video">
+                    <div class="video skill_Q">
+    
+                    </div>
+                    <div class="video skill_W">
+    
+                    </div>
+                    <div class="video skill_E">
+    
+                    </div>
+                    <div class="video skill_R">
+    
+                    </div>
+                    <div class="video skill_P">
+    
+                    </div>
+                </div>
+            </div>
+            <div class="Character_skill Lidailin1">
+                <div class="Skill_img">
+                    <button class="btn b1"><img src="img/Jackie_Q1.png" alt="jack_q"></button>
+                    <button class="btn b2"><img src="img/Jackie_W_Adrenaline Burst.png" alt="jack_w"></button>
+                    <button class="btn b3"><img src="img/Jackie_E_Leaping Strike.png" alt="jack_e"></button>
+                    <button class="btn b4"><img src="img/Jackie_R_Chainsaw Murderer.png" alt="jack_r"></button>
+                    <button class="btn b5"><img src="img/Jackie_P_Bloodfest.png" alt="jack_p"></button>
+                    <div class="Skill_text_box">
+                        <div class="Skill text_Q">
+                
+                        </div>
+                        <div class="Skill text_W">
+                
+                        </div>
+                        <div class="Skill text_E">
+                
+                        </div>
+                        <div class="Skill text_R">
+                
+                        </div>
+                        <div class="Skill text_P">
+                
+                        </div>
+                    </div>
+                </div>
+                <div class="Skill_video">
+                    <div class="video skill_Q">
+    
+                    </div>
+                    <div class="video skill_W">
+    
+                    </div>
+                    <div class="video skill_E">
+    
+                    </div>
+                    <div class="video skill_R">
+    
+                    </div>
+                    <div class="video skill_P">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <div id="etc_content">
