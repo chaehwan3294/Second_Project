@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-
+@media (min-width:1200px){
 #slider {width: 100%; height: 900px; display: flex; align-items: center; justify-content: space-between; background-color: #222;}
-.character_wrap {width: 23%; height: 230px; overflow: hidden; position: relative;}
+.character_wrap {width: 25%; height: 230px; overflow: hidden; position: relative;}
 .prev {color: #fff; font-size: 40px; position: absolute; top: 0; left: 50%; transform: translateX(-50%); }
 .prev:hover {cursor: pointer;}
 .next {color: #fff; font-size: 40px; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);}
@@ -10,15 +10,15 @@
 
 .character_list {width: 100%;height: 130px;display: flex; flex-direction: column; justify-content: flex-start; position: absolute; top: 50%; transform: translateY(-50%);}
 .character {display: flex; flex-direction: row; justify-content: flex-start;align-items: center; height: 100px; padding: 11px 30px 20px 30px;margin-bottom: 30px; box-sizing: content-box;}
-.character h4 {width: 20%; font-size: 50px; text-align: center; color: aliceblue;}
+.character h4 {width: 20%; font-size: 3.33vw; text-align: center; color: aliceblue;}
 
 
 .list_text {display: flex;flex-flow: row wrap; padding-left: 30px;}
-.list_text h1 {font-size: 60px; color: aliceblue;}
-.list_text h5 {width: 60%; font-size: 14px; color: aliceblue;}
+.list_text h1 {font-size: 4.17vw; color: aliceblue;}
+.list_text h5 {width: 60%; font-size: 1.17vw; color: aliceblue;}
 .list_text:hover {cursor: pointer;}
 
-.character_img {width: 80%;position: absolute; left: 55%;transform: translateX(-45%);}
+.character_img {width: 80%;position: absolute; left: 55%;transform: translateX(-45%); z-index: 5;}
 .character_img img{width: 70%;margin-left: 50px;}
 .img {height: 900px;}
 .img img{float: left; align-self: flex-start; height: 100vh; width: 40vw; padding-top: 10px;}
@@ -27,25 +27,36 @@
 .img_textbox p { font-size: 16px; color: #fff;}
 
 
-section {width: 100%; height: 600px; background-color: #222; position: relative;}
+section {width: 100%; height: 600px; background-color: #222; position: relative; z-index: 1;}
 
 #Skill_box {width: 90%; height: 90%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 #Skill_box > h1 {font-size: 60px; margin: 30px 0 0 30px; color: cyan;}
 .Character_skill {width: 100%;height: 100%;display: flex; justify-content: space-around; align-items: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 .Skill_img {width: 40%; height: 40%;}
 .btn {border: none; width: 90px; height: 90px; margin-left: 30px; cursor: pointer;}
+.btn > img {width: 90px; height: 90px;}
 button:nth-of-type(1) {margin: 0;}
+.video video {width: 640px; height: 380px;}
 
 .Skill > h2 {font-size: 32px; margin-top: 20px; margin-bottom: 20px; color: red;}
 .Skill > p {font-size: 16px; color: #fff;}
 
+#etc_content {width: 100%; height: 500px;background-color: #222; position: relative;}
+.Character_skin_list {width: 90%; height: 90%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.Character_skin_list > h1 {font-size: 60px; color: cyan; margin: 10px 0 30px 10px;}
+.Character_skin {justify-content: space-around; text-align: center; flex-flow: row wrap;}
+.Skin > h2 {color: #fff;}
+.Skin img {width: 380px; height: 280px;}
+
+.Magnus h4 {font-size: 3.33vw;}
+.Magnus>.list_text>h1{font-size: 3.4vw;}
+.Magnus>.list_text>h5{font-size: 1.17vw;}
+
+.Lidailin h4 {font-size: 3.33vw;}
+.Lidailin>.list_text>h1{font-size: 3.35vw;}
+.Lidailin>.list_text>h5{font-size: 1.17vw;}
 
 
-
-
-
-
-#etc_content {width: 100%; height: 500px; background-color: yellowgreen;}
 
 
 
@@ -71,3 +82,4 @@ button:nth-of-type(1) {margin: 0;}
 .text_E {display: none;}
 .text_R {display: none;}
 .text_P {display: none;}
+}
