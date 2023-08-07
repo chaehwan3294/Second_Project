@@ -11,27 +11,27 @@
 #wrap {width: 100%; margin: 0 auto; background-color: black;}
 
 @media (max-width:769px) {
-header {width: 100%; height: 80px; margin: 0 auto;display: flex; flex-direction: row;justify-content: space-between; position: relative;}
-.menu-trigger {margin-right: 25px; margin-top: 15px; position: relative; width: 50px; height: 44px;}
+header {width: 100%; height: 80px; margin: 0 auto;display: flex; flex-direction: row;justify-content: space-between; position: relative; z-index: 10;}
+.menu-trigger {margin-right: 25px; margin-top: 20px; position: relative; width: 40px; height: 34px;}
 .menu-trigger span {position: absolute; left: 0; width: 100%; height: 4px; background-color: #fff; border-radius: 4px;}
 .menu-trigger, .menu-trigger span {display: inline-block; transition: all .4s; box-sizing: border-box;}
 .menu-trigger span:nth-of-type(1) {top: 0;}
-.menu-trigger span:nth-of-type(2) {top: 20px;}
+.menu-trigger span:nth-of-type(2) {top: 15px;}
 .menu-trigger span:nth-of-type(3) {bottom: 0;}
 
 .menubar {width: 100%;display: none; position: absolute; top: 80px;left: 0;}
 .menubar a:hover {color: cyan;}
 .list_me {width:100%; display: flex; flex-direction: column;background-color: rgba(0,0,0,0.8); }
-.main_menu {display: flex; flex-direction: column;z-index: 5;}
+.main_menu {display: flex; flex-direction: column;z-index: 10;}
 .main_menu>li {font-size: 24px; width: 100%; height: auto;line-height: 80px;}
 .main_menu>li a {font-family: "Glitch Goblin"; color: #fff; padding: 0 0 0 5px;}
 
-.sub {width: 100%;display: none;background-color: #333;opacity: 0.8;z-index: 5;}
+.sub {width: 100%;display: none;background-color: #333;opacity: 0.8;z-index: 10;}
 .sub>li {font-size: 16px; height: 50px; color: #fff; line-height: 50px;}
 .sub>li:hover {background-color: gold; cursor: pointer;}
 .sub>li:hover a{color: violet;}
 	
-/*해당 사이즈에서는 사용안함*/
+/*작은 사이즈에서 사용*/
 .contbox_me {width: 20%; height: 100%; display: none; flex-direction: row; align-items: center; justify-content: flex-end;}
 .contbox_me i {font-size: 24px; color: #fff;}
 .contbox_me a {margin: 0 10px 0 10px;}
@@ -39,7 +39,7 @@ header {width: 100%; height: 80px; margin: 0 auto;display: flex; flex-direction:
 .play {display: block; padding: 10px 20px; background-color: gold; border-radius: 10px; font-size: 20px; font-family: "Glitch Goblin";color: #333;} 
 .contbox_me > .play:hover {color: #fff; background-color: yellow;}
 			
-	/*footer 내용*/
+/*footer 내용*/
 footer {width: 100%; height: 680px; background-color: black;margin: 0 auto;}
 footer br {margin: 30px 0 30px 0;}
 			
@@ -63,8 +63,8 @@ footer br {margin: 30px 0 30px 0;}
 #void {width: 100%; height: 30px; margin: 0 auto;}
 	
 .menu-trigger.active span:nth-of-type(1) {
-	-webkit-transform : translateY(20px) rotate(-45deg);
-	transform : translateY(20px) rotate(-45deg);
+	-webkit-transform : translateY(10px) rotate(-45deg);
+	transform : translateY(10px) rotate(-45deg);
 }
 .menu-trigger.active span:nth-of-type(2) {
 	left : 50%;
@@ -91,22 +91,22 @@ footer br {margin: 30px 0 30px 0;}
 
 
 @media (min-width:770px) and (max-width:1199px){
-header {width: 100%; height: 80px; margin: 0 auto;display: flex; flex-direction: row;justify-content: space-between;}
-.menu-trigger {margin-right: 25px; margin-top: 15px; position: relative; width: 50px; height: 44px;}
+header {width: 100%; height: 80px; margin: 0 auto;display: flex; flex-direction: row;justify-content: space-between;z-index: 10;}
+.menu-trigger {margin-right: 25px; margin-top: 17px; position: relative; width: 45px; height: 39px;}
 .menu-trigger span {position: absolute; left: 0; width: 100%; height: 4px; background-color: #fff; border-radius: 4px;}
 .menu-trigger, .menu-trigger span {display: inline-block; transition: all .4s; box-sizing: border-box;}
 .menu-trigger span:nth-of-type(1) {top: 0;}
-.menu-trigger span:nth-of-type(2) {top: 20px;}
+.menu-trigger span:nth-of-type(2) {top: 17px;}
 .menu-trigger span:nth-of-type(3) {bottom: 0;}
 
-.menubar {width: 100%;display: none; position: absolute; top: 80px;left: 0;}
+.menubar {width: 100%;display: none; position: absolute; top: 80px;left: 0; z-index: 10;}
 .menubar a:hover {color: cyan;}
 .list_me {width:100%; display: flex; flex-direction: column;background-color: rgba(0,0,0,0.8); }
-.main_menu {display: flex; flex-direction: column;z-index: 5;}
+.main_menu {display: flex; flex-direction: column;}
 .main_menu>li {font-size: 24px; width: 100%; height: auto;line-height: 80px;}
 .main_menu>li a {font-family: "Glitch Goblin"; color: #fff; padding: 0 0 0 5px;}
 
-.sub {width: 100%;display: none;background-color: #333;opacity: 0.8;z-index: 5;}
+.sub {width: 100%;display: none;background-color: #333;opacity: 0.8;z-index: 10;}
 .sub>li {font-size: 16px; height: 50px; color: #fff; line-height: 50px;}
 .sub>li:hover {background-color: gold; cursor: pointer;}
 .sub>li:hover a{color: violet;}
@@ -141,8 +141,8 @@ footer br {margin: 30px 0 30px 0;}
 #void {width: 100%; height: 30px; margin: 0 auto;}
 
 .menu-trigger.active span:nth-of-type(1) {
-	-webkit-transform : translateY(20px) rotate(-45deg);
-	transform : translateY(20px) rotate(-45deg);
+	-webkit-transform : translateY(15px) rotate(-45deg);
+	transform : translateY(15px) rotate(-45deg);
 }
 .menu-trigger.active span:nth-of-type(2) {
 	left : 50%;

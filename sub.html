@@ -17,7 +17,13 @@
     <script>
         $(function () {
                 let hei = $(".character").outerHeight(true);
+                let wid = $(".character").outerWidth(true);
                 let page = 0;
+
+            $(window).resize(function(){
+                hei=$(".character").outerHeight(true);
+                wid=$(".character").outerWidth(true);
+            })
 
             function prev () {
                 $('.character:last').prependTo('.character_list');
@@ -62,6 +68,50 @@
                 });
                 }               
             };
+
+            function prev1 () {
+                $('.character:last').prependTo('.character_list');
+                $('.character_list').css('margin-left', -wid);
+                $('.character_list').stop().animate({ marginLeft: 0 }, 300);
+                page--;
+
+                if(page<0){
+                    page=$(".img").length-1;
+                    $(".img").eq(0).hide();
+                    $(".img").eq(page).fadeIn().css("display","flex");
+                    $(".Character_skill").eq(0).hide();
+                    $(".Character_skill").eq(page).fadeIn().css("display","flex");
+                    $(".Character_skin").eq(0).hide();
+                    $(".Character_skin").eq(page).fadeIn().css("display","flex");
+                }else {
+                    $(".img").eq(page+1).hide();
+                    $(".img").eq(page).fadeIn().css("display","flex");
+                    $(".Character_skill").eq(page+1).hide();
+                    $(".Character_skill").eq(page).fadeIn().css("display","flex");
+                    $(".Character_skin").eq(page+1).hide();
+                    $(".Character_skin").eq(page).fadeIn().css("display","flex");
+                }
+            };
+
+            function next1 () { 
+                if ($(this).is(':animated') == false) {
+                    $('.character_list').stop().animate({ marginLeft: -wid }, 300, function () {
+                    $('.character:first').appendTo('.character_list');
+                    $('.character_list').css({ marginLeft: 0 });
+                    page++;
+                
+                    if(page>=$(".img").length){
+                        page=0;
+                    }
+                    $(".img").eq(page-1).hide();
+                    $(".img").eq(page).fadeIn().css("display","flex"); 
+                    $(".Character_skill").eq(page-1).hide();
+                    $(".Character_skill").eq(page).fadeIn().css("display","flex"); 
+                    $(".Character_skin").eq(page-1).hide();
+                    $(".Character_skin").eq(page).fadeIn().css("display","flex"); 
+                });
+                }               
+            };
             
 
             $('.prev').click(function () {
@@ -70,6 +120,14 @@
 
             $('.next').click(function () {
                 next();
+            });
+
+            $('.prev1').click(function () {
+                prev1();
+            });
+
+            $('.next1').click(function () {
+                next1();
             });
 
             $(".b1").click(function(){
@@ -105,6 +163,18 @@
                 $(".text_P").siblings().hide();
                 $(".skill_P").show();
                 $(".skill_P").siblings().hide();
+            });
+
+            //작은 화면 메뉴바
+            $('.menu-trigger').click(function () {
+                $(this).toggleClass('active');
+                $('.menubar').slideToggle();
+            });
+
+            //작은 화면 서브 메뉴바
+            $('.main_menu>li').click(function () {
+                $('.sub').stop().slideUp();
+                $(this).find('.sub').stop().slideToggle();
             });
 
         });
@@ -174,6 +244,7 @@
         <div id="slider">
             <div class="character_wrap">
                 <span class="prev"><i class="fa-solid fa-chevron-up"></i></span>
+                <span class="prev1"><i class="fa-solid fa-chevron-left"></i></span>
                 <div class="character_list">
                     <div class="character Jackie">
                         <h4>01</h4>
@@ -247,6 +318,7 @@
                     </div>
                 </div>
                 <span class="next"><i class="fa-solid fa-chevron-down"></i></span>
+                <span class="next1"><i class="fa-solid fa-chevron-right"></i></span>
             </div>
 
             <div class="character_img">

@@ -1,8 +1,14 @@
 @charset "utf-8";
+@font-face {font-family: "Cyberwar"; src: url(../font/CyberwarRegular-7BX0E.ttf) format('truetype')}
+@font-face {font-family: "Glitch Goblin"; src: url(../font/GlitchGoblin-2O87v.ttf) format('truetype');}
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
 @media (min-width:1200px){
 #slider {width: 100%; height: 900px; display: flex; align-items: center; justify-content: space-between; background-color: #222;}
-.character_wrap {width: 25%; height: 230px; overflow: hidden; position: relative;}
+.character_wrap {width: 27%; height: 200px; overflow: hidden; position: relative;}
 .prev {color: #fff; font-size: 40px; position: absolute; top: 0; left: 50%; transform: translateX(-50%); }
 .prev:hover {cursor: pointer;}
 .next {color: #fff; font-size: 40px; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);}
@@ -10,12 +16,12 @@
 
 .character_list {width: 100%;height: 130px;display: flex; flex-direction: column; justify-content: flex-start; position: absolute; top: 50%; transform: translateY(-50%);}
 .character {display: flex; flex-direction: row; justify-content: flex-start;align-items: center; height: 100px; padding: 11px 30px 20px 30px;margin-bottom: 30px; box-sizing: content-box;}
-.character h4 {width: 20%; font-size: 3.33vw; text-align: center; color: aliceblue;}
+.character h4 {width: 20%; font-size: 50px; text-align: center; color: aliceblue;}
 
 
-.list_text {display: flex;flex-flow: row wrap; padding-left: 30px;}
-.list_text h1 {font-size: 4.17vw; color: aliceblue;}
-.list_text h5 {width: 60%; font-size: 1.17vw; color: aliceblue;}
+.list_text {display: flex;flex-flow: row wrap; padding-left: 30px; flex-shrink: 0;}
+.list_text h1 {font-size: 60px; color: aliceblue;}
+.list_text h5 {width: 60%; font-size: 14px; color: aliceblue;}
 .list_text:hover {cursor: pointer;}
 
 .character_img {width: 80%;position: absolute; left: 55%;transform: translateX(-45%); z-index: 5;}
@@ -36,7 +42,7 @@ section {width: 100%; height: 600px; background-color: #222; position: relative;
 .btn {border: none; width: 90px; height: 90px; margin-left: 30px; cursor: pointer;}
 .btn > img {width: 90px; height: 90px;}
 button:nth-of-type(1) {margin: 0;}
-.video video {width: 640px; height: 380px;}
+.video video {width: 100%; height: 380px;margin-left: 10px;}
 
 .Skill > h2 {font-size: 32px; margin-top: 20px; margin-bottom: 20px; color: red;}
 .Skill > p {font-size: 16px; color: #fff;}
@@ -44,10 +50,10 @@ button:nth-of-type(1) {margin: 0;}
 #etc_content {width: 100%; height: 500px;background-color: #222; position: relative;}
 .Character_skin_list {width: 90%; height: 90%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 .Character_skin_list > h1 {font-size: 60px; color: cyan; margin: 10px 0 30px 10px;}
-.Character_skin {justify-content: space-around; text-align: center; flex-flow: row wrap;}
+.Character_skin {justify-content: space-around; text-align: center; flex-flow: row;}
 .Skin > h2 {color: #fff;}
-.Skin img {width: 380px; height: 280px;}
-
+.Skin img {width: 90%; height: 280px;}
+/*
 .Magnus h4 {font-size: 3.33vw;}
 .Magnus>.list_text>h1{font-size: 3.4vw;}
 .Magnus>.list_text>h5{font-size: 1.17vw;}
@@ -55,10 +61,11 @@ button:nth-of-type(1) {margin: 0;}
 .Lidailin h4 {font-size: 3.33vw;}
 .Lidailin>.list_text>h1{font-size: 3.35vw;}
 .Lidailin>.list_text>h5{font-size: 1.17vw;}
+*/
 
 
-
-
+.prev1 {display: none;}
+.next1 {display: none;}
 
 .Jackie1 {display: flex;}
 .Aya1 {display: none;}
