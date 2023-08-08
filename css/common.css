@@ -29,7 +29,7 @@ header {width: 100%; height: 80px; margin: 0 auto;display: flex; flex-direction:
 .sub {width: 100%;display: none;background-color: #333;opacity: 0.8;z-index: 10;}
 .sub>li {font-size: 16px; height: 50px; color: #fff; line-height: 50px;}
 .sub>li:hover {background-color: gold; cursor: pointer;}
-.sub>li:hover a{color: violet;}
+.sub>li:hover a{color: red;}
 	
 /*작은 사이즈에서 사용*/
 .contbox_me {width: 20%; height: 100%; display: none; flex-direction: row; align-items: center; justify-content: flex-end;}
@@ -109,7 +109,7 @@ header {width: 100%; height: 80px; margin: 0 auto;display: flex; flex-direction:
 .sub {width: 100%;display: none;background-color: #333;opacity: 0.8;z-index: 10;}
 .sub>li {font-size: 16px; height: 50px; color: #fff; line-height: 50px;}
 .sub>li:hover {background-color: gold; cursor: pointer;}
-.sub>li:hover a{color: violet;}
+.sub>li:hover a{color: red;}
 
 /*해당 사이즈에서는 사용안함*/
 .contbox_me {width: 20%; height: 100%; display: none; flex-direction: row; align-items: center; justify-content: flex-end;}
@@ -186,7 +186,7 @@ footer br {margin: 30px 0 30px 0;}
 	.sub {width: 150px;display: none;position: absolute;background-color: #333;opacity: 0.8;z-index: 3;}
 	.sub>li {font-size: 16px; height: 30px; color: #fff; line-height: 30px;}
 	.sub>li:hover {background-color: gold; cursor: pointer;}
-	.sub>li:hover a{color: violet;}
+	.sub>li:hover a{color: red;}
 	
 	
 	.contbox_me {width: 20%; height: 80px; display: flex; flex-direction: row; align-items: center; justify-content: flex-end; overflow: hidden;}
@@ -194,7 +194,7 @@ footer br {margin: 30px 0 30px 0;}
 	.contbox_me a {margin: 0 10px 0 10px;}
 	.contbox_me i:hover {color: cyan;}
 	.play {display: block; padding: 10px 20px; background-color: gold; border-radius: 10px; font-size: 20px; font-family: "Glitch Goblin";color: #333; text-align: center;} 
-	.contbox_me > .play:hover {color: #fff; background-color: yellow;}
+	.contbox_me > .play:hover {color: red; background-color: yellow;}
 	
 	/*footer 내용*/
 	footer {width: 100%; height: 480px; background-color: black;margin: 0 auto;}
