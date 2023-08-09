@@ -60,7 +60,7 @@ footer br {margin: 30px 0 30px 0;}
 .regulration table th {border: 1px solid #222; width: 25%; padding: 0 10px 0 10px; background-color: gold; font-size: 12px;}
 		   
 /*주요 Content 사이 간격 조정*/
-#void {width: 100%; height: 30px; margin: 0 auto;}
+.void {width: 100%; height: 30px; margin: 0 auto;}
 	
 .menu-trigger.active span:nth-of-type(1) {
 	-webkit-transform : translateY(10px) rotate(-45deg);
@@ -138,7 +138,7 @@ footer br {margin: 30px 0 30px 0;}
 .regulration table th {border: 1px solid #222; width: 25%; padding: 0 10px 0 10px; background-color: gold; font-size: 12px;}
     
 /*주요 Content 사이 간격 조정*/
-#void {width: 100%; height: 30px; margin: 0 auto;}
+.void {width: 100%; height: 30px; margin: 0 auto;}
 
 .menu-trigger.active span:nth-of-type(1) {
 	-webkit-transform : translateY(15px) rotate(-45deg);
@@ -215,6 +215,6 @@ footer br {margin: 30px 0 30px 0;}
 	.regulration table th {border: 1px solid #222; width: 25%; padding: 0 10px 0 10px; background-color: gold; font-size: 12px;}
 	
 	/*주요 Content 사이 간격 조정*/
-	#void {width: 100%; height: 60px; margin: 0 auto;}
+	.void {width: 100%; height: 60px; margin: 0 auto;}
 	}
 	

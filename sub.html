@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,170 +14,7 @@
     
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js"></script>
 
-    <script>
-        $(function () {
-                let hei = $(".character").outerHeight(true);
-                let wid = $(".character").outerWidth(true);
-                let page = 0;
-
-            $(window).resize(function(){
-                hei=$(".character").outerHeight(true);
-                wid=$(".character").outerWidth(true);
-            })
-
-            function prev () {
-                $('.character:last').prependTo('.character_list');
-                $('.character_list').css('margin-top', -hei);
-                $('.character_list').stop().animate({ marginTop: 0 }, 300);
-                page--;
-
-                if(page<0){
-                    page=$(".img").length-1;
-                    $(".img").eq(0).hide();
-                    $(".img").eq(page).fadeIn().css("display","flex");
-                    $(".Character_skill").eq(0).hide();
-                    $(".Character_skill").eq(page).fadeIn().css("display","flex");
-                    $(".Character_skin").eq(0).hide();
-                    $(".Character_skin").eq(page).fadeIn().css("display","flex");
-                }else {
-                    $(".img").eq(page+1).hide();
-                    $(".img").eq(page).fadeIn().css("display","flex");
-                    $(".Character_skill").eq(page+1).hide();
-                    $(".Character_skill").eq(page).fadeIn().css("display","flex");
-                    $(".Character_skin").eq(page+1).hide();
-                    $(".Character_skin").eq(page).fadeIn().css("display","flex");
-                }
-            };
-
-            function next () { 
-                if ($(this).is(':animated') == false) {
-                    $('.character_list').stop().animate({ marginTop: -hei }, 300, function () {
-                    $('.character:first').appendTo('.character_list');
-                    $('.character_list').css({ marginTop: 0 });
-                    page++;
-                
-                    if(page>=$(".img").length){
-                        page=0;
-                    }
-                    $(".img").eq(page-1).hide();
-                    $(".img").eq(page).fadeIn().css("display","flex"); 
-                    $(".Character_skill").eq(page-1).hide();
-                    $(".Character_skill").eq(page).fadeIn().css("display","flex"); 
-                    $(".Character_skin").eq(page-1).hide();
-                    $(".Character_skin").eq(page).fadeIn().css("display","flex"); 
-                });
-                }               
-            };
-
-            function prev1 () {
-                $('.character:last').prependTo('.character_list');
-                $('.character_list').css('margin-left', -wid);
-                $('.character_list').stop().animate({ marginLeft: 0 }, 300);
-                page--;
-
-                if(page<0){
-                    page=$(".img").length-1;
-                    $(".img").eq(0).hide();
-                    $(".img").eq(page).fadeIn().css("display","flex");
-                    $(".Character_skill").eq(0).hide();
-                    $(".Character_skill").eq(page).fadeIn().css("display","flex");
-                    $(".Character_skin").eq(0).hide();
-                    $(".Character_skin").eq(page).fadeIn().css("display","flex");
-                }else {
-                    $(".img").eq(page+1).hide();
-                    $(".img").eq(page).fadeIn().css("display","flex");
-                    $(".Character_skill").eq(page+1).hide();
-                    $(".Character_skill").eq(page).fadeIn().css("display","flex");
-                    $(".Character_skin").eq(page+1).hide();
-                    $(".Character_skin").eq(page).fadeIn().css("display","flex");
-                }
-            };
-
-            function next1 () { 
-                if ($(this).is(':animated') == false) {
-                    $('.character_list').stop().animate({ marginLeft: -wid }, 300, function () {
-                    $('.character:first').appendTo('.character_list');
-                    $('.character_list').css({ marginLeft: 0 });
-                    page++;
-                
-                    if(page>=$(".img").length){
-                        page=0;
-                    }
-                    $(".img").eq(page-1).hide();
-                    $(".img").eq(page).fadeIn().css("display","flex"); 
-                    $(".Character_skill").eq(page-1).hide();
-                    $(".Character_skill").eq(page).fadeIn().css("display","flex"); 
-                    $(".Character_skin").eq(page-1).hide();
-                    $(".Character_skin").eq(page).fadeIn().css("display","flex"); 
-                });
-                }               
-            };
-            
-
-            $('.prev').click(function () {
-                prev();
-            });
-
-            $('.next').click(function () {
-                next();
-            });
-
-            $('.prev1').click(function () {
-                prev1();
-            });
-
-            $('.next1').click(function () {
-                next1();
-            });
-
-            $(".b1").click(function(){
-                $(".text_Q").show();
-                $(".text_Q").siblings().hide();
-                $(".skill_Q").show();
-                $(".skill_Q").siblings().hide();
-            });
-
-            $(".b2").click(function(){
-                $(".text_W").show();
-                $(".text_W").siblings().hide();
-                $(".skill_W").show();
-                $(".skill_W").siblings().hide();
-            });
-
-            $(".b3").click(function(){
-                $(".text_E").show();
-                $(".text_E").siblings().hide();
-                $(".skill_E").show();
-                $(".skill_E").siblings().hide();
-            });
-
-            $(".b4").click(function(){
-                $(".text_R").show();
-                $(".text_R").siblings().hide();
-                $(".skill_R").show();
-                $(".skill_R").siblings().hide();
-            });
-
-            $(".b5").click(function(){
-                $(".text_P").show();
-                $(".text_P").siblings().hide();
-                $(".skill_P").show();
-                $(".skill_P").siblings().hide();
-            });
-
-            //작은 화면 메뉴바
-            $('.menu-trigger').click(function () {
-                $(this).toggleClass('active');
-                $('.menubar').slideToggle();
-            });
-
-            //작은 화면 서브 메뉴바
-            $('.main_menu>li').click(function () {
-                $('.sub').stop().slideUp();
-                $(this).find('.sub').stop().slideToggle();
-            });
-        });
-    </script>
+    <script src="js/sub.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -193,1080 +30,1080 @@
                     <ul class="main_menu">
                         <li><a href="#">Game</a>
                             <ul class="sub">
-                                <li><a href="#">이터널 리턴이란?</a></li>
-                                <li><a href="#">실험체</a></li>
+                                <li><a href="sub.html">이터널 리턴이란?</a></li>
+                                <li><a href="sub.html">실험체</a></li>
                             </ul>
                         </li>
 
                         <li><a href="#">News</a>
                             <ul class="sub">
-                                <li><a href="#">새소식</a></li>
-                                <li><a href="#">패치노트</a></li>
-                                <li><a href="#">로드맵</a></li>
+                                <li><a href="sub.html">새소식</a></li>
+                                <li><a href="sub.html">패치노트</a></li>
+                                <li><a href="sub.html">로드맵</a></li>
                             </ul>
                         </li>
 
                         <li><a href="#">Record</a>
                             <ul class="sub">
-                                <li><a href="#">유저 검색</a></li>
-                                <li><a href="#">통계</a></li>
+                                <li><a href="sub.html">유저 검색</a></li>
+                                <li><a href="sub.html">통계</a></li>
                             </ul>
                         </li>
 
                         <li><a href="#">Community</a>
                             <ul class="sub">
-                                <li><a href="#">팬아트</a></li>
-                                <li><a href="#">유튜브</a></li>
-                                <li><a href="#">디스코드</a></li>
-                                <li><a href="#">톡채널</a></li>
-                                <li><a href="#">레딧</a></li>
-                                <li><a href="#">페이스북</a></li>
-                                <li><a href="#">트위터</a></li>
-                                <li><a href="#">트위치</a></li>
+                                <li><a href="sub.html">팬아트</a></li>
+                                <li><a href="sub.html">유튜브</a></li>
+                                <li><a href="sub.html">디스코드</a></li>
+                                <li><a href="sub.html">톡채널</a></li>
+                                <li><a href="sub.html">레딧</a></li>
+                                <li><a href="sub.html">페이스북</a></li>
+                                <li><a href="sub.html">트위터</a></li>
+                                <li><a href="sub.html">트위치</a></li>
                             </ul>
                         </li>
 
-                        <li><a href="#">Rank</a></li>
+                        <li><a href="sub.html">Rank</a></li>
 
-                        <li><a href="#">Service</a></li>
+                        <li><a href="sub.html">Service</a></li>
 
                     </ul>
                 </div>
                 <div class="contbox_me">
-                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    <a href="#"><i class="fa-solid fa-globe"></i></a>
-                    <a href="#" class="play">Now Play</a>
+                    <a href="sub.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="sub.html"><i class="fa-solid fa-globe"></i></a>
+                    <a href="sub.html" class="play">Now Play</a>
                 </div>
             </div>
         </header>
-
-        <div id="slider">
-            <div class="character_wrap">
-                <span class="prev"><i class="fa-solid fa-chevron-up"></i></span>
-                <span class="prev1"><i class="fa-solid fa-chevron-left"></i></span>
-                <div class="character_list">
-                    <div class="character Jackie">
-                        <h4>01</h4>
-                        <div class="list_text">
-                            <h1>재키</h1>
-                            <h5>06M-RF01</h5>
+        <div id="sub_wrap">
+            <div id="slider">
+                <div class="character_wrap">
+                    <span class="prev"><i class="fa-solid fa-chevron-up"></i></span>
+                    <span class="prev1"><i class="fa-solid fa-chevron-left"></i></span>
+                    <div class="character_list">
+                        <div class="character Jackie">
+                            <h4>01</h4>
+                            <div class="list_text">
+                                <h1>재키</h1>
+                                <h5>06M-RF01</h5>
+                            </div>
+                        </div>
+                        <div class="character Aya">
+                            <h4>02</h4>
+                            <div class="list_text">
+                                <h1>아야</h1>
+                                <h5>14M-RFT11</h5>
+                            </div>
+                        </div>
+                        <div class="character Hyunwoo">
+                            <h4>03</h4>
+                            <div class="list_text">
+                                <h1>현우</h1>
+                                <h5>14M-RFT04</h5>
+                            </div>
+                        </div>
+                        <div class="character Magnus">
+                            <h4>04</h4>
+                            <div class="list_text">
+                                <h1>매그너스</h1>
+                                <h5>15M-RFT18</h5>
+                            </div>
+                        </div>
+                        <div class="character Fiora">
+                            <h4>05</h4>
+                            <div class="list_text">
+                                <h1>피오라</h1>
+                                <h5>14M-RFT02</h5>
+                            </div>
+                        </div>
+                        <div class="character Nadine">
+                            <h4>06</h4>
+                            <div class="list_text">
+                                <h1>나딘</h1>
+                                <h5>14M-RFT10</h5>
+                            </div>
+                        </div>
+                        <div class="character Zahir">
+                            <h4>07</h4>
+                            <div class="list_text">
+                                <h1>자히르</h1>
+                                <h5>14M-RFT03</h5>
+                            </div>
+                        </div>
+                        <div class="character Hart">
+                            <h4>08</h4>
+                            <div class="list_text">
+                                <h1>하트</h1>
+                                <h5>16M-RFT22</h5>
+                            </div>
+                        </div>
+                        <div class="character Isol">
+                            <h4>09</h4>
+                            <div class="list_text">
+                                <h1>아이솔</h1>
+                                <h5>15M-RFT16</h5>
+                            </div>
+                        </div>
+                        <div class="character Lidailin">
+                            <h4>10</h4>
+                            <div class="list_text">
+                                <h1>리 다이린</h1>
+                                <h5>16M-RFT20</h5>
+                            </div>
                         </div>
                     </div>
-                    <div class="character Aya">
-                        <h4>02</h4>
-                        <div class="list_text">
-                            <h1>아야</h1>
-                            <h5>14M-RFT11</h5>
+                    <span class="next"><i class="fa-solid fa-chevron-down"></i></span>
+                    <span class="next1"><i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+        
+                <div class="character_img">
+                    <div class="img Jackie1">
+                        <img src="img/재키.png" alt="Jackie">
+                        <div class="img_textbox">
+                            <h3>"숨바꼭질 시작이구나?"</h3>
+                            <p>정치명문 윈슬레어가의 안주인과 딸을 죽인 것을 시작으로 지금까지 약 30여명의 목숨을 앗아간 연쇄살인마. <br>
+                                시체를 매우 잘게 찢어놔서, 조각보를 기우듯이 맞추지 않는 한 신원을 파악할 수 없게 만들기 때문에 재키 퀼트라는 별명이 붙었다. <br>
+                                잔인한 살인방법과 용의주도한 뒷처리로 유명하다. <br>
+                                안젤라 윈슬레어는 재키의 첫 희생자이자 유일하게 가죽 한 조각도 찾지 못한 피해자로 기록되어있다.
+                            </p>
                         </div>
                     </div>
-                    <div class="character Hyunwoo">
-                        <h4>03</h4>
-                        <div class="list_text">
-                            <h1>현우</h1>
-                            <h5>14M-RFT04</h5>
+                    <div class="img Aya1">
+                        <img src="img/아야.png" alt="Aya">
+                        <div class="img_textbox">
+                            <h3>"나쁜 사람이요? 어디 있나요!"</h3>
+                            <p>정의에 대한 동경으로 경찰이 되었으나 가족이 살인사건에 휘말린 이후 직업에 회의감을 느끼기 시작했다. <br>
+                                또한, 정의에 대한 집착이 심해져서 자신이 아니면 이 세상에 정의를 구현할 사람은 없다고 생각하게 되었다. <br>
+                                시체를 잘 보지 못한다. 어쩌다 동물 사체를 뒤져야 할 때면 큰 스트레스를 받는다. <br>
+                                동생의 이름은 스즈키 히카루. 두 다리가 없다.
+                            </p>
                         </div>
                     </div>
-                    <div class="character Magnus">
-                        <h4>04</h4>
-                        <div class="list_text">
-                            <h1>매그너스</h1>
-                            <h5>15M-RFT18</h5>
+                    <div class="img Hyunwoo1">
+                        <img src="img/현우.png" alt="Hyunwoo">
+                        <div class="img_textbox">
+                            <h3>"이럴 때 쓰라고 있는 게 주먹이지."</h3>
+                            <p>현우에게 미래는 막막함, 그 자체였다. <br>
+                                소문, 험담, 손가락질, 그리고 낙인... 너무 많은 것들이 그의 앞을 가로막고 있다. <br>
+                                그 막막함을 잊기 위해 싸움을 하거나 바이크를 타는 등 현실의 자극을 더 키우는 데만 집중했다. <br>
+                                그러나 아무리 외면하려고 해도, 끝없는 불안감은 사라지지 않고 계속 가슴 한 켠에 남아있었다. <br>
+                                성인이 되면 가장 먼저 하고 싶은 일은 복권을 사는 것. <br>
+                                지금 현실을 벗어날 수만 있다면, 그 정도의 꿈만으로도 충분했다.
+                            </p>
                         </div>
                     </div>
-                    <div class="character Fiora">
-                        <h4>05</h4>
-                        <div class="list_text">
-                            <h1>피오라</h1>
-                            <h5>14M-RFT02</h5>
+                    <div class="img Magnus1">
+                        <img src="img/매그너스.png" alt="Magnus">
+                        <div class="img_textbox">
+                            <h3>"이 몸의 질주를 막을 수 있는 놈이 있을 것 같나?"</h3>
+                            <p>과격한 폭주족 집단 Reaper's wheel의 리더. <br>
+                                일개 단원에서 리더까지 오직 힘으로만 권력을 쟁취한 인물. <br>
+                                의리와 우정보다 자신의 강함과 근성을 위해 조직을 존속시키려 했다. <br>
+                                모든 것을 힘으로 해결하려는 성격 때문에 그를 탐탁치 않게 보는 단원들이 많았다. <br>
+                                약자를 무시한다. 특히 박쥐처럼 이곳저곳 옮겨붙는 사람을 가장 혐오한다. <br>
+                                바이크의 백라이트와 뒷모습보다 무력과 권력으로 기억되는 남자.
+                            </p>
                         </div>
                     </div>
-                    <div class="character Nadine">
-                        <h4>06</h4>
-                        <div class="list_text">
-                            <h1>나딘</h1>
-                            <h5>14M-RFT10</h5>
+                    <div class="img Fiora1">
+                        <img src="img/피오라.png" alt="Fiora">
+                        <div class="img_textbox">
+                            <h3>"내 적은 어디에 있지?"</h3>
+                            <p>월등한 실력의 펜싱선수. <br>
+                                바른 자세와 높은 프라이드는 집안의 영향이 크다. <br>
+                                가부장적이였던 아버지는 여자란 남자 차 시중이나 드는 존재라 생각했다. <br>
+                                펜싱을 시작한 건 그런 아버지에 대한 반발심과 인정받고 싶은 욕구 때문이었다. <br>
+                                학생시절엔 수학을 가장 잘했다. <br>
+                                자신보다 약한 사람은 지켜주고 싶어하고 자신보다 강한 사람에겐 인정받고 싶어한다.
+                            </p>
                         </div>
                     </div>
-                    <div class="character Zahir">
-                        <h4>07</h4>
-                        <div class="list_text">
-                            <h1>자히르</h1>
-                            <h5>14M-RFT03</h5>
+                    <div class="img Nadine1">
+                        <img src="img/나딘.png" alt="Nadine">
+                        <div class="img_textbox">
+                            <h3>"그래, 사냥을 시작하지."</h3>
+                            <p>어릴 적, 산사태로 부모를 잃고 짐승들 사이에서 자란 야생 인간. <br>
+                                사냥꾼에게 발견된 후 뒤늦게 인간 사회로 돌아왔다. <br>
+                                아직 야생의 습성이 남아있어 인간 사회에 잘 적응하지 못하는 상태. <br>
+                                사소한 일에도 인간으로서 이렇게 대응해야 할지 몰라서 혼란스러워한다. <br>
+                                그런 어수룩한 모습을 감추려고 평소엔 퉁명스럽게 행동하는 편. <br>
+                                무시당하는 것보단 차라리 기피 받는 게 더 편하다. <br>
+                                어릴 적 산사태로 토사에 깔렸던 기억 때문에 폐소공포증이 남아있다. <br>
+                                어째서인지 요즘, 우리에 갇힌 꿈을 꾸는 날이 많아지고 있다. <br>
+                                이 꿈의 의미는 무엇일까?
+                            </p>
                         </div>
                     </div>
-                    <div class="character Hart">
-                        <h4>08</h4>
-                        <div class="list_text">
-                            <h1>하트</h1>
-                            <h5>16M-RFT22</h5>
+                    <div class="img Zahir1">
+                        <img src="img/자히르.png" alt="Zahir">
+                        <div class="img_textbox">
+                            <h3>"신이 주신 시련이라면, 기꺼이 감당할 것이오."</h3>
+                            <p>자신의 눈에 신이 보인다고 주장하는 청년. 진실은 아무도 모른다. <br>
+                                어릴 적 고아원에서 도망쳐 나와 탈진과 굶주림으로 죽을 뻔했다. <br>
+                                그때 기적적으로 어느 작은 사원에 도달했고, 겨우 살 수 있었다. <br>
+                                신이 자신을 구해줬다고 생각했으며, 그때부터 무조건적인 믿음을 가지고 신앙생활에 전념했다. <br>
+                                매일 아침 몸을 씻고, 나무빗으로 머리카락을 정돈한다. <br>
+                                말이 적어서 잘 티가 나진 않으나 약간 '중2병스러운' 말을 잘한다.
+                            </p>
                         </div>
                     </div>
-                    <div class="character Isol">
-                        <h4>09</h4>
-                        <div class="list_text">
-                            <h1>아이솔</h1>
-                            <h5>15M-RFT16</h5>
+                    <div class="img Hart1">
+                        <img src="img/하트.png" alt="Hart">
+                        <div class="img_textbox">
+                            <h3>"Love&Peace! 헤헤..."</h3>
+                            <p>사랑과 음악은 세상을 바꾼다는 구호에 반해 락의 세계로 들어왔다. <br>
+                                대형 레이블의 눈에 띄었으나, 자신이 원하는 노래와는 방향이 달라 거절한다. <br>
+                                그러나 하트를 제외한 밴드원은 오랜 생활고에 지쳐 계약을 진행한다. <br>
+                                이에 충격을 받은 하트는 자신이 음악적 가치관에 더욱 집착하기 시작했다. <br>
+                                키와 얼굴이 같은 쌍둥이 남동생이 있다. 뉴욕에서 함께 자취 중. <br>
+                                자신의 음악이 절실히 필요한 곳을 찾았다는 메시지를 동생에게 보낸 뒤 자취를 감췄다.
+                            </p>
                         </div>
                     </div>
-                    <div class="character Lidailin">
-                        <h4>10</h4>
-                        <div class="list_text">
-                            <h1>리 다이린</h1>
-                            <h5>16M-RFT20</h5>
+                    <div class="img Isol1">
+                        <img src="img/아이솔.png" alt="Isol">
+                        <div class="img_textbox">
+                            <h3>"작전 준비 완료."</h3>
+                            <p>테러 집단 소년병 출신. <br>
+                                12살까지 보육원에서 마르셀로라는 이름으로 생활한 기록이 있다. <br>
+                                믿고 의지하던 형의 권유로 여러 아이들을 설득해 보육원을 나와 테러집단에 입대했다. <br>
+                                이후, 같이 들어온 아이들 중 죽거나 잡히지 않은 사람은 아이솔 한 명 뿐이다. <br>
+                                필요 이상으로 사람들을 잔인하게 죽이는 경향이 있다. <br>
+                                사람을 죽일 때 무의식적으로 배웠던 성가를 읋을 때가 있다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="img Lidailin1">
+                        <img src="img/리다이린1.png" alt="Lidailin">
+                        <div class="img_textbox">
+                            <h3>"하아...꼭 내가 해야 돼?"</h3>
+                            <p>무술가 집안의 외동딸. <br>
+                                자신의 가족들이 무술수련에 온 신경을 집중하느라 그녀를 뒷전으로 미뤄뒀었기에 무술에 대해 부정적인 감정을 지니고 있다. <br>
+                                가족들에게 복수하기 위해 대대로 내려오던 무공 비급과 도장을 모두 없애버렸으며, <br>
+                                자신 역시 무술가로서의 긍지를 버린 채 살아가는 길을 택한다. <br>
+                                술을 살 돈이 떨어지면 적당한 일을 찾는다. <br>
+                                동네에서는 이름보다 리화자(利花子: 이씨 성의 거지)라는 별명으로 유명했다.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <span class="next"><i class="fa-solid fa-chevron-down"></i></span>
-                <span class="next1"><i class="fa-solid fa-chevron-right"></i></span>
             </div>
-
-            <div class="character_img">
-                <div class="img Jackie1">
-                    <img src="img/재키.png" alt="Jackie">
-                    <div class="img_textbox">
-                        <h3>"숨바꼭질 시작이구나?"</h3>
-                        <p>정치명문 윈슬레어가의 안주인과 딸을 죽인 것을 시작으로 지금까지 약 30여명의 목숨을 앗아간 연쇄살인마. <br>
-                            시체를 매우 잘게 찢어놔서, 조각보를 기우듯이 맞추지 않는 한 신원을 파악할 수 없게 만들기 때문에 재키 퀼트라는 별명이 붙었다. <br>
-                            잔인한 살인방법과 용의주도한 뒷처리로 유명하다. <br>
-                            안젤라 윈슬레어는 재키의 첫 희생자이자 유일하게 가죽 한 조각도 찾지 못한 피해자로 기록되어있다.
-                        </p>
+        
+        
+        
+            <section>
+                <div id="Skill_box">
+                    <h1>캐릭터 스킬</h1>
+                    <div class="Character_skill Jackie1">
+                        <div class="Skill_img">
+                            <button class="btn b1"><img src="img/Jackie_Q1.png" alt="jack_q"></button>
+                            <button class="btn b2"><img src="img/Jackie_W_Adrenaline_Burst.png" alt="jack_w"></button>
+                            <button class="btn b3"><img src="img/Jackie_E_Leaping_Strike.png" alt="jack_e"></button>
+                            <button class="btn b4"><img src="img/Jackie_R_Chainsaw_Murderer.png" alt="jack_r"></button>
+                            <button class="btn b5"><img src="img/Jackie_P_Bloodfest.png" alt="jack_p"></button>
+                            <div class="Skill_text_box">
+                                <div class="Skill text_Q">
+                                    <h2>Q - 연참</h2>
+                                    <p>재키가 지정한 방향으로 무기를 휘둘러 스킬 피해를 입힙니다. <br>
+                                        연참이 적에게 적중했다면 재사용이 활성화됩니다. <br>
+                                        재사용 시 재키가 지정한 방향으로 살짝 전진하며 무기를 휘둘러 스킬 피해를 입힙니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_W">
+                                    <h2>W - 아드레날린 분비</h2>
+                                    <p>
+                                        재키가 아드레날린을 활성화하여 이동 속도가 증가합니다. <br>
+                                        아드레날린이 활성화된 동안 출혈에 걸린 적을 향해 이동하면 이동 속도가 증가하고, <br>
+                                        출혈 상태의 적을 공격하면 자신의 잃은 체력에 비례해 체력을 회복합니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_E">
+                                    <h2>E - 습격</h2>
+                                    <p>
+                                        재키가 지정한 위치로 점프하여, 주변의 적들에게 스킬 피해를 입힙니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_R">
+                                    <h2>R - 전기톱 살인마</h2>
+                                    <p>
+                                        재키가 일정 시간동안 전기톱을 꺼내들어 기본 공격으로 추가 스킬 피해를 입힙니다. <br>
+                                        재키가 적 실험체 처치에 관여하면 지속 시간이 5초 증가합니다. <br>
+                                        전기톱 살인마가 발동되고 3초가 지나면 학살을 사용할 수 있습니다. <br>
+                                        <br>
+                                        학살: 재키가 전기톱을 크게 휘둘러 적의 잃은 체력에 비례하여 스킬 피해를 입힙니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_P">
+                                    <h2>패시브 - 피의 축제</h2>
+                                    <p>
+                                        재키가 피해를 입힌 적 실험체가 3초 내에 빈사 또는 사망에 이르게 되면 재키의 일반 스킬 쿨다운이 초기화됩니다. <br>
+                                        재키가 스킬로 피해를 입히면 6초 동안 스킬 피해를 입히는 출혈을 부여합니다. <br>
+                                        재키는 출혈 상태의 대상에게 추가 스킬 피해를 입히고 출혈의 지속 시간을 갱신합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Skill_video">
+                            <div class="video skill_Q">
+                                <video src="video/재키Q.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_W">
+                                <video src="video/재키W.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_E">
+                                <video src="video/재키E.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_R">
+                                <video src="video/재키R.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_P">
+                                <video src="video/재키P.mp4" loop muted autoplay></video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Character_skill Aya1">
+                        <div class="Skill_img">
+                            <button class="btn b1"><img src="img/Aya_Q_Double_Shot.png" alt="jack_q"></button>
+                            <button class="btn b2"><img src="img/Aya_W_Steady_Shot.png" alt="jack_w"></button>
+                            <button class="btn b3"><img src="img/Aya_E_Moving_Turn.png" alt="jack_e"></button>
+                            <button class="btn b4"><img src="img/Aya_R_Black_Cartridge.png" alt="jack_r"></button>
+                            <button class="btn b5"><img src="img/Aya_P_Aya_s_Justice.png" alt="jack_p"></button>
+                            <div class="Skill_text_box">
+                                <div class="Skill text_Q">
+                                    <h2>Q - 2연발</h2>
+                                    <p>
+                                        아야가 대상을 향해 2번 빠르게 사격합니다. <br>
+                                        첫 발은 공격력의 100%의 기본 공격 피해를, <br>
+                                        두 번째 발은 스킬 피해를 입히며 아야의 공격 속도가 잠시 동안 증가합니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_W">
+                                    <h2>W - 고정 사격</h2>
+                                    <p>
+                                        아야가 한 방향으로 1.6초 동안 총을 발사하여 6~8발을 연사합니다. <br>
+                                        추가 공격 속도 30%당 발사 탄환 수가 증가합니다. <br>
+                                        탄환은 명중 시 스킬 피해를 입힙니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_E">
+                                    <h2>E - 무빙턴</h2>
+                                    <p>
+                                        아야가 지정한 방향으로 재빠르게 뜁니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_R">
+                                    <h2>R - 공포탄</h2>
+                                    <p>
+                                        아야가 하늘을 향해 공포탄을 발사합니다. <br>
+                                        주변 적들은 스킬 피해를 입고 잠깐 공포에 질립니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_P">
+                                    <h2>P - 아야의 정의</h2>
+                                    <p>
+                                        아야가 공격당하면 보호막이 생성되어 1.5초 동안 피해를 막아줍니다. <br>
+                                        적에게 공격을 할 때마다 아야의 정의의 쿨다운이 1초씩 감소합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Skill_video">
+                            <div class="video skill_Q">
+                                <video src="video/아야Q.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_W">
+                                <video src="video/아야W.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_E">
+                                <video src="video/아야E.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_R">
+                                <video src="video/아야R.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_P">
+                                <video src="video/아야P.mp4" loop muted autoplay></video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Character_skill Hyunwoo1">
+                        <div class="Skill_img">
+                            <button class="btn b1"><img src="img/Hyunwoo_Q_Stomping_Foot.png" alt="jack_q"></button>
+                            <button class="btn b2"><img src="img/Hyunwoo_W_Bluff.png" alt="jack_w"></button>
+                            <button class="btn b3"><img src="img/Hyunwoo_E_First_Attack.png" alt="jack_e"></button>
+                            <button class="btn b4"><img src="img/Hyunwoo_R_Haymaker.png" alt="jack_r"></button>
+                            <button class="btn b5"><img src="img/Hyunwoo_P_Dogfight.png" alt="jack_p"></button>
+                            <div class="Skill_text_box">
+                                <div class="Skill text_Q">
+                                    <h2>Q - 발 밟기</h2>
+                                    <p>
+                                        아야가 공격당하면 보호막이 생성되어 1.5초 동안 피해를 막아줍니다. <br>
+                                        적에게 공격을 할 때마다 아야의 정의의 쿨다운이 1초씩 감소합니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_W">
+                                    <h2>W - 허세</h2>
+                                    <p>
+                                        현우가 허세를 부려 도그파이트(P)를 활성화하고, 2.5초 동안 방어력이 증가합니다. <br>
+                                        지속 시간 동안 적에게 기본 공격을 받을 때마다 도그파이트(P) 중첩을 1 획득합니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_E">
+                                    <h2>E - 선빵필승</h2>
+                                    <p>
+                                        현우가 지정한 방향으로 돌진하며, 적과 부딪히면 스킬 피해를 입히고 밀어냅니다. <br>
+                                        밀어낸 적이 벽에 부딪히면 스킬 피해를 입히고 1.5초 간 기절시킵니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_R">
+                                    <h2>R - 핵펀치</h2>
+                                    <p>
+                                        현우가 1.5초 동안 힘을 충전한 후, 강력한 한 방을 날려 의 스킬 피해를 입히고 <br>
+                                        6초 동안 방어력을 25/30/35% 감소시킨 후 짧게 밀쳐냅니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_P">
+                                    <h2>P - 도그파이트</h2>
+                                    <p>
+                                        현우가 적을 공격할 때마다 도그파이트 중첩을 1 얻고, 일정 중첩이 되면 도그파이트가 활성화됩니다. <br>
+                                        다음 공격은 대상에게 추가 스킬 피해를 입히며, <br>
+                                        현우는 일부 체력을 회복하고 허세(W)의 쿨다운이 2초 감소됩니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Skill_video">
+                            <div class="video skill_Q">
+                                <video src="video/현우Q.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_W">
+                                <video src="video/현우W.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_E">
+                                <video src="video/현우E.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_R">
+                                <video src="video/현우R.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_P">
+                                <video src="video/현우P.mp4" loop muted autoplay></video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Character_skill Magnus1">
+                        <div class="Skill_img">
+                            <button class="btn b1"><img src="img/Magnus_Q.png" alt="jack_q"></button>
+                            <button class="btn b2"><img src="img/Magnus_W.png" alt="jack_w"></button>
+                            <button class="btn b3"><img src="img/Magnus_E.png" alt="jack_e"></button>
+                            <button class="btn b4"><img src="img/Magnus_R.png" alt="jack_r"></button>
+                            <button class="btn b5"><img src="img/Magnus_P_Tough_Body.png" alt="jack_p"></button>
+                            <div class="Skill_text_box">
+                                <div class="Skill text_Q">
+                                    <h2>Q - 파쇄탄</h2>
+                                    <p>
+                                        지면을 강하게 쳐 돌덩이를 날려 스킬 피해를 입힙니다. <br>
+                                        돌덩이에 적중된 대상은 2초 동안 이동 속도가 감소되며, <br>
+                                        감소된 이동 속도는 지속 시간에 걸쳐 천천히 회복됩니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_W">
+                                    <h2>W - 17 대 1</h2>
+                                    <p>
+                                        매그너스가 무기를 휘둘러 4초 동안 스킬 피해를 일정 횟수 입힙니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_E">
+                                    <h2>E - 강타</h2>
+                                    <p>
+                                        대상을 후려쳐 스킬 피해를 입히고,
+                                        매그너스가 바라보는 왼쪽 방향으로 3m 날려 버립니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_R">
+                                    <h2>R - 폭주 바이크</h2>
+                                    <p>
+                                        매그너스가 바이크에 시동을 걸고, 7초 동안 진정한 사나이의 질주를 시작합니다. <br>
+                                        바이크의 속도는 점점 빨라지며 2초 후에 최대가 됩니다. <br>
+                                        바이크가 적이나 벽에 충돌하면 스킬 피해를 입힙니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_P">
+                                    <h2>P - 맷집</h2>
+                                    <p>
+                                        매그너스가 적 실험체에게 기본 공격을 적중하면 근성 중첩을 1, 스킬을 적중하면 근성 중첩을 2 획득합니다. <br>
+                                        근성 중첩 당 방어력이 증가하며, 최대 12회 중첩됩니다. <br>
+                                        최대 중첩에 도달하면 매그너스의 초당 체력 재생이 증가합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Skill_video">
+                            <div class="video skill_Q">
+                                <video src="video/매그너스Q.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_W">
+                                <video src="video/매그너스W.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_E">
+                                <video src="video/매그너스E.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_R">
+                                <video src="video/매그너스R.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_P">
+                                <video src="video/매그너스P.mp4" loop muted autoplay></video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Character_skill Fiora1">
+                        <div class="Skill_img">
+                            <button class="btn b1"><img src="img/Fiora_Q.png" alt="jack_q"></button>
+                            <button class="btn b2"><img src="img/Fiora_W.png" alt="jack_w"></button>
+                            <button class="btn b3"><img src="img/Fiora_E.png" alt="jack_e"></button>
+                            <button class="btn b4"><img src="img/Fiora_R.png" alt="jack_r"></button>
+                            <button class="btn b5"><img src="img/Fiora_P.png" alt="jack_p"></button>
+                            <div class="Skill_text_box">
+                                <div class="Skill text_Q">
+                                    <h2>Q - 팡뜨</h2>
+                                    <p>
+                                        피오라가 지정한 방향으로 공격하여 명중한 적에게 스킬 피해를 입힙니다.
+                                        끝 지점에 찔린 적에게는 스킬 피해를 주면서 1.5초 동안 이동 속도를 25% 감소시키고,
+                                        뚜셰 표식을 2회 중첩 시킵니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_W">
+                                    <h2>W - 아따끄 꽁뽀제</h2>
+                                    <p>
+                                        피오라가 지정한 방향으로 무기를 빠르게 2회 휘둘러 각각의 스킬 피해를 입히고,
+                                        각각 뚜셰 표식을 중첩시킵니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_E">
+                                    <h2>E - 마르셰&롱빼</h2>
+                                    <p>
+                                        피오라가 지정한 방향으로 돌진해서 부딪힌 적에게 스킬 피해를 입힙니다. <br>
+                                        <br>
+                                        적에게 적중 시 4초 이내에 스킬을 재사용하여 지정한 방향으로 이동할 수 있으며 벽을 넘을 수 있습니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_R">
+                                    <h2>R - 플레슈</h2>
+                                    <p>
+                                        피오라가 지정한 방향으로 찌르기 공격을 통해 스킬 피해를 입히고, 1초 동안 적의 이동 속도를 50% 감소 시킵니다. <br>
+                                        플레슈는 9.85초 동안 최대 3번을 사용할 수 있으며, 뚜셰 표식이 최대로 중첩된 적에게는 스킬 피해를 추가로 입힙니다. <br>
+                                        플레슈가 적 실험체에게 적중할 때마다 피해량이 증가합니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_P">
+                                    <h2>P - 뚜셰</h2>
+                                    <p>
+                                        피오라가 적에게 스킬을 적중시킬 때마다 뚜셰 표식을 중첩시킬 수 있습니다. <br>
+                                        뚜셰 표식이 최대로 중첩되었을 때 팡뜨(Q), 마르셰(E), 플레슈(R) 스킬을 통해 중첩을 터뜨리며 추가 효과를 줄 수 있습니다. <br>
+                                        레벨이 오를수록 최대 중첩량이 적어져 중첩을 더 쉽게 터뜨릴 수 있습니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="Skill_video">
+                            <div class="video skill_Q">
+                                <video src="video/피오라Q.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_W">
+                                <video src="video/피오라W.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_E">
+                                <video src="video/피오라E.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_R">
+                                <video src="video/피오라R.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_P">
+                                <video src="video/피오라P.mp4" loop muted autoplay></video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Character_skill Nadine1">
+                        <div class="Skill_img">
+                            <button class="btn b1"><img src="img/Nadine_Q.png" alt="jack_q"></button>
+                            <button class="btn b2"><img src="img/Nadine_W.png" alt="jack_w"></button>
+                            <button class="btn b3"><img src="img/Nadine_E.png" alt="jack_e"></button>
+                            <button class="btn b4"><img src="img/Nadine_R.png" alt="jack_r"></button>
+                            <button class="btn b5"><img src="img/Nadine_P.png" alt="jack_p"></button>
+                            <div class="Skill_text_box">
+                                <div class="Skill text_Q">
+                                    <h2>Q - 황소의 눈</h2>
+                                    <p>
+                                        나딘이 2초에 걸쳐 힘을 모으며, 이동 속도가 서서히 줄어들어 20%까지 감소하고 스킬 사거리와 피해량이 2배까지 증가합니다. <br>
+                                        야성이 50 이상 중첩되어 있으면 스킬 사거리가 2.5배까지 증가합니다. <br>
+                                        스킬을 한 번 더 사용하면 화살을 발사하여 스킬 피해를 입힙니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_W">
+                                    <h2>W - 다람쥐 덫</h2>
+                                    <p>
+                                        나딘이 지정한 위치에 다람쥐 덫을 던집니다. <br>
+                                        5초 이내에 재설치 범위 내에서 한 번 더 덫을 던질 수 있으며, <br>
+                                        연결된 덫에 걸린 적은 스킬 피해를 입으며 공격 속도 30%, 이동 속도를 감소시키고, <br>
+                                        5초 간 나딘에게 시야를 제공합니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_E">
+                                    <h2>E - 원숭이 와이어</h2>
+                                    <p>
+                                        나딘이 지정한 위치에 와이어를 발사합니다. <br>
+                                        설치된 와이어는 8초간 10m 이내에서 유지되며, 와이어가 설치되어 있는 동안에는 공격 속도가 추가로 증가합니다. <br>
+                                        한 번 더 사용하면 와이어가 감기면서 나딘이 이동합니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_R">
+                                    <h2>R - 늑대 맹습</h2>
+                                    <p>
+                                        유지 시간 동안 기본 공격을 3번 할 때마다 늑대를 소환하여 적을 공격하게 합니다. <br>
+                                        늑대는 나타나서 대상에게 달려들어 피해를 입히고, <br>
+                                        공격 속도 10%, 이동 속도 15/20/25%를 감소시킵니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_P">
+                                    <h2>P - 야성</h2>
+                                    <p>
+                                        나딘이 야생동물을 사냥할 때 마다 야성 중첩을 획득 합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="Skill_video">
+                            <div class="video skill_Q">
+                                <video src="video/나딘Q.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_W">
+                                <video src="video/나딘W.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_E">
+                                <video src="video/나딘E.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_R">
+                                <video src="video/나딘R.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_P">
+                                <video src="video/나딘P.mp4" loop muted autoplay></video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Character_skill Zahir1">
+                        <div class="Skill_img">
+                            <button class="btn b1"><img src="img/Zahir_Q.png" alt="jack_q"></button>
+                            <button class="btn b2"><img src="img/Zahir_W.png" alt="jack_w"></button>
+                            <button class="btn b3"><img src="img/Zahir_E.png" alt="jack_e"></button>
+                            <button class="btn b4"><img src="img/Zahir_R.png" alt="jack_r"></button>
+                            <button class="btn b5"><img src="img/Zahir_P.png" alt="jack_p"></button>
+                            <div class="Skill_text_box">
+                                <div class="Skill text_Q">
+                                    <h2>Q - 나라야나스트라</h2>
+                                    <p>
+                                        자히르가 신의 힘을 빌려 일정 범위에 스킬 피해를 입힙니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_W">
+                                    <h2>W - 간디바</h2>
+                                    <p>
+                                        차크람을 1개 소모하여 지정한 방향으로 차크람을 발사하며 적중된 적에게 의 스킬 피해를 입힙니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_E">
+                                    <h2>E - 바이바야스트라</h2>
+                                    <p>
+                                        바람을 날려 스킬 피해를 입힙니다. 적중한 대상을 0.35초 동안 공중에 띄웁니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_R">
+                                    <h2>R - 바르가바스트라</h2>
+                                    <p>
+                                        자히르가 크게 힘을 모아 지정한 방향을 향하여 순차적으로 차크람을 퍼붓습니다. <br>
+                                        최초로 스킬 피해를 주고 0.45초마다 스킬 피해를 입힙니다. <br>
+                                        적에게 사신의 눈이 없으면 사신의 눈을 부여합니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_P">
+                                    <h2>P - 사신의 눈</h2>
+                                    <p>
+                                        적에게 스킬을 적중시키면 적에게 3초간 유지되는 <br>
+                                        사신의 눈 표식을 부여하고 대상의 시야를 제공 받습니다. <br>
+                                        또한, 자히르의 이동 속도가 증가하고 2초에 걸쳐 점점 감소합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="Skill_video">
+                            <div class="video skill_Q">
+                                <video src="video/자히르Q.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_W">
+                                <video src="video/자히르W.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_E">
+                                <video src="video/자히르E.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_R">
+                                <video src="video/자히르R.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_P">
+                                <video src="video/자히르P.mp4" loop muted autoplay></video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Character_skill Hart1">
+                        <div class="Skill_img">
+                            <button class="btn b1"><img src="img/Hart_Q_1.png" alt="jack_q"></button>
+                            <button class="btn b2"><img src="img/Hart_W_1.png" alt="jack_w"></button>
+                            <button class="btn b3"><img src="img/Hart_E_1.png" alt="jack_e"></button>
+                            <button class="btn b4"><img src="img/Hart_R_1.png" alt="jack_r"></button>
+                            <button class="btn b5"><img src="img/Hart_P_1.png" alt="jack_p"></button>
+                            <div class="Skill_text_box">
+                                <div class="Skill text_Q">
+                                    <h2>Q - Delay</h2>
+                                    <p>
+                                        하트가 기타를 치면 음표가 생성됩니다. 이후 스킬을 재사용할 수 있습니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_W">
+                                    <h2>W - OverDrive</h2>
+                                    <p>
+                                        하트가 기타를 치면 일정 시간동안 공격력이 증가하고, 기본 공격 사거리가 0.4 증가합니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_E">
+                                    <h2>E - Flanger</h2>
+                                    <p>
+                                        하트가 지정한 방향으로 짧게 이동한 이후 근처의 적에게 음파를 날려 피해를 입힙니다. <br>
+                                        이 스킬은 1회 재사용할 수 있습니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_R">
+                                    <h2>R - Peacemaker</h2>
+                                    <p>
+                                        하트가 5초간 기타를 쳐서 모든 대상을 춤추게 합니다. <br>
+                                        기타를 치는 동안 0.5초마다 자신의 체력을 회복시킵니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_P">
+                                    <h2>P - Feedback</h2>
+                                    <p>
+                                        하트가 기본 공격으로 적에게 피해를 입힐 때마다 스태미나를 회복합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="Skill_video">
+                            <div class="video skill_Q">
+                                <video src="video/하트Q.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_W">
+                                <video src="video/하트W.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_E">
+                                <video src="video/하트E.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_R">
+                                <video src="video/하트R.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_P">
+                                <video src="video/하트P.mp4" loop muted autoplay></video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Character_skill Isol1">
+                        <div class="Skill_img">
+                            <button class="btn b1"><img src="img/Isol_Q.png" alt="jack_q"></button>
+                            <button class="btn b2"><img src="img/Isol_W.png" alt="jack_w"></button>
+                            <button class="btn b3"><img src="img/Isol_E.png" alt="jack_e"></button>
+                            <button class="btn b4"><img src="img/Isol_R.png" alt="jack_r"></button>
+                            <button class="btn b5"><img src="img/Isol_P.png" alt="jack_p"></button>
+                            <div class="Skill_text_box">
+                                <div class="Skill text_Q">
+                                    <h2>Q - 셈텍스 폭탄</h2>
+                                    <p>
+                                        아이솔이 적이나 지면에 부착되는 폭탄을 던집니다. <br>
+                                        폭탄이 지면에 설치된 경우 3초 뒤 폭발하고 스킬 피해와 함께 0.6초 동안 속박 상태로 만듭니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_W">
+                                    <h2>W - 화망</h2>
+                                    <p>
+                                        아이솔이 2초 동안 전방을 향해 무기를 난사하여 0.33초 간격으로 스킬 피해를 입힙니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_E">
+                                    <h2>E - 은밀 기동</h2>
+                                    <p>
+                                        아이솔이 앞으로 구르며 이동합니다. <br>
+                                        이동 후 일정 시간동안 은신 상태가 됩니다. 이동을 제외한 행동을 하면 은신 상태가 해제됩니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_R">
+                                    <h2>R - Mok제 폭탄</h2>
+                                    <p>
+                                        아이솔이 Mok제 폭탄을 설치합니다. Mok제 폭탄은 45초 동안 적을 감지하며, <br>
+                                        범위 안에 적이 들어오면 폭발하여 스킬 피해를 입힙니다. <br>
+                                        최대 2개까지 보유할 수 있으며, 2개까지 설치할 수 있습니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_P">
+                                    <h2>P - 유격전</h2>
+                                    <p>
+                                        아이솔이 트랩을 설치하는 시간이 감소합니다. <br>
+                                        아이솔이 설치한 트랩에 피해를 받은 대상은 3초 동안 방어력이 감소합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="Skill_video">
+                            <div class="video skill_Q">
+                                <video src="video/아이솔Q.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_W">
+                                <video src="video/아이솔W.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_E">
+                                <video src="video/아이솔E.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_R">
+                                <video src="video/아이솔R.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_P">
+                                <video src="video/아이솔P.mp4" loop muted autoplay></video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Character_skill Lidailin1">
+                        <div class="Skill_img">
+                            <button class="btn b1"><img src="img/Li_Dailin_Q.png" alt="jack_q"></button>
+                            <button class="btn b2"><img src="img/Li_Dailin_W.png" alt="jack_w"></button>
+                            <button class="btn b3"><img src="img/Li_Dailin_E.png" alt="jack_e"></button>
+                            <button class="btn b4"><img src="img/Li_Dailin_R.png" alt="jack_r"></button>
+                            <button class="btn b5"><img src="img/Li_Dailin_P.png" alt="jack_p"></button>
+                            <div class="Skill_text_box">
+                                <div class="Skill text_Q">
+                                    <h2>Q - 호연각</h2>
+                                    <p>
+                                        리 다이린이 앞으로 짧게 돌진하며 범위 내의 적들에게 스킬 피해를 입힙니다. <br>
+                                        이 스킬은 2회 다시 사용할 수 있습니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_W">
+                                    <h2>W - 술마시기</h2>
+                                    <p>
+                                        리 다이린이 0.8초 동안 술을 마셔 취기를 45만큼 충전하며 기본 공격을 회피하며 받는 스킬 피해가 감소합니다. <br>
+                                        리 다이린이 기본 공격을 하면 술 마시기 쿨다운이 1초 감소합니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_E">
+                                    <h2>E - 술뿌리기</h2>
+                                    <p>
+                                        리 다이린이 부채꼴 모양으로 술을 뿜어, <br>
+                                        범위 안의 적들의 이동 속도를 2초 동안 만큼 감소시키며 스킬 피해를 입힙니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_R">
+                                    <h2>R - 취호격파산</h2>
+                                    <p>
+                                        리 다이린이 방해 효과 면역 상태로 빠르게 돌진하여 부딪친 적을 제압하고 <br>
+                                        4회 연타하여 각 타격마다 적의 잃은 체력에 비례해 스킬 피해를 입힙니다.
+                                    </p>
+                                </div>
+                                <div class="Skill text_P">
+                                    <h2>P - 취기</h2>
+                                    <p>
+                                        리 다이린은 술 마시기를 사용해 취기를 채울 수 있습니다. <br>
+                                        취기에 따라 맹호청권이 발동합니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Skill_video">
+                            <div class="video skill_Q">
+                                <video src="video/리다이린Q.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_W">
+                                <video src="video/리다이린W.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_E">
+                                <video src="video/리다이린E.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_R">
+                                <video src="video/리다이린R.mp4" loop muted autoplay></video>
+                            </div>
+                            <div class="video skill_P">
+                                <video src="video/리다이린P.mp4" loop muted autoplay></video>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="img Aya1">
-                    <img src="img/아야.png" alt="Aya">
-                    <div class="img_textbox">
-                        <h3>"나쁜 사람이요? 어디 있나요!"</h3>
-                        <p>정의에 대한 동경으로 경찰이 되었으나 가족이 살인사건에 휘말린 이후 직업에 회의감을 느끼기 시작했다. <br>
-                            또한, 정의에 대한 집착이 심해져서 자신이 아니면 이 세상에 정의를 구현할 사람은 없다고 생각하게 되었다. <br>
-                            시체를 잘 보지 못한다. 어쩌다 동물 사체를 뒤져야 할 때면 큰 스트레스를 받는다. <br>
-                            동생의 이름은 스즈키 히카루. 두 다리가 없다.
-                        </p>
+            </section>
+        
+            <div id="etc_content">
+                <div class="Character_skin_list">
+                    <h1>캐릭터 스킨</h1>
+                    <div class="Character_skin Jackie1">
+                        <div class="Skin SA">
+                            <img src="img/Executioner_Jackie.png" alt="jack_skin_a">
+                            <p>처형자 재키</p>
+                        </div>
+                        <div class="Skin SB">
+                            <img src="img/Scarlet_Corsage_Jackie.png" alt="jack_skin_b">
+                            <p>스칼렛 코사지 재키</p>
+                        </div>
+                        <div class="Skin SC">
+                            <img src="img/Overvolt_Jackie.png" alt="jack_skin_c">
+                            <p>시스템쇼크 재키</p>
+                        </div>
+                        <div class="Skin SD">
+                            <img src="img/Cadet_Jackie.png" alt="jack_skin_D">
+                            <p>사관후보생 재키</p>
+                        </div>
                     </div>
-                </div>
-                <div class="img Hyunwoo1">
-                    <img src="img/현우.png" alt="Hyunwoo">
-                    <div class="img_textbox">
-                        <h3>"이럴 때 쓰라고 있는 게 주먹이지."</h3>
-                        <p>현우에게 미래는 막막함, 그 자체였다. <br>
-                            소문, 험담, 손가락질, 그리고 낙인... 너무 많은 것들이 그의 앞을 가로막고 있다. <br>
-                            그 막막함을 잊기 위해 싸움을 하거나 바이크를 타는 등 현실의 자극을 더 키우는 데만 집중했다. <br>
-                            그러나 아무리 외면하려고 해도, 끝없는 불안감은 사라지지 않고 계속 가슴 한 켠에 남아있었다. <br>
-                            성인이 되면 가장 먼저 하고 싶은 일은 복권을 사는 것. <br>
-                            지금 현실을 벗어날 수만 있다면, 그 정도의 꿈만으로도 충분했다.
-                        </p>
+                    <div class="Character_skin Aya1">
+                        <div class="Skin SA">
+                            <img src="img/On-Duty_Aya.png" alt="aya_skin_a">
+                            <p>경찰 아야</p>
+                        </div>
+                        <div class="Skin SB">
+                            <img src="img/Midsummer_Festival_Aya.png" alt="aya_skin_b">
+                            <p>불꽃놀이 아야</p>
+                        </div>
                     </div>
-                </div>
-                <div class="img Magnus1">
-                    <img src="img/매그너스.png" alt="Magnus">
-                    <div class="img_textbox">
-                        <h3>"이 몸의 질주를 막을 수 있는 놈이 있을 것 같나?"</h3>
-                        <p>과격한 폭주족 집단 Reaper's wheel의 리더. <br>
-                            일개 단원에서 리더까지 오직 힘으로만 권력을 쟁취한 인물. <br>
-                            의리와 우정보다 자신의 강함과 근성을 위해 조직을 존속시키려 했다. <br>
-                            모든 것을 힘으로 해결하려는 성격 때문에 그를 탐탁치 않게 보는 단원들이 많았다. <br>
-                            약자를 무시한다. 특히 박쥐처럼 이곳저곳 옮겨붙는 사람을 가장 혐오한다. <br>
-                            바이크의 백라이트와 뒷모습보다 무력과 권력으로 기억되는 남자.
-                        </p>
+                    <div class="Character_skin Hyunwoo1">
+                        <div class="Skin SA">
+                            <img src="img/Street_Fiend_Hyunwoo.png" alt="hyun_skin_a">
+                            <p>뒷골목 현우</p>
+                        </div>
+                        <div class="Skin SB">
+                            <img src="img/Red_Devil_Hyunwoo.png" alt="hyun_skin_b">
+                            <p>레드데블 현우</p>
+                        </div>
+                        <div class="Skin SC">
+                            <img src="img/Cadet_Hyunwoo.png" alt="hyun_skin_c">
+                            <p>사관후보생 현우</p>
+                        </div>
+                        <div class="Skin SD">
+                            <img src="img/Sweet_Beast_Hyunwoo.png" alt="hyun_skin_D">
+                            <p>맷현우</p>
+                        </div>
                     </div>
-                </div>
-                <div class="img Fiora1">
-                    <img src="img/피오라.png" alt="Fiora">
-                    <div class="img_textbox">
-                        <h3>"내 적은 어디에 있지?"</h3>
-                        <p>월등한 실력의 펜싱선수. <br>
-                            바른 자세와 높은 프라이드는 집안의 영향이 크다. <br>
-                            가부장적이였던 아버지는 여자란 남자 차 시중이나 드는 존재라 생각했다. <br>
-                            펜싱을 시작한 건 그런 아버지에 대한 반발심과 인정받고 싶은 욕구 때문이었다. <br>
-                            학생시절엔 수학을 가장 잘했다. <br>
-                            자신보다 약한 사람은 지켜주고 싶어하고 자신보다 강한 사람에겐 인정받고 싶어한다.
-                        </p>
+                    <div class="Character_skin Magnus1">
+                        <div class="Skin SA">
+                            <img src="img/Boss_Magnus.png" alt="mag_skin_a">
+                            <p>보스 매그너스</p>
+                        </div>
+                        <div class="Skin SB">
+                            <img src="img/Tropical_Party_Magnus.png" alt="mag_skin_b">
+                            <p>남국 매그너스</p>
+                        </div>
+                        <div class="Skin SC">
+                            <img src="img/Rebel_Magnus.png" alt="mag_skin_c">
+                            <p>반항아 매그너스</p>
+                        </div>
                     </div>
-                </div>
-                <div class="img Nadine1">
-                    <img src="img/나딘.png" alt="Nadine">
-                    <div class="img_textbox">
-                        <h3>"그래, 사냥을 시작하지."</h3>
-                        <p>어릴 적, 산사태로 부모를 잃고 짐승들 사이에서 자란 야생 인간. <br>
-                            사냥꾼에게 발견된 후 뒤늦게 인간 사회로 돌아왔다. <br>
-                            아직 야생의 습성이 남아있어 인간 사회에 잘 적응하지 못하는 상태. <br>
-                            사소한 일에도 인간으로서 이렇게 대응해야 할지 몰라서 혼란스러워한다. <br>
-                            그런 어수룩한 모습을 감추려고 평소엔 퉁명스럽게 행동하는 편. <br>
-                            무시당하는 것보단 차라리 기피 받는 게 더 편하다. <br>
-                            어릴 적 산사태로 토사에 깔렸던 기억 때문에 폐소공포증이 남아있다. <br>
-                            어째서인지 요즘, 우리에 갇힌 꿈을 꾸는 날이 많아지고 있다. <br>
-                            이 꿈의 의미는 무엇일까?
-                        </p>
+                    <div class="Character_skin Fiora1">
+                        <div class="Skin SA">
+                            <img src="img/Lieutenant_Fiora.png" alt="fiora_skin_a">
+                            <p>장교 피오라</p>
+                        </div>
+                        <div class="Skin SB">
+                            <img src="img/Muskateer_Fiora.png" alt="fiora_skin_b">
+                            <p>총사 피오라</p>
+                        </div>
+                        <div class="Skin SC">
+                            <img src="img/Fiora_Skin_03.png" alt="fiora_skin_c">
+                            <p>파티 드레스 피오라</p>
+                        </div>
                     </div>
-                </div>
-                <div class="img Zahir1">
-                    <img src="img/자히르.png" alt="Zahir">
-                    <div class="img_textbox">
-                        <h3>"신이 주신 시련이라면, 기꺼이 감당할 것이오."</h3>
-                        <p>자신의 눈에 신이 보인다고 주장하는 청년. 진실은 아무도 모른다. <br>
-                            어릴 적 고아원에서 도망쳐 나와 탈진과 굶주림으로 죽을 뻔했다. <br>
-                            그때 기적적으로 어느 작은 사원에 도달했고, 겨우 살 수 있었다. <br>
-                            신이 자신을 구해줬다고 생각했으며, 그때부터 무조건적인 믿음을 가지고 신앙생활에 전념했다. <br>
-                            매일 아침 몸을 씻고, 나무빗으로 머리카락을 정돈한다. <br>
-                            말이 적어서 잘 티가 나진 않으나 약간 '중2병스러운' 말을 잘한다.
-                        </p>
+                    <div class="Character_skin Nadine1">
+                        <div class="Skin SA">
+                            <img src="img/Neon_Huntress_Nadine.png" alt="nadi_skin_a">
+                            <p>헌터 나딘</p>
+                        </div>
+                        <div class="Skin SB">
+                            <img src="img/Little_Nadine_Riding_Hood.png" alt="nadi_skin_b">
+                            <p>빨간망토 나딘</p>
+                        </div>
+                        <div class="Skin SC">
+                            <img src="img/nadi.png" alt="nadi_skin_c">
+                            <p>야생의 부름 나딘</p>
+                        </div>
                     </div>
-                </div>
-                <div class="img Hart1">
-                    <img src="img/하트.png" alt="Hart">
-                    <div class="img_textbox">
-                        <h3>"Love&Peace! 헤헤..."</h3>
-                        <p>사랑과 음악은 세상을 바꾼다는 구호에 반해 락의 세계로 들어왔다. <br>
-                            대형 레이블의 눈에 띄었으나, 자신이 원하는 노래와는 방향이 달라 거절한다. <br>
-                            그러나 하트를 제외한 밴드원은 오랜 생활고에 지쳐 계약을 진행한다. <br>
-                            이에 충격을 받은 하트는 자신이 음악적 가치관에 더욱 집착하기 시작했다. <br>
-                            키와 얼굴이 같은 쌍둥이 남동생이 있다. 뉴욕에서 함께 자취 중. <br>
-                            자신의 음악이 절실히 필요한 곳을 찾았다는 메시지를 동생에게 보낸 뒤 자취를 감췄다.
-                        </p>
+                    <div class="Character_skin Zahir1">
+                        <div class="Skin SA">
+                            <img src="img/Glided_Reaper_Zahir.png" alt="za_skin_a">
+                            <p>사신 자히르</p>
+                        </div>
+                        <div class="Skin SB">
+                            <img src="img/Cobalt_Evolution_Zahir.jpg" alt="za_skin_b">
+                            <p>사이코시스 자히르</p>
+                        </div>
                     </div>
-                </div>
-                <div class="img Isol1">
-                    <img src="img/아이솔.png" alt="Isol">
-                    <div class="img_textbox">
-                        <h3>"작전 준비 완료."</h3>
-                        <p>테러 집단 소년병 출신. <br>
-                            12살까지 보육원에서 마르셀로라는 이름으로 생활한 기록이 있다. <br>
-                            믿고 의지하던 형의 권유로 여러 아이들을 설득해 보육원을 나와 테러집단에 입대했다. <br>
-                            이후, 같이 들어온 아이들 중 죽거나 잡히지 않은 사람은 아이솔 한 명 뿐이다. <br>
-                            필요 이상으로 사람들을 잔인하게 죽이는 경향이 있다. <br>
-                            사람을 죽일 때 무의식적으로 배웠던 성가를 읋을 때가 있다.
-                        </p>
+                    <div class="Character_skin Hart1">
+                        <div class="Skin SA">
+                            <img src="img/Band_Leader_Hart.png" alt="hart_skin_a">
+                            <p>밴드리더 하트</p>
+                        </div>
+                        <div class="Skin SB">
+                            <img src="img/Winter_Carnival_Hart.png" alt="hart_skin_b">
+                            <p>눈꽃축제 하트</p>
+                        </div>
+                        <div class="Skin SC">
+                            <img src="img/HART_Skin_03.png" alt="hart_skin_c">
+                            <p>퍼플퀸 하트</p>
+                        </div>
                     </div>
-                </div>
-                <div class="img Lidailin1">
-                    <img src="img/리다이린1.png" alt="Lidailin">
-                    <div class="img_textbox">
-                        <h3>"하아...꼭 내가 해야 돼?"</h3>
-                        <p>무술가 집안의 외동딸. <br>
-                            자신의 가족들이 무술수련에 온 신경을 집중하느라 그녀를 뒷전으로 미뤄뒀었기에 무술에 대해 부정적인 감정을 지니고 있다. <br>
-                            가족들에게 복수하기 위해 대대로 내려오던 무공 비급과 도장을 모두 없애버렸으며, <br>
-                            자신 역시 무술가로서의 긍지를 버린 채 살아가는 길을 택한다. <br>
-                            술을 살 돈이 떨어지면 적당한 일을 찾는다. <br>
-                            동네에서는 이름보다 리화자(利花子: 이씨 성의 거지)라는 별명으로 유명했다.
-                        </p>
+                    <div class="Character_skin Isol1">
+                        <div class="Skin SA">
+                            <img src="img/Wasteland_Isol.png" alt="isol_skin_a">
+                            <p>아포칼립스 아이솔</p>
+                        </div>
+                        <div class="Skin SB">
+                            <img src="img/hunterisol.jpg_large" alt="isol_skin_b">
+                            <p>고스트헌터 아이솔</p>
+                        </div>
+                        <div class="Skin SC">
+                            <img src="img/116.Isol_Skin_03.png" alt="isol_skin_c">
+                            <p>새해토끼 아이솔</p>
+                        </div>
+                    </div>
+                    <div class="Character_skin Lidailin1">
+                        <div class="Skin SA">
+                            <img src="img/Jade_Drifter_Li_Dailin.png" alt="lida_skin_a">
+                            <p>여행자 리 다이린</p>
+                        </div>
+                        <div class="Skin SB">
+                            <img src="img/Rebel_Li_Dailin.png" alt="lida_skin_b">
+                            <p>반항아 리 다이린</p>
+                        </div>
+                        <div class="Skin SC">
+                            <img src="img/Dragon_Dance_Li_Dailin.png" alt="lida_skin_c">
+                            <p>용 다이린</p>
+                        </div>
+                        <div class="Skin SD">
+                            <img src="img/Festive_Roar_Li_Dailin.png" alt="hyun_skin_D">
+                            <p>어흥다이린</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-        <section>
-            <div id="Skill_box">
-                <h1>캐릭터 스킬</h1>
-                <div class="Character_skill Jackie1">
-                    <div class="Skill_img">
-                        <button class="btn b1"><img src="img/Jackie_Q1.png" alt="jack_q"></button>
-                        <button class="btn b2"><img src="img/Jackie_W_Adrenaline Burst.png" alt="jack_w"></button>
-                        <button class="btn b3"><img src="img/Jackie_E_Leaping Strike.png" alt="jack_e"></button>
-                        <button class="btn b4"><img src="img/Jackie_R_Chainsaw Murderer.png" alt="jack_r"></button>
-                        <button class="btn b5"><img src="img/Jackie_P_Bloodfest.png" alt="jack_p"></button>
-                        <div class="Skill_text_box">
-                            <div class="Skill text_Q">
-                                <h2>Q - 연참</h2>
-                                <p>재키가 지정한 방향으로 무기를 휘둘러 스킬 피해를 입힙니다. <br>
-                                    연참이 적에게 적중했다면 재사용이 활성화됩니다. <br>
-                                    재사용 시 재키가 지정한 방향으로 살짝 전진하며 무기를 휘둘러 스킬 피해를 입힙니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_W">
-                                <h2>W - 아드레날린 분비</h2>
-                                <p>
-                                    재키가 아드레날린을 활성화하여 이동 속도가 증가합니다. <br>
-                                    아드레날린이 활성화된 동안 출혈에 걸린 적을 향해 이동하면 이동 속도가 증가하고, <br>
-                                    출혈 상태의 적을 공격하면 자신의 잃은 체력에 비례해 체력을 회복합니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_E">
-                                <h2>E - 습격</h2>
-                                <p>
-                                    재키가 지정한 위치로 점프하여, 주변의 적들에게 스킬 피해를 입힙니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_R">
-                                <h2>R - 전기톱 살인마</h2>
-                                <p>
-                                    재키가 일정 시간동안 전기톱을 꺼내들어 기본 공격으로 추가 스킬 피해를 입힙니다. <br>
-                                    재키가 적 실험체 처치에 관여하면 지속 시간이 5초 증가합니다. <br>
-                                    전기톱 살인마가 발동되고 3초가 지나면 학살을 사용할 수 있습니다. <br>
-                                    <br>
-                                    학살: 재키가 전기톱을 크게 휘둘러 적의 잃은 체력에 비례하여 스킬 피해를 입힙니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_P">
-                                <h2>패시브 - 피의 축제</h2>
-                                <p>
-                                    재키가 피해를 입힌 적 실험체가 3초 내에 빈사 또는 사망에 이르게 되면 재키의 일반 스킬 쿨다운이 초기화됩니다. <br>
-                                    재키가 스킬로 피해를 입히면 6초 동안 스킬 피해를 입히는 출혈을 부여합니다. <br>
-                                    재키는 출혈 상태의 대상에게 추가 스킬 피해를 입히고 출혈의 지속 시간을 갱신합니다.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="Skill_video">
-                        <div class="video skill_Q">
-                            <video src="video/재키Q.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_W">
-                            <video src="video/재키W.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_E">
-                            <video src="video/재키E.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_R">
-                            <video src="video/재키R.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_P">
-                            <video src="video/재키P.mp4" loop muted autoplay></video>
-                        </div>
-                    </div>
-                </div>
-                <div class="Character_skill Aya1">
-                    <div class="Skill_img">
-                        <button class="btn b1"><img src="img/Aya_Q_Double Shot.png" alt="jack_q"></button>
-                        <button class="btn b2"><img src="img/Aya_W_Steady Shot.png" alt="jack_w"></button>
-                        <button class="btn b3"><img src="img/Aya_E_Moving Turn.png" alt="jack_e"></button>
-                        <button class="btn b4"><img src="img/Aya_R_Black Cartridge.png" alt="jack_r"></button>
-                        <button class="btn b5"><img src="img/Aya_P_Aya_s Justice.png" alt="jack_p"></button>
-                        <div class="Skill_text_box">
-                            <div class="Skill text_Q">
-                                <h2>Q - 2연발</h2>
-                                <p>
-                                    아야가 대상을 향해 2번 빠르게 사격합니다. <br>
-                                    첫 발은 공격력의 100%의 기본 공격 피해를, <br>
-                                    두 번째 발은 스킬 피해를 입히며 아야의 공격 속도가 잠시 동안 증가합니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_W">
-                                <h2>W - 고정 사격</h2>
-                                <p>
-                                    아야가 한 방향으로 1.6초 동안 총을 발사하여 6~8발을 연사합니다. <br>
-                                    추가 공격 속도 30%당 발사 탄환 수가 증가합니다. <br>
-                                    탄환은 명중 시 스킬 피해를 입힙니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_E">
-                                <h2>E - 무빙턴</h2>
-                                <p>
-                                    아야가 지정한 방향으로 재빠르게 뜁니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_R">
-                                <h2>R - 공포탄</h2>
-                                <p>
-                                    아야가 하늘을 향해 공포탄을 발사합니다. <br>
-                                    주변 적들은 스킬 피해를 입고 잠깐 공포에 질립니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_P">
-                                <h2>P - 아야의 정의</h2>
-                                <p>
-                                    아야가 공격당하면 보호막이 생성되어 1.5초 동안 피해를 막아줍니다. <br>
-                                    적에게 공격을 할 때마다 아야의 정의의 쿨다운이 1초씩 감소합니다.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="Skill_video">
-                        <div class="video skill_Q">
-                            <video src="video/아야Q.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_W">
-                            <video src="video/아야W.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_E">
-                            <video src="video/아야E.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_R">
-                            <video src="video/아야R.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_P">
-                            <video src="video/아야P.mp4" loop muted autoplay></video>
-                        </div>
-                    </div>
-                </div>
-                <div class="Character_skill Hyunwoo1">
-                    <div class="Skill_img">
-                        <button class="btn b1"><img src="img/Hyunwoo_Q_Stomping Foot.png" alt="jack_q"></button>
-                        <button class="btn b2"><img src="img/Hyunwoo_W_Bluff.png" alt="jack_w"></button>
-                        <button class="btn b3"><img src="img/Hyunwoo_E_First Attack.png" alt="jack_e"></button>
-                        <button class="btn b4"><img src="img/Hyunwoo_R_Haymaker.png" alt="jack_r"></button>
-                        <button class="btn b5"><img src="img/Hyunwoo_P_Dogfight.png" alt="jack_p"></button>
-                        <div class="Skill_text_box">
-                            <div class="Skill text_Q">
-                                <h2>Q - 발 밟기</h2>
-                                <p>
-                                    아야가 공격당하면 보호막이 생성되어 1.5초 동안 피해를 막아줍니다. <br>
-                                    적에게 공격을 할 때마다 아야의 정의의 쿨다운이 1초씩 감소합니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_W">
-                                <h2>W - 허세</h2>
-                                <p>
-                                    현우가 허세를 부려 도그파이트(P)를 활성화하고, 2.5초 동안 방어력이 증가합니다. <br>
-                                    지속 시간 동안 적에게 기본 공격을 받을 때마다 도그파이트(P) 중첩을 1 획득합니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_E">
-                                <h2>E - 선빵필승</h2>
-                                <p>
-                                    현우가 지정한 방향으로 돌진하며, 적과 부딪히면 스킬 피해를 입히고 밀어냅니다. <br>
-                                    밀어낸 적이 벽에 부딪히면 스킬 피해를 입히고 1.5초 간 기절시킵니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_R">
-                                <h2>R - 핵펀치</h2>
-                                <p>
-                                    현우가 1.5초 동안 힘을 충전한 후, 강력한 한 방을 날려 의 스킬 피해를 입히고 <br>
-                                    6초 동안 방어력을 25/30/35% 감소시킨 후 짧게 밀쳐냅니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_P">
-                                <h2>P - 도그파이트</h2>
-                                <p>
-                                    현우가 적을 공격할 때마다 도그파이트 중첩을 1 얻고, 일정 중첩이 되면 도그파이트가 활성화됩니다. <br>
-                                    다음 공격은 대상에게 추가 스킬 피해를 입히며, <br>
-                                    현우는 일부 체력을 회복하고 허세(W)의 쿨다운이 2초 감소됩니다.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="Skill_video">
-                        <div class="video skill_Q">
-                            <video src="video/현우Q.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_W">
-                            <video src="video/현우W.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_E">
-                            <video src="video/현우E.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_R">
-                            <video src="video/현우R.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_P">
-                            <video src="video/현우P.mp4" loop muted autoplay></video>
-                        </div>
-                    </div>
-                </div>
-                <div class="Character_skill Magnus1">
-                    <div class="Skill_img">
-                        <button class="btn b1"><img src="img/Magnus_Q.png" alt="jack_q"></button>
-                        <button class="btn b2"><img src="img/Magnus_W.png" alt="jack_w"></button>
-                        <button class="btn b3"><img src="img/Magnus_E.png" alt="jack_e"></button>
-                        <button class="btn b4"><img src="img/Magnus_R.png" alt="jack_r"></button>
-                        <button class="btn b5"><img src="img/Magnus_P_Tough Body.png" alt="jack_p"></button>
-                        <div class="Skill_text_box">
-                            <div class="Skill text_Q">
-                                <h2>Q - 파쇄탄</h2>
-                                <p>
-                                    지면을 강하게 쳐 돌덩이를 날려 스킬 피해를 입힙니다. <br>
-                                    돌덩이에 적중된 대상은 2초 동안 이동 속도가 감소되며, <br>
-                                    감소된 이동 속도는 지속 시간에 걸쳐 천천히 회복됩니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_W">
-                                <h2>W - 17 대 1</h2>
-                                <p>
-                                    매그너스가 무기를 휘둘러 4초 동안 스킬 피해를 일정 횟수 입힙니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_E">
-                                <h2>E - 강타</h2>
-                                <p>
-                                    대상을 후려쳐 스킬 피해를 입히고,
-                                    매그너스가 바라보는 왼쪽 방향으로 3m 날려 버립니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_R">
-                                <h2>R - 폭주 바이크</h2>
-                                <p>
-                                    매그너스가 바이크에 시동을 걸고, 7초 동안 진정한 사나이의 질주를 시작합니다. <br>
-                                    바이크의 속도는 점점 빨라지며 2초 후에 최대가 됩니다. <br>
-                                    바이크가 적이나 벽에 충돌하면 스킬 피해를 입힙니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_P">
-                                <h2>P - 맷집</h2>
-                                <p>
-                                    매그너스가 적 실험체에게 기본 공격을 적중하면 근성 중첩을 1, 스킬을 적중하면 근성 중첩을 2 획득합니다. <br>
-                                    근성 중첩 당 방어력이 증가하며, 최대 12회 중첩됩니다. <br>
-                                    최대 중첩에 도달하면 매그너스의 초당 체력 재생이 증가합니다.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="Skill_video">
-                        <div class="video skill_Q">
-                            <video src="video/매그너스Q.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_W">
-                            <video src="video/매그너스W.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_E">
-                            <video src="video/매그너스E.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_R">
-                            <video src="video/매그너스R.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_P">
-                            <video src="video/매그너스P.mp4" loop muted autoplay></video>
-                        </div>
-                    </div>
-                </div>
-                <div class="Character_skill Fiora1">
-                    <div class="Skill_img">
-                        <button class="btn b1"><img src="img/Fiora_Q.png" alt="jack_q"></button>
-                        <button class="btn b2"><img src="img/Fiora_W.png" alt="jack_w"></button>
-                        <button class="btn b3"><img src="img/Fiora_E.png" alt="jack_e"></button>
-                        <button class="btn b4"><img src="img/Fiora_R.png" alt="jack_r"></button>
-                        <button class="btn b5"><img src="img/Fiora_P.png" alt="jack_p"></button>
-                        <div class="Skill_text_box">
-                            <div class="Skill text_Q">
-                                <h2>Q - 팡뜨</h2>
-                                <p>
-                                    피오라가 지정한 방향으로 공격하여 명중한 적에게 스킬 피해를 입힙니다.
-                                    끝 지점에 찔린 적에게는 스킬 피해를 주면서 1.5초 동안 이동 속도를 25% 감소시키고,
-                                    뚜셰 표식을 2회 중첩 시킵니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_W">
-                                <h2>W - 아따끄 꽁뽀제</h2>
-                                <p>
-                                    피오라가 지정한 방향으로 무기를 빠르게 2회 휘둘러 각각의 스킬 피해를 입히고,
-                                    각각 뚜셰 표식을 중첩시킵니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_E">
-                                <h2>E - 마르셰&롱빼</h2>
-                                <p>
-                                    피오라가 지정한 방향으로 돌진해서 부딪힌 적에게 스킬 피해를 입힙니다. <br>
-                                    <br>
-                                    적에게 적중 시 4초 이내에 스킬을 재사용하여 지정한 방향으로 이동할 수 있으며 벽을 넘을 수 있습니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_R">
-                                <h2>R - 플레슈</h2>
-                                <p>
-                                    피오라가 지정한 방향으로 찌르기 공격을 통해 스킬 피해를 입히고, 1초 동안 적의 이동 속도를 50% 감소 시킵니다. <br>
-                                    플레슈는 9.85초 동안 최대 3번을 사용할 수 있으며, 뚜셰 표식이 최대로 중첩된 적에게는 스킬 피해를 추가로 입힙니다. <br>
-                                    플레슈가 적 실험체에게 적중할 때마다 피해량이 증가합니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_P">
-                                <h2>P - 뚜셰</h2>
-                                <p>
-                                    피오라가 적에게 스킬을 적중시킬 때마다 뚜셰 표식을 중첩시킬 수 있습니다. <br>
-                                    뚜셰 표식이 최대로 중첩되었을 때 팡뜨(Q), 마르셰(E), 플레슈(R) 스킬을 통해 중첩을 터뜨리며 추가 효과를 줄 수 있습니다. <br>
-                                    레벨이 오를수록 최대 중첩량이 적어져 중첩을 더 쉽게 터뜨릴 수 있습니다.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="Skill_video">
-                        <div class="video skill_Q">
-                            <video src="video/피오라Q.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_W">
-                            <video src="video/피오라W.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_E">
-                            <video src="video/피오라E.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_R">
-                            <video src="video/피오라R.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_P">
-                            <video src="video/피오라P.mp4" loop muted autoplay></video>
-                        </div>
-                    </div>
-                </div>
-                <div class="Character_skill Nadine1">
-                    <div class="Skill_img">
-                        <button class="btn b1"><img src="img/Nadine_Q.png" alt="jack_q"></button>
-                        <button class="btn b2"><img src="img/Nadine_W.png" alt="jack_w"></button>
-                        <button class="btn b3"><img src="img/Nadine_E.png" alt="jack_e"></button>
-                        <button class="btn b4"><img src="img/Nadine_R.png" alt="jack_r"></button>
-                        <button class="btn b5"><img src="img/Nadine_P.png" alt="jack_p"></button>
-                        <div class="Skill_text_box">
-                            <div class="Skill text_Q">
-                                <h2>Q - 황소의 눈</h2>
-                                <p>
-                                    나딘이 2초에 걸쳐 힘을 모으며, 이동 속도가 서서히 줄어들어 20%까지 감소하고 스킬 사거리와 피해량이 2배까지 증가합니다. <br>
-                                    야성이 50 이상 중첩되어 있으면 스킬 사거리가 2.5배까지 증가합니다. <br>
-                                    스킬을 한 번 더 사용하면 화살을 발사하여 스킬 피해를 입힙니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_W">
-                                <h2>W - 다람쥐 덫</h2>
-                                <p>
-                                    나딘이 지정한 위치에 다람쥐 덫을 던집니다. <br>
-                                    5초 이내에 재설치 범위 내에서 한 번 더 덫을 던질 수 있으며, <br>
-                                    연결된 덫에 걸린 적은 스킬 피해를 입으며 공격 속도 30%, 이동 속도를 감소시키고, <br>
-                                    5초 간 나딘에게 시야를 제공합니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_E">
-                                <h2>E - 원숭이 와이어</h2>
-                                <p>
-                                    나딘이 지정한 위치에 와이어를 발사합니다. <br>
-                                    설치된 와이어는 8초간 10m 이내에서 유지되며, 와이어가 설치되어 있는 동안에는 공격 속도가 추가로 증가합니다. <br>
-                                    한 번 더 사용하면 와이어가 감기면서 나딘이 이동합니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_R">
-                                <h2>R - 늑대 맹습</h2>
-                                <p>
-                                    유지 시간 동안 기본 공격을 3번 할 때마다 늑대를 소환하여 적을 공격하게 합니다. <br>
-                                    늑대는 나타나서 대상에게 달려들어 피해를 입히고, <br>
-                                    공격 속도 10%, 이동 속도 15/20/25%를 감소시킵니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_P">
-                                <h2>P - 야성</h2>
-                                <p>
-                                    나딘이 야생동물을 사냥할 때 마다 야성 중첩을 획득 합니다.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="Skill_video">
-                        <div class="video skill_Q">
-                            <video src="video/나딘Q.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_W">
-                            <video src="video/나딘W.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_E">
-                            <video src="video/나딘E.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_R">
-                            <video src="video/나딘R.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_P">
-                            <video src="video/나딘P.mp4" loop muted autoplay></video>
-                        </div>
-                    </div>
-                </div>
-                <div class="Character_skill Zahir1">
-                    <div class="Skill_img">
-                        <button class="btn b1"><img src="img/Zahir_Q.png" alt="jack_q"></button>
-                        <button class="btn b2"><img src="img/Zahir_W.png" alt="jack_w"></button>
-                        <button class="btn b3"><img src="img/Zahir_E.png" alt="jack_e"></button>
-                        <button class="btn b4"><img src="img/Zahir_R.png" alt="jack_r"></button>
-                        <button class="btn b5"><img src="img/Zahir_P.png" alt="jack_p"></button>
-                        <div class="Skill_text_box">
-                            <div class="Skill text_Q">
-                                <h2>Q - 나라야나스트라</h2>
-                                <p>
-                                    자히르가 신의 힘을 빌려 일정 범위에 스킬 피해를 입힙니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_W">
-                                <h2>W - 간디바</h2>
-                                <p>
-                                    차크람을 1개 소모하여 지정한 방향으로 차크람을 발사하며 적중된 적에게 의 스킬 피해를 입힙니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_E">
-                                <h2>E - 바이바야스트라</h2>
-                                <p>
-                                    바람을 날려 스킬 피해를 입힙니다. 적중한 대상을 0.35초 동안 공중에 띄웁니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_R">
-                                <h2>R - 바르가바스트라</h2>
-                                <p>
-                                    자히르가 크게 힘을 모아 지정한 방향을 향하여 순차적으로 차크람을 퍼붓습니다. <br>
-                                    최초로 스킬 피해를 주고 0.45초마다 스킬 피해를 입힙니다. <br>
-                                    적에게 사신의 눈이 없으면 사신의 눈을 부여합니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_P">
-                                <h2>P - 사신의 눈</h2>
-                                <p>
-                                    적에게 스킬을 적중시키면 적에게 3초간 유지되는 <br>
-                                    사신의 눈 표식을 부여하고 대상의 시야를 제공 받습니다. <br>
-                                    또한, 자히르의 이동 속도가 증가하고 2초에 걸쳐 점점 감소합니다.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="Skill_video">
-                        <div class="video skill_Q">
-                            <video src="video/자히르Q.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_W">
-                            <video src="video/자히르W.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_E">
-                            <video src="video/자히르E.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_R">
-                            <video src="video/자히르R.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_P">
-                            <video src="video/자히르P.mp4" loop muted autoplay></video>
-                        </div>
-                    </div>
-                </div>
-                <div class="Character_skill Hart1">
-                    <div class="Skill_img">
-                        <button class="btn b1"><img src="img/Hart_Q_1.png" alt="jack_q"></button>
-                        <button class="btn b2"><img src="img/Hart_W_1.png" alt="jack_w"></button>
-                        <button class="btn b3"><img src="img/Hart_E_1.png" alt="jack_e"></button>
-                        <button class="btn b4"><img src="img/Hart_R_1.png" alt="jack_r"></button>
-                        <button class="btn b5"><img src="img/Hart_P_1.png" alt="jack_p"></button>
-                        <div class="Skill_text_box">
-                            <div class="Skill text_Q">
-                                <h2>Q - Delay</h2>
-                                <p>
-                                    하트가 기타를 치면 음표가 생성됩니다. 이후 스킬을 재사용할 수 있습니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_W">
-                                <h2>W - OverDrive</h2>
-                                <p>
-                                    하트가 기타를 치면 일정 시간동안 공격력이 증가하고, 기본 공격 사거리가 0.4 증가합니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_E">
-                                <h2>E - Flanger</h2>
-                                <p>
-                                    하트가 지정한 방향으로 짧게 이동한 이후 근처의 적에게 음파를 날려 피해를 입힙니다. <br>
-                                    이 스킬은 1회 재사용할 수 있습니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_R">
-                                <h2>R - Peacemaker</h2>
-                                <p>
-                                    하트가 5초간 기타를 쳐서 모든 대상을 춤추게 합니다. <br>
-                                    기타를 치는 동안 0.5초마다 자신의 체력을 회복시킵니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_P">
-                                <h2>P - Feedback</h2>
-                                <p>
-                                    하트가 기본 공격으로 적에게 피해를 입힐 때마다 스태미나를 회복합니다.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="Skill_video">
-                        <div class="video skill_Q">
-                            <video src="video/하트Q.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_W">
-                            <video src="video/하트W.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_E">
-                            <video src="video/하트E.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_R">
-                            <video src="video/하트R.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_P">
-                            <video src="video/하트P.mp4" loop muted autoplay></video>
-                        </div>
-                    </div>
-                </div>
-                <div class="Character_skill Isol1">
-                    <div class="Skill_img">
-                        <button class="btn b1"><img src="img/Isol_Q.png" alt="jack_q"></button>
-                        <button class="btn b2"><img src="img/Isol_W.png" alt="jack_w"></button>
-                        <button class="btn b3"><img src="img/Isol_E.png" alt="jack_e"></button>
-                        <button class="btn b4"><img src="img/Isol_R.png" alt="jack_r"></button>
-                        <button class="btn b5"><img src="img/Isol_P.png" alt="jack_p"></button>
-                        <div class="Skill_text_box">
-                            <div class="Skill text_Q">
-                                <h2>Q - 셈텍스 폭탄</h2>
-                                <p>
-                                    아이솔이 적이나 지면에 부착되는 폭탄을 던집니다. <br>
-                                    폭탄이 지면에 설치된 경우 3초 뒤 폭발하고 스킬 피해와 함께 0.6초 동안 속박 상태로 만듭니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_W">
-                                <h2>W - 화망</h2>
-                                <p>
-                                    아이솔이 2초 동안 전방을 향해 무기를 난사하여 0.33초 간격으로 스킬 피해를 입힙니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_E">
-                                <h2>E - 은밀 기동</h2>
-                                <p>
-                                    아이솔이 앞으로 구르며 이동합니다. <br>
-                                    이동 후 일정 시간동안 은신 상태가 됩니다. 이동을 제외한 행동을 하면 은신 상태가 해제됩니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_R">
-                                <h2>R - Mok제 폭탄</h2>
-                                <p>
-                                    아이솔이 Mok제 폭탄을 설치합니다. Mok제 폭탄은 45초 동안 적을 감지하며, <br>
-                                    범위 안에 적이 들어오면 폭발하여 스킬 피해를 입힙니다. <br>
-                                    최대 2개까지 보유할 수 있으며, 2개까지 설치할 수 있습니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_P">
-                                <h2>P - 유격전</h2>
-                                <p>
-                                    아이솔이 트랩을 설치하는 시간이 감소합니다. <br>
-                                    아이솔이 설치한 트랩에 피해를 받은 대상은 3초 동안 방어력이 감소합니다.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="Skill_video">
-                        <div class="video skill_Q">
-                            <video src="video/아이솔Q.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_W">
-                            <video src="video/아이솔W.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_E">
-                            <video src="video/아이솔E.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_R">
-                            <video src="video/아이솔R.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_P">
-                            <video src="video/아이솔P.mp4" loop muted autoplay></video>
-                        </div>
-                    </div>
-                </div>
-                <div class="Character_skill Lidailin1">
-                    <div class="Skill_img">
-                        <button class="btn b1"><img src="img/Li Dailin_Q.png" alt="jack_q"></button>
-                        <button class="btn b2"><img src="img/Li Dailin_W.png" alt="jack_w"></button>
-                        <button class="btn b3"><img src="img/Li Dailin_E.png" alt="jack_e"></button>
-                        <button class="btn b4"><img src="img/Li Dailin_R.png" alt="jack_r"></button>
-                        <button class="btn b5"><img src="img/Li Dailin_P.png" alt="jack_p"></button>
-                        <div class="Skill_text_box">
-                            <div class="Skill text_Q">
-                                <h2>Q - 호연각</h2>
-                                <p>
-                                    리 다이린이 앞으로 짧게 돌진하며 범위 내의 적들에게 스킬 피해를 입힙니다. <br>
-                                    이 스킬은 2회 다시 사용할 수 있습니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_W">
-                                <h2>W - 술마시기</h2>
-                                <p>
-                                    리 다이린이 0.8초 동안 술을 마셔 취기를 45만큼 충전하며 기본 공격을 회피하며 받는 스킬 피해가 감소합니다. <br>
-                                    리 다이린이 기본 공격을 하면 술 마시기 쿨다운이 1초 감소합니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_E">
-                                <h2>E - 술뿌리기</h2>
-                                <p>
-                                    리 다이린이 부채꼴 모양으로 술을 뿜어, <br>
-                                    범위 안의 적들의 이동 속도를 2초 동안 만큼 감소시키며 스킬 피해를 입힙니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_R">
-                                <h2>R - 취호격파산</h2>
-                                <p>
-                                    리 다이린이 방해 효과 면역 상태로 빠르게 돌진하여 부딪친 적을 제압하고 <br>
-                                    4회 연타하여 각 타격마다 적의 잃은 체력에 비례해 스킬 피해를 입힙니다.
-                                </p>
-                            </div>
-                            <div class="Skill text_P">
-                                <h2>P - 취기</h2>
-                                <p>
-                                    리 다이린은 술 마시기를 사용해 취기를 채울 수 있습니다. <br>
-                                    취기에 따라 맹호청권이 발동합니다.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="Skill_video">
-                        <div class="video skill_Q">
-                            <video src="video/리다이린Q.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_W">
-                            <video src="video/리다이린W.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_E">
-                            <video src="video/리다이린E.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_R">
-                            <video src="video/리다이린R.mp4" loop muted autoplay></video>
-                        </div>
-                        <div class="video skill_P">
-                            <video src="video/리다이린P.mp4" loop muted autoplay></video>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div id="etc_content">
-            <div class="Character_skin_list">
-                <h1>캐릭터 스킨</h1>
-                <div class="Character_skin Jackie1">
-                    <div class="Skin SA">
-                        <img src="img/Executioner Jackie.png" alt="jack_skin_a">
-                        <p>처형자 재키</p>
-                    </div>
-                    <div class="Skin SB">
-                        <img src="img/Scarlet Corsage Jackie.png" alt="jack_skin_b">
-                        <p>스칼렛 코사지 재키</p>
-                    </div>
-                    <div class="Skin SC">
-                        <img src="img/Overvolt Jackie.png" alt="jack_skin_c">
-                        <p>시스템쇼크 재키</p>
-                    </div>
-                    <div class="Skin SD">
-                        <img src="img/Cadet Jackie.png" alt="jack_skin_D">
-                        <p>사관후보생 재키</p>
-                    </div>
-                </div>
-                <div class="Character_skin Aya1">
-                    <div class="Skin SA">
-                        <img src="img/On-Duty Aya.png" alt="aya_skin_a">
-                        <p>경찰 아야</p>
-                    </div>
-                    <div class="Skin SB">
-                        <img src="img/Midsummer Festival Aya.png" alt="aya_skin_b">
-                        <p>불꽃놀이 아야</p>
-                    </div>
-                </div>
-                <div class="Character_skin Hyunwoo1">
-                    <div class="Skin SA">
-                        <img src="img/Street Fiend Hyunwoo.png" alt="hyun_skin_a">
-                        <p>뒷골목 현우</p>
-                    </div>
-                    <div class="Skin SB">
-                        <img src="img/Red Devil Hyunwoo.png" alt="hyun_skin_b">
-                        <p>레드데블 현우</p>
-                    </div>
-                    <div class="Skin SC">
-                        <img src="img/Cadet Hyunwoo.png" alt="hyun_skin_c">
-                        <p>사관후보생 현우</p>
-                    </div>
-                    <div class="Skin SD">
-                        <img src="img/Sweet Beast Hyunwoo.png" alt="hyun_skin_D">
-                        <p>맷현우</p>
-                    </div>
-                </div>
-                <div class="Character_skin Magnus1">
-                    <div class="Skin SA">
-                        <img src="img/Boss Magnus.png" alt="mag_skin_a">
-                        <p>보스 매그너스</p>
-                    </div>
-                    <div class="Skin SB">
-                        <img src="img/Tropical Party Magnus.png" alt="mag_skin_b">
-                        <p>남국 매그너스</p>
-                    </div>
-                    <div class="Skin SC">
-                        <img src="img/Rebel Magnus.png" alt="mag_skin_c">
-                        <p>반항아 매그너스</p>
-                    </div>
-                </div>
-                <div class="Character_skin Fiora1">
-                    <div class="Skin SA">
-                        <img src="img/Lieutenant Fiora.png" alt="fiora_skin_a">
-                        <p>장교 피오라</p>
-                    </div>
-                    <div class="Skin SB">
-                        <img src="img/Muskateer Fiora.png" alt="fiora_skin_b">
-                        <p>총사 피오라</p>
-                    </div>
-                    <div class="Skin SC">
-                        <img src="img/Fiora_Skin_03.png" alt="fiora_skin_c">
-                        <p>파티 드레스 피오라</p>
-                    </div>
-                </div>
-                <div class="Character_skin Nadine1">
-                    <div class="Skin SA">
-                        <img src="img/Neon Huntress Nadine.png" alt="nadi_skin_a">
-                        <p>헌터 나딘</p>
-                    </div>
-                    <div class="Skin SB">
-                        <img src="img/Little Nadine Riding Hood.png" alt="nadi_skin_b">
-                        <p>빨간망토 나딘</p>
-                    </div>
-                    <div class="Skin SC">
-                        <img src="img/nadi.png" alt="nadi_skin_c">
-                        <p>야생의 부름 나딘</p>
-                    </div>
-                </div>
-                <div class="Character_skin Zahir1">
-                    <div class="Skin SA">
-                        <img src="img/Glided Reaper Zahir.png" alt="za_skin_a">
-                        <p>사신 자히르</p>
-                    </div>
-                    <div class="Skin SB">
-                        <img src="img/Cobalt Evolution Zahir.jpg" alt="za_skin_b">
-                        <p>사이코시스 자히르</p>
-                    </div>
-                </div>
-                <div class="Character_skin Hart1">
-                    <div class="Skin SA">
-                        <img src="img/Band Leader Hart.png" alt="hart_skin_a">
-                        <p>밴드리더 하트</p>
-                    </div>
-                    <div class="Skin SB">
-                        <img src="img/Winter Carnival Hart.png" alt="hart_skin_b">
-                        <p>눈꽃축제 하트</p>
-                    </div>
-                    <div class="Skin SC">
-                        <img src="img/HART_Skin_03.png" alt="hart_skin_c">
-                        <p>퍼플퀸 하트</p>
-                    </div>
-                </div>
-                <div class="Character_skin Isol1">
-                    <div class="Skin SA">
-                        <img src="img/Wasteland Isol.png" alt="isol_skin_a">
-                        <p>아포칼립스 아이솔</p>
-                    </div>
-                    <div class="Skin SB">
-                        <img src="img/hunterisol.jpg_large" alt="isol_skin_b">
-                        <p>고스트헌터 아이솔</p>
-                    </div>
-                    <div class="Skin SC">
-                        <img src="img/116.Isol_Skin_03.png" alt="isol_skin_c">
-                        <p>새해토끼 아이솔</p>
-                    </div>
-                </div>
-                <div class="Character_skin Lidailin1">
-                    <div class="Skin SA">
-                        <img src="img/Jade Drifter Li Dailin.png" alt="lida_skin_a">
-                        <p>여행자 리 다이린</p>
-                    </div>
-                    <div class="Skin SB">
-                        <img src="img/Rebel Li Dailin.png" alt="lida_skin_b">
-                        <p>반항아 리 다이린</p>
-                    </div>
-                    <div class="Skin SC">
-                        <img src="img/Dragon Dance Li Dailin.png" alt="lida_skin_c">
-                        <p>용 다이린</p>
-                    </div>
-                    <div class="Skin SD">
-                        <img src="img/Festive Roar Li Dailin.png" alt="hyun_skin_D">
-                        <p>어흥다이린</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
         <footer>
             <div class="media_box">
                 <h3>소셜 미디어</h3>
-                <a href="#"><i class="fa-brands fa-discord"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-reddit-alien"></i></a>
+                <a href="sub.html"><i class="fa-brands fa-discord"></i></a>
+                <a href="sub.html"><i class="fa-brands fa-twitter"></i></a>
+                <a href="sub.html"><i class="fa-brands fa-youtube"></i></a>
+                <a href="sub.html"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="sub.html"><i class="fa-brands fa-reddit-alien"></i></a>
             </div>
 
             <div class="logo_footer">

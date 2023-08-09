@@ -25,9 +25,9 @@ article h5 {color: #fff; font-weight: normal;}
 .banner_textbox h1 {color: gold; padding-top: 20px;}
 .banner_textbox h4 {color: lightgray; margin: 20px 0 20px 0; font-size: 20px; font-weight: normal;}
 .banner_textbox h4 span {font-weight: bold; font-size: 22px;; color: gold;}
-#solid {margin: 0 auto; border: 1px solid gold; width: 120px; height: 40px; position: relative;}
-#solid a {width: 120px; height: 40px; background-color: gold; position: absolute; top: 5px; left: 5px; line-height: 40px; font-family: "Glitch Goblin"; color: #333;}
-#solid a:hover {color: red; background-color: yellow}
+.solid {margin: 0 auto; border: 1px solid gold; width: 120px; height: 40px; position: relative;}
+.solid a {width: 120px; height: 40px; background-color: gold; position: absolute; top: 5px; left: 5px; line-height: 40px; font-family: "Glitch Goblin"; color: #333;}
+.solid a:hover {color: red; background-color: yellow}
 
 
 #impo {width: 80%; height: auto; margin: 0 auto; border-style: none none none solid; border-color: #fff; border-width: thin;}
@@ -46,19 +46,19 @@ article h5 {color: #fff; font-weight: normal;}
 .impo_button {width: 12%; height: 480px; display: flex; flex-direction: column;}
 .impo_button button {width: 180px; height: 160px;}
 .crbu {background-image: url(../img/crafting.webp); background-size: cover; transition: all 1s ease-in-out; background-position: center;}
-.crbu span {transition: all 1s ease-in-out; opacity: 0; scale: 0; font-family: 'Noto Sans KR'; font-size: 20px; font-weight: bold;color: #fff;}
+.crbu span {transition: all 1s ease-in-out; opacity: 0;font-family: 'Noto Sans KR'; font-size: 20px; font-weight: bold;color: #fff;}
 .crbu:hover {background-image: url(../img/cr_bu.jpg); background-size: cover;}
-.crbu:hover span{opacity: 1; transform: scale(1);}
+.crbu:hover span{opacity: 1;}
 
 .babu {background-image: url(../img/battle.webp); background-size: cover; transition: all 1s ease-in-out;background-position: center;}
-.babu span {transition: all 1s ease-in-out; opacity: 0; scale: 0; font-family: 'Noto Sans KR'; font-size: 20px; font-weight: bold;color: #fff;}
+.babu span {transition: all 1s ease-in-out; opacity: 0;font-family: 'Noto Sans KR'; font-size: 20px; font-weight: bold;color: #fff;}
 .babu:hover {background-image: url(../img/ba_bu.jpg); background-size: cover;}
-.babu:hover span{opacity: 1; transform: scale(1);}
+.babu:hover span{opacity: 1;}
 
 .subu {background-image: url(../img/survive.webp); background-size: cover; transition: all 1s ease-in-out; background-position: center;}
-.subu span {transition: all 1s ease-in-out; opacity: 0; scale: 0; font-family: 'Noto Sans KR'; font-size: 20px; font-weight: bold;color: #fff;}
+.subu span {transition: all 1s ease-in-out; opacity: 0;font-family: 'Noto Sans KR'; font-size: 20px; font-weight: bold;color: #fff;}
 .subu:hover {background-image: url(../img/su_bu.jpg); background-size: cover;}
-.subu:hover span{opacity: 1; transform: scale(1);}
+.subu:hover span{opacity: 1;}
 
 .craft_text {width: 840px; height: 200px;}
 .craft_text h1 {margin: 10px 0 10px 10px; color: #fff;}
@@ -83,9 +83,9 @@ article h5 {color: #fff; font-weight: normal;}
 .chatext h1 {color: gold; font-size: 30px;margin: 30px 0 20px 0;}
 .chatext h3 {color: #fff; font-size: 22px; font-weight: normal;}
 .chatext>h3>b {font-size: 26px; color: gold; margin-top: 20px;}
-.chatext #solid {margin: 30px auto; border: 1px solid gold; width: 120px; height: 40px; position: relative;}
-.chatext #solid a {width: 120px; height: 40px; background-color: gold; position: absolute; top: 5px; left: 5px; line-height: 40px; font-family: 'Noto Sans KR'; color: #333; font-weight: bold;}
-.chatext #solid a:hover {color: red; background-color: yellow}
+.chatext .solid {margin: 30px auto; border: 1px solid gold; width: 120px; height: 40px; position: relative;}
+.chatext .solid a {width: 120px; height: 40px; background-color: gold; position: absolute; top: 5px; left: 5px; line-height: 40px; font-family: 'Noto Sans KR'; color: #333; font-weight: bold;}
+.chatext .solid a:hover {color: red; background-color: yellow}
 
 #bottom_banner {width: 100%; height: 620px; background-image: url(../img/bg-play-er.jpg); background-size: cover; position: relative; margin: 0 auto; text-align: center; margin-top: 30px;}
 #bottom_banner img {width: 100%;position: absolute; bottom: 10px; left: 0;}

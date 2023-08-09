@@ -1,7 +1,8 @@
 @charset "utf-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 @font-face {font-family: "Cyberwar"; src: url(../font/CyberwarRegular-7BX0E.ttf) format('truetype')}
 @font-face {font-family: "Glitch Goblin"; src: url(../font/GlitchGoblin-2O87v.ttf) format('truetype');}
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 
 .notosanskr * { 
  font-family: 'Noto Sans KR', sans-serif;
@@ -59,6 +60,8 @@ button:nth-of-type(1) {margin-right: 30px;}
     
 .prev {display: none;}
 .next {display: none;}
+
+#sub_wrap {background-color: #222;}
     
 .Jackie1 {display: flex;}
 .Aya1 {display: none;}

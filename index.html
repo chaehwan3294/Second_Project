@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,74 +11,9 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js"></script>
 
-    <script>
-        $(function () {
-            //impo button(메인 영상)
-            $('button:nth-of-type(1)').click(function () {
-                $(".impo_craft").show();
-                $(".impo_battle").hide();
-                $(".impo_survive").hide();
-            });
-
-            $('button:nth-of-type(2)').click(function () {
-                $(".impo_craft").hide();
-                $(".impo_battle").show();
-                $(".impo_survive").hide();
-            });
-
-            $('button:nth-of-type(3)').click(function () {
-                $(".impo_craft").hide();
-                $(".impo_battle").hide();
-                $(".impo_survive").show();
-            });
-
-
-            //impo button(텍스트)
-            $('button:nth-of-type(1)').click(function () {
-                $(".craft_text").show();
-                $(".battle_text").hide();
-                $(".survive_text").hide();
-            });
-
-            $('button:nth-of-type(2)').click(function () {
-                $(".craft_text").hide();
-                $(".battle_text").show();
-                $(".survive_text").hide();
-            });
-
-            $('button:nth-of-type(3)').click(function () {
-                $(".craft_text").hide();
-                $(".battle_text").hide();
-                $(".survive_text").show();
-            });
-
-            //작은 화면 메뉴바
-            $('.menu-trigger').click(function () {
-                $(this).toggleClass('active');
-                $('.menubar').slideToggle();
-            });
-
-            //작은 화면 서브 메뉴바
-            $('.main_menu>li').click(function () {
-
-                $('.sub').stop().slideUp();
-
-                $(this).find('.sub').stop().slideToggle();
-
-            });
-
-        });
-
-
-        // $(window).resize(function () {
-        //     if (window.innerWidth <= 1199) {
-        //         $('.menubar').show();
-        //     }
-        // });
-    </script>
+    <script src="js/main.js"></script>
 
 </head>
 <body>
@@ -95,49 +30,49 @@
                     <ul class="main_menu">
                         <li><a href="#">Game</a>
                             <ul class="sub">
-                                <li><a href="#">이터널 리턴이란?</a></li>
-                                <li><a href="#">실험체</a></li>
+                                <li><a href="sub.html">이터널 리턴이란?</a></li>
+                                <li><a href="sub.html">실험체</a></li>
                             </ul>
                         </li>
             
                         <li><a href="#">News</a>
                             <ul class="sub">
-                                <li><a href="#">새소식</a></li>
-                                <li><a href="#">패치노트</a></li>
-                                <li><a href="#">로드맵</a></li>
+                                <li><a href="sub.html">새소식</a></li>
+                                <li><a href="sub.html">패치노트</a></li>
+                                <li><a href="sub.html">로드맵</a></li>
                             </ul>
                         </li>
             
                         <li><a href="#">Record</a>
                             <ul class="sub">
-                                <li><a href="#">유저 검색</a></li>
-                                <li><a href="#">통계</a></li>
+                                <li><a href="sub.html">유저 검색</a></li>
+                                <li><a href="sub.html">통계</a></li>
                             </ul>
                         </li>
             
                         <li><a href="#">Community</a>
                             <ul class="sub">
-                                <li><a href="#">팬아트</a></li>
-                                <li><a href="#">유튜브</a></li>
-                                <li><a href="#">디스코드</a></li>
-                                <li><a href="#">톡채널</a></li>
-                                <li><a href="#">레딧</a></li>
-                                <li><a href="#">페이스북</a></li>
-                                <li><a href="#">트위터</a></li>
-                                <li><a href="#">트위치</a></li>
+                                <li><a href="sub.html">팬아트</a></li>
+                                <li><a href="sub.html">유튜브</a></li>
+                                <li><a href="sub.html">디스코드</a></li>
+                                <li><a href="sub.html">톡채널</a></li>
+                                <li><a href="sub.html">레딧</a></li>
+                                <li><a href="sub.html">페이스북</a></li>
+                                <li><a href="sub.html">트위터</a></li>
+                                <li><a href="sub.html">트위치</a></li>
                             </ul>
                         </li>
             
-                        <li><a href="#">Rank</a></li>
+                        <li><a href="sub.html">Rank</a></li>
             
-                        <li><a href="#">Service</a></li>
+                        <li><a href="sub.html">Service</a></li>
         
                     </ul>
                 </div>
                 <div class="contbox_me">
-                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    <a href="#"><i class="fa-solid fa-globe"></i></a>
-                    <a href="#" class="play">Now Play</a>
+                    <a href="sub.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="sub.html"><i class="fa-solid fa-globe"></i></a>
+                    <a href="sub.html" class="play">Now Play</a>
                 </div>
             </div>
         </header>
@@ -146,36 +81,36 @@
             <video src="video/videoplayback.mp4" loop muted autoplay></video>
         </div>
         
-        <div id="void"></div>
+        <div class="void"></div>
 
         <section>
             <nav>
                 <h1>News</h1>
             </nav>
-            <a href="#">
+            <a href="sub.html">
                 <article>
                     <img src="img/article1.png" alt="art1">
-                    <h1> 이터널 리턴 정식출시 카운트다운 안내</h1>
+                    <h1>이터널 리턴 정식출시 카운트다운 안내</h1>
                     <h5>7월 18일(화) 11:30~7월 20일(목) 14:00까지(KST)</h5>
                 </article>
             </a>
-            <a href="#">
+            <a href="sub.html">
                 <article>
                     <img src="img/article2.png" alt="art2">
-                    <h1> ER 1.0 2033 시즌 1:바캉스 미리 보기</h1>
+                    <h1>ER 1.0 2033 시즌 1:바캉스 미리 보기</h1>
                     <h5>첫 시즌 1.0팩과 함께 시원한 바캉스 준비하세요!</h5>
                 </article>
             </a>
-            <a href="#">
+            <a href="sub.html">
                 <article>
                     <img src="img/article3.png" alt="art3">
-                    <h1> 신규 캐릭터 데비&마를렌 미리보기</h1>
+                    <h1>신규 캐릭터 데비&마를렌 미리보기</h1>
                     <h5>둘이 아닌 하나! 데비&마를렌이 루미아섬을 찾아옵니다!</h5>
                 </article>
             </a>
         </section>
     
-        <div id="void"></div>
+        <div class="void"></div>
 
         <div id="mid_banner">
             <img src="img/banner1_2.jpg" alt="banner1">
@@ -184,13 +119,13 @@
                 <h4>세상과는 떨어진 섬 루미아에서, 과학집단 아글라이아가 인간을 대상으로 신인류가 되기 위한 비밀스러운 생존 실험을 벌입니다.<br>
                     생존에 필요한 무기와 방어구를 제작해, <span>17명의 다른 생존자들을 쓰러트리고 마지막까지 살아남아보세요.</span>
                 </h4>
-                <div id="solid">
-                    <a href="#">Play Now!</a>
+                <div class="solid">
+                    <a href="sub.html">Play Now!</a>
                 </div>
             </div>
         </div>
     
-        <div id="void"></div>
+        <div class="void"></div>
 
         <div id="impo">
             <div class="impo_head">
@@ -233,7 +168,7 @@
             </div>
         </div>
 
-        <div id="void"></div>
+        <div class="void"></div>
 
         <div id="chainfo">
             <aside class="asidl"></aside>
@@ -250,13 +185,13 @@
                     상황에 맞는 전투를 펼치세요.<br><br>
                     <b>개성 넘치는 실험체들이 여러분을 기다립니다!</b>
                 </h3>
-                <div id="solid">
-                    <a href="#">자세히 보기</a>
+                <div class="solid">
+                    <a href="sub.html">자세히 보기</a>
                 </div>
             </div>
         </div>
     
-        <div id="void"></div>
+        <div class="void"></div>
 
         <div id="bottom_banner">
             <h2>쿼터뷰 형식의 전투 스타일과 배틀로얄</h2>
@@ -264,13 +199,13 @@
             <h1><span>이터널 리턴</span>을 플레이해보세요</h1>
 
             <div class="platform">
-                <a href="#">
+                <a href="sub.html">
                     <div class="kakao">
                         <span>kakao<b>games</b></span>
                     </div>
                 </a>
             
-                <a href="#">
+                <a href="sub.html">
                     <div class="steam">
                         <i class="fa-brands fa-steam"></i>
                         <span>STEAM</span>
@@ -288,11 +223,11 @@
         <footer>
             <div class="media_box">
                 <h3>소셜 미디어</h3>
-                <a href="#"><i class="fa-brands fa-discord"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-reddit-alien"></i></a>
+                <a href="sub.html"><i class="fa-brands fa-discord"></i></a>
+                <a href="sub.html"><i class="fa-brands fa-twitter"></i></a>
+                <a href="sub.html"><i class="fa-brands fa-youtube"></i></a>
+                <a href="sub.html"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="sub.html"><i class="fa-brands fa-reddit-alien"></i></a>
             </div>
 
             <div class="logo_footer">
