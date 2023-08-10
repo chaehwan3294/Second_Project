@@ -29,7 +29,7 @@
 .character_img img{width: 70%;margin-left: 50px;}
 .img {height: 900px;}
 .img img{float: left; align-self: center; height: 100vh; padding-top: 10px;}
-.img_textbox {width: 30%;display: flex; flex-flow: row wrap; align-content: center;margin-left: 10%;}
+.img_textbox {width: 30%;display: flex; flex-flow: row wrap; align-content: center;margin-left: 10%; margin-bottom: 30px;}
 .img_textbox h3 {width: 100%; font-size: 30px; color: red; margin-bottom: 20px;}
 .img_textbox p { font-size: 16px; color: #fff;}
 
